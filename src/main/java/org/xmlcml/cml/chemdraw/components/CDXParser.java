@@ -20,7 +20,8 @@ public class CDXParser implements CDXConstants {
 
     private static Logger LOG = Logger.getLogger(CDXParser.class);
     static {
-    	LOG.setLevel(Level.DEBUG);
+//    	LOG.setLevel(Level.DEBUG);
+    	LOG.setLevel(Level.INFO);
     }
 
 //  VjCD0100 - chemdraw signature
