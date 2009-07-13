@@ -33,6 +33,14 @@
 					<target>1.5</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>org/xmlcml/util/TestUtils.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>			
 		</plugins>
 	</build>
 	<repositories>
