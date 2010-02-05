@@ -220,7 +220,8 @@ public class CDXML2CMLObject {
 	private void flattenGroupingElement(Nodes nodes) {
 		for (int i = 0; i < nodes.size(); i++) {
 			 CMLElement element = (CMLElement)nodes.get(i);
-			 CMLUtil.transferChildrenToParent(element);
+             Element parent = (Element) element.getParent(); 
+			 CMLUtil.transferChildren(element, parent);
 			 element.detach();
 		 }
 	}

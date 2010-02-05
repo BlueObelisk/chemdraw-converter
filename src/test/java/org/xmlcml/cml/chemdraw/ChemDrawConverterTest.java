@@ -1,18 +1,16 @@
 package org.xmlcml.cml.chemdraw;
 
-import java.io.File;
-import java.io.FileInputStream;
-
 import nu.xom.Builder;
 import nu.xom.Element;
-
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.cml.chemdraw.CDX2CDXML;
 import org.xmlcml.cml.chemdraw.components.CDXObject;
 import org.xmlcml.util.TestUtils;
+
+import java.io.File;
+import java.io.FileInputStream;
 
 
 public class ChemDrawConverterTest {
