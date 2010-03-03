@@ -2,7 +2,6 @@ package org.xmlcml.cml.chemdraw.components;
 
 
 import nu.xom.Attribute;
-import nu.xom.Element;
 import nu.xom.Node;
 
 import org.apache.log4j.Level;
@@ -33,20 +32,11 @@ p="15796356 5862751"
 BoundingBox="5538348 15796356 6449298 18525930"
 Warning="ChemDraw can't interpret this label."
 --*/
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
 
     private String text = null;
-//    private String warning = null;
-//    private int[] lineStarts = null;
-//    private String[] textStarts;
-//    private int nLines = 0;
 
     public CDXText() {
-		super(CDXNAME);
-        setCodeName();
+        super(CODE, NAME, CDXNAME);
 	}
 	
     /**
@@ -64,81 +54,6 @@ Warning="ChemDraw can't interpret this label."
     public CDXText(CDXText old) {
     	super(old);
     }
-
-
-//	private void setLineStarts(String t) {
-//		StringTokenizer st = new StringTokenizer(t);
-//		nLines = st.countTokens();
-//		lineStarts = new int[nLines];
-//		textStarts = new String[nLines];
-//		for (int i = 0; i < nLines; i++) {
-//			lineStarts[i] = Integer.parseInt(st.nextToken());
-//		}
-//		splitText();
-//	}
-
-//	private String getLineStarts() {
-//		if (lineStarts == null) {
-//            String ss = this.getAttributeValue("LineStarts");
-//            if (ss != null) {
-//                setLineStarts(ss);
-//            }
-//        }
-//		String s = "";
-//		for (int i = 0; i < lineStarts.length; i++) {
-//			if (i > 0) s += " ";
-//			s += lineStarts[i];
-//		}
-//		return s;
-//	}
-//
-//	private void setText(String t) {
-//		text = new String(t);
-//		splitText();
-//	}
-//
-//	private String getText() {
-//		return text;
-//	}
-
-//	private String[] getTextStarts() {
-//		return textStarts;
-//	}
-
-//    /** tidy node.
-//    * turn temp_Text attribute into s child.
-//    * of form [[1 2 3 4 5]] or [[1 2 3 4 5]][[6 7 8 9 10]]
-//    * this is messy; there can be more than one font; take the last one
-//    */
-//	private void tidy() {
-//        String content = "";
-//        String t = this.getAttributeValue(TEMP_TEXT);
-//        if (t != null && !t.equals("")) {
-//            int idx1 = t.lastIndexOf("]]");
-//            if (idx1 == -1) {
-//                content = t;
-//            } else {
-//                int idx0 = t.lastIndexOf(FRBRAK+FLBRAK);
-//                idx0 = (idx0 == -1) ? 2 : idx0 + 4;
-//                this.removeAttribute(TEMP_TEXT);
-//                CDXObject s = new CDXObject("s");
-//                this.appendChild(s);
-//                content = t.substring(idx1+2);
-//                String fonts = t.substring(idx0, idx1);
-//                String[] ss = fonts.split(" ");
-//                if (ss.length == 5) {
-//                    s.setAttribute("att1", ""+ss[0]);
-//                    s.setAttribute("att2", ""+ss[1]);
-//                    s.setAttribute("face", ""+ss[2]);
-//                    s.setAttribute("size", ""+ss[3]);
-//                    s.setAttribute("font", ""+ss[4]);
-//                    s.appendChild(new Text(content));
-//                } else {
-//                    LOG.error("expected 5 font style attributes");
-//                }
-//            }
-//        }
-//    }
     
     /** return ints for font
      * order is startChar fontIndex typeface? size color
@@ -221,58 +136,16 @@ Warning="ChemDraw can't interpret this label."
         }
     }
 		
-    // concatenates text in all "s" children
-	private String getTextValue() {
-        String s = "";
-        for (int i = 0; i < getChildCount(); i++) {
-            Node child = getChild(i);
-            if (child instanceof Element) {
-	            if (((Element)child).getLocalName().equals("s")) {
-	                s += ((Element)child.getChild(0)).getValue();
-	            }
-            }
-        }
-        return s;
-    }
-
 	// might be useful
     public void process2CML(CMLElement cmlNode) {
-        CMLLabel label = new CMLLabel();
-        label.setDictRef("cdx:label");
-        label.setCMLValue(this.getTextValue());
-        this.copyAttributesTo(label);
-        Element ss = (this.getChildCount() == 0) ? null : (Element) this.getChild(0);
-        if (ss != null) {
-        	((CDXObject)ss).copyAttributesTo(label);
-        }
-        try {
-            cmlNode.appendChild(label);
-//            processChildren2CML(label);
-            this.copyAttributesTo(label);
-        } catch (Exception de) {
-            de.printStackTrace();
-            LOG.error("Cannot add label "+cmlNode.getLocalName());
-        }
+        addLabelToCMLElement(cmlNode);
     }
-
-	/**
-	 * @param node
-	 * @return label
-	 * @throws RuntimeException
-	 */
-	CMLLabel createLabelFromText() throws RuntimeException {
-		String vv = getLabelText();
-		CMLLabel label = new CMLLabel();
-		label.setCMLValue(vv);
-		this.copyAttributesTo(label);
-		return label;
-	}
 
 	/**
 	 * @return text after [[..]]
 	 */
-	String getLabelText() {
-		String vv = this.query("./@temp_Text").get(0).getValue();
+	String getLabelTextFromTextTempAndSquareBrackets() {
+		String vv = this.query("./@"+TEMP_TEXT).get(0).getValue();
 		// can be several of these
 		while (vv.startsWith("[[")) {
 			int idx = vv.indexOf("]]");
@@ -284,6 +157,16 @@ Warning="ChemDraw can't interpret this label."
 		}
 		return vv;
 	}
+	
+	void addLabelToCMLElement(CMLElement element) {
+		CMLLabel label = new CMLLabel();
+        label.setDictRef("cdx:label");
+		String vv = this.getLabelTextFromTextTempAndSquareBrackets();
+		this.copyAttributesTo(label);
+		label.setCMLValue(vv);
+		element.appendChild(label);
+	}
+
 
     /**
      * @return s

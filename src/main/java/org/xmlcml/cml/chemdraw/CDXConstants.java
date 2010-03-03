@@ -1,6 +1,7 @@
 package org.xmlcml.cml.chemdraw; 
 
 import org.xmlcml.cml.base.CMLConstants;
+import org.xmlcml.cml.chemdraw.components.BoundingBox;
 
 
 /**
@@ -14,6 +15,8 @@ public interface CDXConstants extends CMLConstants {
 	float MAG = 8;
 	/** */
 	float SCALE2D = 65536;
+	/** NO IDEA WHETHER THIS WORKS*/
+	float SCALE3D = 65536;
 	/** */
 	float SCALE2DMAG = 65536 * MAG;
 
@@ -57,8 +60,8 @@ public interface CDXConstants extends CMLConstants {
 	int MAX_ATOM_LABEL_FONT_SIZE = 5;
 	/** smallest allowed atom label size */
 	int MIN_ATOM_LABEL_FONT_SIZE = 5;
-	/** smallest allowed molecule label size */
-	int MAX_MOLECULE_LABEL_FONT_SIZE = 9;
+	/** largest allowed molecule label size */
+	int MAX_MOLECULE_LABEL_FONT_SIZE = 13;
 	/** smallest allowed molecule label size */
 	int MIN_MOLECULE_LABEL_FONT_SIZE = 9;
 	/** smallest allowed reaction label size */
@@ -71,7 +74,7 @@ public interface CDXConstants extends CMLConstants {
 	int MIN_MOLECULE_TO_LABEL_YDELTA = -20;
 	
 	/** */
-	String ATT_BOUNDING_BOX = "BoundingBox";
+	String ATT_BOUNDING_BOX = BoundingBox.TAG;
 	/** */
 	String ATT_YDELTA = "ydelta";
 	/** */

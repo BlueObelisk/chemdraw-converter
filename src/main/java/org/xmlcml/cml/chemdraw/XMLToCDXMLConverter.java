@@ -12,12 +12,15 @@ import nu.xom.Text;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.cml.chemdraw.components.CDXArrow;
 import org.xmlcml.cml.chemdraw.components.CDXBond;
+import org.xmlcml.cml.chemdraw.components.CDXBracketAttachment;
 import org.xmlcml.cml.chemdraw.components.CDXBracketedGroup;
 import org.xmlcml.cml.chemdraw.components.CDXColorTable;
 import org.xmlcml.cml.chemdraw.components.CDXCurve;
 import org.xmlcml.cml.chemdraw.components.CDXFontTable;
 import org.xmlcml.cml.chemdraw.components.CDXFragment;
+import org.xmlcml.cml.chemdraw.components.CDXGeometry;
 import org.xmlcml.cml.chemdraw.components.CDXGraphic;
 import org.xmlcml.cml.chemdraw.components.CDXGroup;
 import org.xmlcml.cml.chemdraw.components.CDXList;
@@ -41,12 +44,15 @@ public class XMLToCDXMLConverter {
 	static {
 		String base = new XMLToCDXMLConverter().getClass().getPackage().getName();
 		try {
+		    classMap.put(CDXArrow.CDXNAME, CDXArrow.class);
 		    classMap.put(CDXBond.CDXNAME, CDXBond.class);
+		    classMap.put(CDXBracketAttachment.CDXNAME, CDXBracketAttachment.class);
 		    classMap.put(CDXBracketedGroup.CDXNAME, CDXBracketedGroup.class);
 		    classMap.put(CDXColorTable.CDXNAME, CDXColorTable.class);
 		    classMap.put(CDXCurve.CDXNAME, CDXCurve.class);
 		    classMap.put(CDXFontTable.CDXNAME, CDXFontTable.class);
 		    classMap.put(CDXFragment.CDXNAME, CDXFragment.class);
+		    classMap.put(CDXGeometry.CDXNAME, CDXGeometry.class);
 		    classMap.put(CDXGraphic.CDXNAME, CDXGraphic.class);
 		    classMap.put(CDXGroup.CDXNAME, CDXGroup.class);
 		    classMap.put(CDXList.CDXNAME, CDXList.class);
@@ -60,6 +66,7 @@ public class XMLToCDXMLConverter {
 		    // subsidiary classes
 		    classMap.put("color", Element.class);	
 		    classMap.put("font", Element.class);	
+		    classMap.put("object", Element.class);	
 		} catch (Exception e) {
 			throw new RuntimeException("Cannot set up classMap in: "+base);
 		}

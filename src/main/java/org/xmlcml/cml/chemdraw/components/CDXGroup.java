@@ -1,6 +1,7 @@
 package org.xmlcml.cml.chemdraw.components;
 
 
+import nu.xom.Attribute;
 import nu.xom.Element;
 import nu.xom.Elements;
 import nu.xom.Node;
@@ -34,15 +35,9 @@ public class CDXGroup extends CDXObject {
   FooterPosition="35.9999"
   id="156">
 --*/
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
 
 	public CDXGroup() {
-		super(CDXNAME);
-        setCodeName();
+        super(CODE, NAME, CDXNAME);
 	}
 
     /**
@@ -70,22 +65,39 @@ public class CDXGroup extends CDXObject {
     
 	public void flatten(CDXObject ancestor) {
 		Elements childElements = this.getChildElements();
+		Attribute groupAttribute = createCombinedGroupAttribute();
 		for (int j = 0; j < childElements.size(); j++) {
 			Element childElement = childElements.get(j);
+			childElement.addAttribute(new Attribute(groupAttribute));
 			if (!(childElement instanceof CDXGroup)) {
-//				if (ancestor != this) {
-					childElement.detach();
-					ancestor.appendChild(childElement);
-//				}
+				childElement.detach();
+				ancestor.appendChild(childElement);
 			} else {
-				CDXGroup group = (CDXGroup)childElement;
-				group.flatten(ancestor);
-				group.detach();
+				((CDXGroup)childElement).flatten(ancestor);
 			}
 		}
+//		this.debug("GROUP");
+//		this.detach();
+	}
+	
+	private Attribute createCombinedGroupAttribute() {
+		Attribute groupAttribute = this.getAttribute("group");
+		String idValue = this.getAttributeValue("id");
+		if (groupAttribute == null) {
+			groupAttribute = new Attribute("group", idValue);
+		} else {
+			groupAttribute = new Attribute("group", groupAttribute.getValue()+" "+idValue);
+		}
+		return groupAttribute;
 	}
 
-};
+
+	// concatenate all ids on ancestor groups
+	private void addCombinedAttribute(Attribute groupAttribute) {
+		String attValue = groupAttribute.getValue()+" "+this.getId();
+		this.addAttribute(new Attribute("group", attValue));
+	}
+}
 
 
 

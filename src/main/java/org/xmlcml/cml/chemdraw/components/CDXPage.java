@@ -35,15 +35,9 @@ public class CDXPage extends CDXObject {
   FooterPosition="35.9999"
   id="156">
 --*/
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
 
 	public CDXPage() {
-		super(CDXNAME);
-        setCodeName();
+        super(CODE, NAME, CDXNAME);
 	}
     /**
      * copy node .
@@ -116,7 +110,7 @@ public class CDXPage extends CDXObject {
 		// at the end nothing should be left
 		
 		// un-nest groups
-		flattenGroups(element);
+		flattenTopLevelGroups(element);
 		// groups are recursive containers for pages I think    	
 	  	processGroups(element);
 		// find any graphics    	
@@ -127,7 +121,7 @@ public class CDXPage extends CDXObject {
 		// as they are processed they are removed from the CDXPage    	
     	processFragmentsContainingUnspecfiedNodes(element);
 		// now fragments
-    	processFragmentsContainingFramentNodes(element);
+    	processFragmentsContainingFragmentNodes(element);
 		// now molecules    	
     	processMoleculeFragments(element);
 		// collect molecules in list	  	
@@ -140,13 +134,14 @@ public class CDXPage extends CDXObject {
 	  	processLeftOvers(element);
 	}
 	
-	private void flattenGroups(CMLElement element) {
-    	Nodes groups = this.query("group");
+	private void flattenTopLevelGroups(CMLElement element) {
+    	Nodes groups = this.query("//*[not(self::group)]/group");
 		LOG.info("Found "+groups.size()+" groups to flatten");
 		for (int i = 0; i < groups.size(); i++) {
 			CDXGroup group = (CDXGroup) groups.get(i);
     		group.flatten(this);
 		}
+//		this.debug("PAGE");
 	}
 	/**
 	 * @return s

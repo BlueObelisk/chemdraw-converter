@@ -28,15 +28,9 @@ public class CDXFontTable extends CDXObject {
    <font id="3" charset="1252" name="Arial"/>
   </fonttable>
 --*/
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
 
     public CDXFontTable() {
-		super(CDXNAME);
-        setCodeName();
+        super(CODE, NAME, CDXNAME);
 	}
 
     /**

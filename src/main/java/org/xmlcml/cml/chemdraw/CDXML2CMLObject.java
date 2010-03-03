@@ -38,7 +38,9 @@ import org.xmlcml.cml.chemdraw.components.CDXList;
 import org.xmlcml.cml.chemdraw.components.CDXML;
 import org.xmlcml.cml.chemdraw.components.CDXObject;
 import org.xmlcml.cml.chemdraw.components.CDXPage;
+import org.xmlcml.cml.chemdraw.components.CDXReactionStep;
 import org.xmlcml.cml.chemdraw.components.CDXText;
+import org.xmlcml.cml.chemdraw.components.CDXUtil;
 import org.xmlcml.cml.element.CMLAtom;
 import org.xmlcml.cml.element.CMLBond;
 import org.xmlcml.cml.element.CMLBondStereo;
@@ -49,13 +51,14 @@ import org.xmlcml.cml.element.CMLMoleculeList;
 import org.xmlcml.cml.element.CMLReaction;
 import org.xmlcml.cml.element.CMLMolecule.HydrogenControl;
 import org.xmlcml.cml.tools.AtomSetTool;
+import org.xmlcml.cml.tools.GeometryTool;
 import org.xmlcml.cml.tools.MoleculeTool;
 import org.xmlcml.euclid.EuclidRuntimeException;
 import org.xmlcml.euclid.Real2;
 import org.xmlcml.euclid.Real2Range;
 import org.xmlcml.euclid.RealRange;
 import org.xmlcml.euclid.Transform2;
-import org.xmlcml.euclid.Util;
+import org.xmlcml.util.CMLUtilNew;
 
 /**
  * attempts to convert a CDXML file for CML.
@@ -77,7 +80,6 @@ public class CDXML2CMLObject {
     private CDXObject rootCDXObject;
 	private CDXList cdxList;
 	private CDXObject page;
-//	private CDXML cdxml;
     private CMLCml cmlCml = null;
     
     private boolean cleanMolecules = true;
@@ -105,6 +107,7 @@ public class CDXML2CMLObject {
 //   		  <page BoundingBox="0 0 538.507 785.107" WidthPages="1" HeightPages="1" HeaderPosition="35.9999" FooterPosition="35.9999" id="156">
 //   		   <fragment BoundingBox="138.9999 67.0011 214.1269 91.6999" id="19">
 
+        
  		try {
 			if (!(rootCDXObject instanceof CDXList)) {
  	        	 throw new RuntimeException("expected cdxList as root element");
@@ -132,7 +135,7 @@ public class CDXML2CMLObject {
  		 	 }
  		} catch (Exception e) {
  			e.printStackTrace();
- 			throw new RuntimeException(e);
+ 			LOG.error(e);
  		}
 	}
     
@@ -142,6 +145,7 @@ public class CDXML2CMLObject {
     
 	private void convertCDXML(Element cdxml) {
 		int pageCount = 0;
+		page = null;
 		// check for errors and non-page structures
 		 for (int i = 0; i < cdxml.getChildElements().size(); i++) {
 			 CDXObject child = (CDXObject) cdxml.getChildElements().get(i);
@@ -154,6 +158,7 @@ public class CDXML2CMLObject {
 		    		 throw new RuntimeException("Only one page allowed");
 		    	 }
 		    	 pageCount++;
+				 page = (CDXObject) cdxml.getChildElements().get(0);
 		     } else if (child instanceof CDXML) {
 		    	LOG.error("**************Cannot process nested CDXML");
 			 } else  if (child.getLocalName().equals("object")) {
@@ -162,20 +167,20 @@ public class CDXML2CMLObject {
 				 throw new RuntimeException("Unexpected CDXML child: "+child.getLocalName());
 		     }
 		 }
-		 // find a single page
-		 page = null;
-		 for (int i = 0; i < cdxml.getChildElements().size(); i++) {
-			 CDXObject obj = (CDXObject) cdxml.getChildElements().get(i);
-			 if (obj instanceof CDXPage) {
-				 page = (CDXObject) cdxml.getChildElements().get(0);
-			 } else if (obj instanceof CDXFontTable) {
-				 // skip
-			 } else if (obj instanceof CDXColorTable) {
-				 // skip
-			 } else {
-				LOG.warn("Skipped non-page child of CDXML: "+obj);
-			 }
-		 }
+//		 // find a single page
+//		 page = null;
+//		 for (int i = 0; i < cdxml.getChildElements().size(); i++) {
+//			 CDXObject obj = (CDXObject) cdxml.getChildElements().get(i);
+//			 if (obj instanceof CDXPage) {
+//				 page = (CDXObject) cdxml.getChildElements().get(0);
+//			 } else if (obj instanceof CDXFontTable) {
+//				 // skip
+//			 } else if (obj instanceof CDXColorTable) {
+//				 // skip
+//			 } else {
+//				LOG.warn("Skipped non-page child of CDXML: "+obj);
+//			 }
+//		 }
 		 if (page != null) {
 		     tidyToCML();
 		 } else {
@@ -193,35 +198,70 @@ public class CDXML2CMLObject {
 		// tidying
 		CDXML2CMLObject.addLabelsToMolecules(cmlCml);
 		addHydrogenAtomsToMolecules();
-		this.processReactions();
+//		this.processReactions();
+		this.processReactionsNew();
 		cleanRedundantHierarchy();
 		transformRGroups();
 		addLabelsToAtoms();
 		 
+		removeCDXAttributes = true;
 		if (removeCDXAttributes) {
 			removeCDXAttributes();
 		}
 		if (cleanMolecules) {
 			flattenGroupingElements();
-			removeAtomsWithChildren();
+			removeAtomsWithChildrenExcludingLabels();
 		    removeAtomsWithoutElementTypeOrCoordinates();
 			cleanExternalConnectionPoints();
-			removeLabelsReactionsAndReactionSchemes();
 		}
 		flipAndRescaleMolecules();
 		if (LOG.isDebugEnabled()) {
 			CMLUtil.debug(cmlCml, "==cmlCML==");
 		}
+		ensureXMLIds(cmlCml);
+		groupMultipleMolecules();
+		removeDeadCDXObjects();
 	}
     
+	private void removeDeadCDXObjects() {
+		Nodes groups = cmlCml.query("//*[local-name()='group' and (.='')]");
+		for (int i = 0; i < groups.size(); i++) {
+			groups.get(i).detach();
+		}
+	}
+
+	private void groupMultipleMolecules() {
+		Nodes molecules = cmlCml.query("cml:molecule", CMLConstants.CML_XPATH);
+		if (molecules.size() > 1) {
+			CMLMoleculeList moleculeList = new CMLMoleculeList();
+			for (int i = 0; i < molecules.size(); i++) {
+				CMLMolecule molecule = (CMLMolecule) molecules.get(i);
+				molecule.detach();
+				moleculeList.addMolecule(molecule);
+			}
+			cmlCml.appendChild(moleculeList);
+		}
+	}
+
+	private void ensureXMLIds(CMLCml cmlCml) {
+		Nodes ids = cmlCml.query("//@id");
+		for (int i = 0; i < ids.size(); i++) {
+			Attribute idAtt = (Attribute) ids.get(i);
+			String value = idAtt.getValue();
+			value = CDXUtil.ensureXMLID(value);
+			idAtt.setValue(value);
+		}
+	}
+
 	/**
 	 * @param nodes
 	 */
 	private void flattenGroupingElement(Nodes nodes) {
 		for (int i = 0; i < nodes.size(); i++) {
 			 CMLElement element = (CMLElement)nodes.get(i);
-             Element parent = (Element) element.getParent(); 
-			 CMLUtil.transferChildren(element, parent);
+			 CMLUtilNew.transferChildrenToParent(element);
+//             Element parent = (Element) element.getParent(); 
+//			 CMLUtil.transferChildren(element, parent);
 			 element.detach();
 		 }
 	}
@@ -229,11 +269,12 @@ public class CDXML2CMLObject {
      
      /** child elements screw up some CML viewers
       */
-     private void removeAtomsWithChildren() {
+     private void removeAtomsWithChildrenExcludingLabels() {
     	 if (cmlCml != null) {
-	    	 Nodes atoms = cmlCml.query("//cml:atom/*", CML_XPATH);
+	    	 Nodes atoms = cmlCml.query("//cml:atom/*[not(local-name()='label')]", CML_XPATH);
 	    	 for (int i = 0; i < atoms.size(); i++) {
-	    		 atoms.get(i).detach();
+	    		 CMLAtom atom = (CMLAtom) atoms.get(i);
+	    		 atom.detach();
 	    	 }
     	 }
      }
@@ -246,21 +287,6 @@ public class CDXML2CMLObject {
 	    			 "//cml:atom[not(@elementType) or not(@x2) or not(@y2)]", CML_XPATH);
 	    	 for (int i = 0; i < atoms.size(); i++) {
 	    		 atoms.get(i).detach();
-	    	 }
-    	 }
-     }
-     
- 	/** top level elements screw some viewers
- 	 */
-     private void removeLabelsReactionsAndReactionSchemes() {
-    	 if (cmlCml != null) {
-	    	 Nodes nodes = cmlCml.query(
-	    			 "//cml:label | " +
-	    			 "//cml:reaction |" +
-	    			 "//cml:reactionScheme" +
-	    			 "", CML_XPATH);
-	    	 for (int i = 0; i < nodes.size(); i++) {
-	    		 nodes.get(i).detach();
 	    	 }
     	 }
      }
@@ -308,15 +334,30 @@ public class CDXML2CMLObject {
     	 }
      }
      
+     private void processReactionsNew() {
+    	 Nodes reactionNodes = cmlCml.query("//cml:reaction", CML_XPATH);
+    	 for (int i = 0; i < reactionNodes.size(); i++) {
+    		 CMLReaction reaction = (CMLReaction) reactionNodes.get(i);
+    		 CDXReactionStep.processReactionStep(reaction);
+    	 }
+     }
+     
      private void addHydrogenAtomsToMolecules() {
     	 Nodes nodes = cmlCml.query("//cml:molecule", CML_XPATH);
     	 for (int i = 0; i < nodes.size(); i++) {
-    		 MoleculeTool.getOrCreateTool((CMLMolecule)nodes.get(i)).
-    		     adjustHydrogenCountsToValency(HydrogenControl.REPLACE_HYDROGEN_COUNT);
+    		 CMLMolecule molecule = (CMLMolecule)nodes.get(i);
+    		 addHydrogens(molecule);
     	 }
      }
 
-     /**
+    private void addHydrogens(CMLMolecule molecule) {
+		MoleculeTool moleculeTool = MoleculeTool.getOrCreateTool(molecule);
+	    moleculeTool.adjustHydrogenCountsToValency(HydrogenControl.REPLACE_HYDROGEN_COUNT);
+        GeometryTool geometryTool = new GeometryTool(molecule);
+    	geometryTool.addCalculatedCoordinatesForHydrogens(CoordinateType.TWOD, HydrogenControl.USE_EXPLICIT_HYDROGENS);
+	}
+
+	/**
       * "carbons" with label children are actually not C.
       * Try to guess them
       */
@@ -413,8 +454,7 @@ public class CDXML2CMLObject {
     		 nodes.get(i).detach();
     	 }
     	 // put top molecules under moleculeList
-    	 nodes = cmlCml.query(
-    			 "./cml:molecule", CML_XPATH);
+    	 nodes = cmlCml.query("./cml:molecule", CML_XPATH);
     	 if (nodes.size() > 1) {
 	    	 CMLMoleculeList moleculeList = new CMLMoleculeList();
 	    	 cmlCml.appendChild(moleculeList);
@@ -673,7 +713,7 @@ public class CDXML2CMLObject {
 						label.addAttribute(new Attribute(CDX_YDELTA, CDX_NAMESPACE, ""+yBelow));
 						labelList.add(label);
 					} else {
-						LOG.warn("MISSED");
+//						LOG.warn("BoundingBox problem for vertical labels");
 					}
 				} else {
 				}
@@ -704,7 +744,7 @@ public class CDXML2CMLObject {
 		String boundingBoxS = element.getAttributeValue(ATT_BOUNDING_BOX, CDX_NAMESPACE);
 		Real2Range r2r = null;
 		if (boundingBoxS != null) {
-			double[] bb = Util.splitToDoubleArray(boundingBoxS, S_SPACE);
+			double[] bb = org.xmlcml.euclid.Util.splitToDoubleArray(boundingBoxS, S_SPACE);
 			r2r = new Real2Range(
 				new RealRange(bb[0], bb[2], true),
 				new RealRange(bb[1], bb[3], true));

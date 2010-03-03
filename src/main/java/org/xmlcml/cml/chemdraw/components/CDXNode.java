@@ -3,13 +3,11 @@ package org.xmlcml.cml.chemdraw.components;
 
 import nu.xom.Elements;
 import nu.xom.Node;
-import nu.xom.Nodes;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLUtil;
 import org.xmlcml.cml.element.CMLAtom;
-import org.xmlcml.cml.element.CMLLabel;
 import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.molutil.ChemicalElement;
 
@@ -27,11 +25,6 @@ public class CDXNode extends CDXObject {
     public final static String NAME = "Node";
     public final static String CDXNAME = "n";
 
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
     int DEFAULTELEMENT = 6;
     int element = -999;    // the default
     int charge = 0;
@@ -40,7 +33,6 @@ public class CDXNode extends CDXObject {
 
     public CDXNode() {
         super(CODE, NAME, CDXNAME);
-        setCodeName();
 	}
     /**
      * copy node .
@@ -219,13 +211,17 @@ The node is treated as Element type.
         if (childs.size() ==  0) {
         	//
         } else if (childs.size() == 1 && childs.get(0) instanceof CDXText) {
-    		processTextChild(atom, childs);
+    		processTextChild(atom, (CDXText) childs.get(0));
         } else if (childs.size() == 1) {
         	LOG.error("Unprocessed element: "+childs.get(0).getLocalName());
         } else if (childs.size() == 2 &&
     		childs.get(0) instanceof CDXText &&
     		childs.get(1) instanceof CDXFragment) {
-        	processSubFragment(atom, childs);
+        	processSubFragment(atom, (CDXText)childs.get(0), (CDXFragment) childs.get(1));
+        } else if (childs.size() == 2 &&
+    		childs.get(1) instanceof CDXText &&
+    		childs.get(0) instanceof CDXFragment) {
+        	processSubFragment(atom, (CDXText)childs.get(1), (CDXFragment) childs.get(0));
     	} else {
 //    		LOG.warn("*************unusual node children");
 //    		CMLUtil.debug(this);
@@ -248,7 +244,7 @@ The node is treated as Element type.
 	 * @param childs
 	 * @throws RuntimeException
 	 */
-	private void processSubFragment(CMLAtom atom, Elements childs) throws RuntimeException {
+	private void processSubFragment(CMLAtom atom, CDXText text, CDXFragment fragment) throws RuntimeException {
 		//          <n Z="134" p="203.5019 88.4499" NodeType="Fragment" AS="N" id="32">
 		//    	      <t temp_Text="[[0 3 96 8 3]]OEt" LabelAlignment="Left" p="200.3769 91.5999" BoundingBox="200.3769 85.2999 214.1269 91.6999" LabelJustification="Left" id="0"/>
 		//     	      <fragment BoundingBox="21.7626 -207.9003 225.6203 89.8167" id="157">
@@ -265,13 +261,9 @@ The node is treated as Element type.
 		//        	</n>
 		//     	    <b Z="135" B="28" E="32" BS="N" id="33"/>
 		        	
-		CMLLabel label = new CMLLabel();
-		CDXText text = (CDXText)childs.get(0);
-		label.setCMLValue(text.getLabelText());
-		text.copyAttributesTo(label);
-		atom.addLabel(label);
+		text.addLabelToCMLElement(atom);
 		CMLMolecule subMolecule = new CMLMolecule();
-		((CDXFragment) childs.get(1)).process2CML(subMolecule);
+		fragment.process2CML(subMolecule);
 		atom.appendChild(subMolecule);
 	}
 
@@ -280,47 +272,29 @@ The node is treated as Element type.
 	 * @param childs
 	 * @throws RuntimeException
 	 */
-	private void processTextChild(CMLAtom atom, Elements childs) throws RuntimeException {
-		CDXText text = (CDXText) childs.get(0);
-		String vv = text.getLabelText();
-		if (vv != null && !vv.trim().equals(S_EMPTY)) {
+	private void processTextChild(CMLAtom atom, CDXText text) throws RuntimeException {
+		String labelText = text.getLabelTextFromTextTempAndSquareBrackets();
+		if (labelText != null && !labelText.trim().equals(S_EMPTY)) {
 			String eltype = atom.getElementType();
-			if (eltype.equals(vv)) {
+			if (labelText.equals(eltype) || 
+				("H".equals(eltype) && labelText.equals("D"))
+				) {
 				// matched
 	        } else if ("GenericNickname".equals(this.getAttributeValue("NodeType"))) {
 //	        	<n Z="348" p="149.6459 89.2224" NodeType="GenericNickname" AS="U" id="279">
 //	        	  <t temp_Text="[[0 3 96 8 3]]R" p="146.5209 92.3724" BoundingBox="146.5209 86.0724 152.3209 92.3724" LabelJustification="Left" id="0"/>
 //	        	</n>
-				CMLLabel label = new CMLLabel();
-				label.setCMLValue(vv);
-				atom.addLabel(label);
-			} else if (ChemicalElement.getChemicalElement(vv) != null) {
+	        	text.addLabelToCMLElement(atom);
+			} else if (ChemicalElement.getChemicalElement(labelText) != null) {
 				CMLUtil.debug(this, "CDXNODE1");
-				throw new RuntimeException("Mismatched elements: "+vv+"/"+eltype);
+				throw new RuntimeException("Mismatched elements: "+labelText+"/"+eltype);
 			} else {
-				CMLLabel label = new CMLLabel();
-				label.setCMLValue(vv);
-				atom.addLabel(label);
+//				LOG.info("ADDED label to atom: "+atom.getId());
+	        	text.addLabelToCMLElement(atom);
 			}
 		}
 	}
-	    
-	/**
-	 * @param node
-	 * @return label
-	 * @throws RuntimeException
-	 */
-	CMLLabel createLabelFromText() {
-		CMLLabel label = null;
-		Nodes texts = this.query("./t[@"+TEMP_TEXT+"]");
-		if (texts.size() == 0) {
-		} else if (texts.size() > 1) {
-			throw new RuntimeException("Too many texts");
-		} else {
-			label = ((CDXText)texts.get(0)).createLabelFromText(); 
-		}
-		return label;
-	}
+	
 
 };
 

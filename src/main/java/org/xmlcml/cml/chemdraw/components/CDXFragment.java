@@ -8,11 +8,15 @@ import nu.xom.Nodes;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.xmlcml.cml.base.CMLConstants;
 import org.xmlcml.cml.chemdraw.CDX2CDXML;
 import org.xmlcml.cml.element.CMLAtom;
 import org.xmlcml.cml.element.CMLBond;
 import org.xmlcml.cml.element.CMLBondStereo;
+import org.xmlcml.cml.element.CMLLabel;
 import org.xmlcml.cml.element.CMLMolecule;
+import org.xmlcml.euclid.Real2;
+import org.xmlcml.euclid.Vector2;
 /**
  * 
  * @author pm286
@@ -28,15 +32,10 @@ public class CDXFragment extends CDXObject {
     public final static int CODE = 0x8003;
     public final static String NAME = "Fragment";
     public final static String CDXNAME = "fragment";
-
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
+	private static final double SCALE_GROUPS = 0.3;
 
     public CDXFragment() {
         super(CODE, NAME, CDXNAME);
-        setCodeName();
 	}
 	
     /**
@@ -54,12 +53,6 @@ public class CDXFragment extends CDXObject {
     public CDXFragment(CDXFragment old) {
     	super(old);
     }
-
-	protected CDXFragment(CDX2CDXML cdxDoc) {
-		super(CDXNAME);
-        setCodeName();
-	}
-
 
     
 	void process2CML(CMLMolecule molecule) {
@@ -102,10 +95,10 @@ public class CDXFragment extends CDXObject {
 	    }
 	   	// flatten subgroups
 	   	flattenSubGroups(molecule);
-	   	
 	}
 
 	void flattenSubGroups(CMLMolecule molecule) {
+
 //	    <atom id="a28" elementType="C" x2="192.9371" y2="82.3503"/>
 //	    <atom id="a30" elementType="O" hydrogenCount="0" x2="192.9371" y2="70.1511"/>
 //	    <atom id="a32" elementType="C" x2="203.5019" y2="88.4499" cdx:NodeType="Fragment">
@@ -144,26 +137,13 @@ public class CDXFragment extends CDXObject {
 			}
 			List<CMLAtom> parentReplacedAtoms = replacedAtom.getLigandAtoms();
 			CMLAtom replacedAtomParent = null;
-//			CMLBond replacedBond = null;
-//			Real2 replacedVector = null;
 			if (parentReplacedAtoms.size() == 0) {
-//				throw new RuntimeException("too few ligands of replaced atom");
 				LOG.warn("too few ligands of replaced atom");
 			} else if (parentReplacedAtoms.size() > 1) {
 				replacedAtomParent = parentReplacedAtoms.get(0);
-//				for (CMLAtom parentReplacedAtom : parentReplacedAtoms) {
-//					LOG.info("REPLACE "+parentReplacedAtom.getId());
-//				}
-//				throw new RuntimeException("too many ligands of replaced atom");
 				LOG.warn("too many ligands of replaced atom: "+replacedAtom.getId());
 			} else {
 				replacedAtomParent = parentReplacedAtoms.get(0);
-//				Real2 xy1 = replacedAtom.getXY2();
-//				Real2 xy2 = replacedAtomParent.getXY2();
-//				if (xy1 != null && xy2 != null) {
-//					replacedVector = xy1.subtract(xy2);
-//					replacedBond = replacedAtom.getLigandBonds().get(0);
-//				}
 			}
 			
 			CMLMolecule subMolecule = (CMLMolecule) subMolecules.get(0);
@@ -173,7 +153,6 @@ public class CDXFragment extends CDXObject {
 			if (atoms.size() == 0) {
 				LOG.warn("too few extension points");
 			} else if (atoms.size() > 1) {
-//				throw new RuntimeException("too many extension points");
 				LOG.warn("too many extension points: "+atoms.size());
 			} 
 			if (atoms.size() > 0) {
@@ -183,14 +162,6 @@ public class CDXFragment extends CDXObject {
 					throw new RuntimeException("too few/many ligands of extension points");
 				}
 				CMLAtom replacingAtom = extensionLigandAtoms.get(0);
-//				Real2 xy1 = replacingAtom.getXY2();
-//				Real2 xy2 = extensionAtom.getXY2();
-//				Real2 extensionVector = null;
-//				if (xy1 != null && xy2 != null) {
-//					extensionVector = xy1.subtract(xy2);
-//				}
-				// transform here if necessary
-				
 				replaceAtomsAndBonds(molecule, replacedAtom, replacedAtomParent, subMolecule, extensionAtom, replacingAtom);
 			}
 		}
@@ -198,6 +169,39 @@ public class CDXFragment extends CDXObject {
 	
 	private void replaceAtomsAndBonds(CMLMolecule molecule, CMLAtom replacedAtom, CMLAtom replacedAtomParent,
 			CMLMolecule subMolecule, CMLAtom extensionAtom, CMLAtom replacingAtom) {
+		moveLabelFromStaticAtomToGroup(replacedAtom, replacingAtom);
+		scaleAndMoveGroup(replacedAtomParent, subMolecule, replacingAtom);
+		CMLBond replacedBond = transferAtomsAndBondsFromGroup(molecule,
+				replacedAtom, replacedAtomParent, subMolecule, extensionAtom,
+				replacingAtom);
+		createAndAddNewBond(molecule, replacedAtomParent, replacingAtom,
+				replacedBond);
+	}
+
+	private void createAndAddNewBond(CMLMolecule molecule,
+			CMLAtom replacedAtomParent, CMLAtom replacingAtom,
+			CMLBond replacedBond) {
+		if (replacedBond != null) {
+			CMLBondStereo bondStereo = replacedBond.getBondStereo();
+			String order = replacedBond.getOrder();
+			
+			if (replacedAtomParent != null) {
+		//		make new bond and copy properties
+				CMLBond newBond = new CMLBond();
+				newBond.setAtomRefs2(new String[]{replacedAtomParent.getId(), replacingAtom.getId()});
+				if (bondStereo != null) {
+					newBond.addBondStereo(bondStereo);
+				}
+				newBond.setOrder(order);
+				molecule.addBond(newBond);
+			}
+		}
+	}
+
+	private CMLBond transferAtomsAndBondsFromGroup(CMLMolecule molecule,
+			CMLAtom replacedAtom, CMLAtom replacedAtomParent,
+			CMLMolecule subMolecule, CMLAtom extensionAtom,
+			CMLAtom replacingAtom) {
 		CMLBond replacedBond = molecule.getBond(replacedAtom, replacedAtomParent);
 		CMLBond extensionBond = subMolecule.getBond(extensionAtom, replacingAtom);
 		// delete everything from subMolecule
@@ -228,18 +232,31 @@ public class CDXFragment extends CDXObject {
 			}
 			molecule.addBond(subMoleculeBond);
 		}
-		
-		CMLBondStereo bondStereo = replacedBond.getBondStereo();
-		String order = replacedBond.getOrder();
+		return replacedBond;
+	}
+
+	private void moveLabelFromStaticAtomToGroup(CMLAtom replacedAtom,
+			CMLAtom replacingAtom) {
+		Nodes labelNodes = replacedAtom.query("./cml:label", CMLConstants.CML_XPATH);
+		CMLLabel label = (labelNodes.size() >= 1) ? (CMLLabel) labelNodes.get(0) : null;
+		if (label != null) {
+			label.detach();
+			replacingAtom.addLabel(label);
+		}
+	}
+
+	private void scaleAndMoveGroup(CMLAtom replacedAtomParent,
+			CMLMolecule subMolecule, CMLAtom replacingAtom) {
 		if (replacedAtomParent != null) {
-	//		make new bond and copy properties
-			CMLBond newBond = new CMLBond();
-			newBond.setAtomRefs2(new String[]{replacedAtomParent.getId(), replacingAtom.getId()});
-			if (bondStereo != null) {
-				newBond.addBondStereo(bondStereo);
-			}
-			newBond.setOrder(order);
-			molecule.addBond(newBond);
+			Real2 replacedXY2 = replacedAtomParent.getXY2();
+			Real2 replacingXY2 = replacingAtom.getXY2();
+			Vector2 bondVector = new Vector2(replacedXY2.subtract(replacingXY2));
+			bondVector = new Vector2(bondVector.multiplyBy(SCALE_GROUPS));
+			Real2 newXY2 = replacingXY2.plus(bondVector);
+			subMolecule.multiply2DCoordsBy(SCALE_GROUPS);
+			Real2 newReplacingXY2 = replacingAtom.getXY2();
+			Vector2 translateXY2 = new Vector2(newXY2.subtract(newReplacingXY2));
+			subMolecule.translate2D(translateXY2);
 		}
 	}
 };

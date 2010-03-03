@@ -32,15 +32,9 @@ public class CDXBracketedGroup extends CDXObject {
   FooterPosition="35.9999"
   id="156">
 --*/
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
 
 	public CDXBracketedGroup() {
-		super(CDXNAME);
-        setCodeName();
+        super(CODE, NAME, CDXNAME);
 	}
 
     /**

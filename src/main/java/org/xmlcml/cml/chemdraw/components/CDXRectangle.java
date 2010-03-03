@@ -112,113 +112,17 @@ public class CDXRectangle implements CDXConstants {
         yy1 = ((int) (10000. * yy1)) / 10000.;
 	}
 
-//	private void setFloatValue(String rectS) throws IllegalArgumentException {
-//		StringTokenizer st = new StringTokenizer(rectS);
-//		if (st.countTokens() != 4) {
-//			throw new IllegalArgumentException("Bad rectangle string: "+rectS);
-//		}
-//		try {
-//			xx0 = new Double(st.nextToken()).doubleValue();
-//			yy0 = new Double(st.nextToken()).doubleValue();
-//			xx1 = new Double(st.nextToken()).doubleValue();
-//			yy1 = new Double(st.nextToken()).doubleValue();
-//            x0 = (int) (xx0 / SCALE2D);
-//            y0 = (int) (yy0 / SCALE2D);
-//            x1 = (int) (xx1 / SCALE2D);
-//            y1 = (int) (yy1 / SCALE2D);
-//		} catch (NumberFormatException nfe) {
-//			throw new IllegalArgumentException("Bad rectangle string: "+rectS);
-//		}
-//	}
-
 	String getAttributeValue() {
 		return ""
-            +Util.trimFloat(xx0)+" "+Util.trimFloat(yy0)+" "
-            +Util.trimFloat(xx1)+" "+Util.trimFloat(yy1);
+            +CDXUtil.trimFloat(xx0)+" "+CDXUtil.trimFloat(yy0)+" "
+            +CDXUtil.trimFloat(xx1)+" "+CDXUtil.trimFloat(yy1);
 	}
-
-///** rectangle with x0 <= x1, y0 <= y1	*/
-//	private CDXRectangle getNormalizedRectangle() {
-//		return new CDXRectangle(
-//			Math.min(x0, x1), Math.max(x0, x1),
-//			Math.min(y0, y1), Math.max(y0, y1));
-//	}
-
-//	private CDXPoint2D getCentroid() {
-//		return new CDXPoint2D((x0 + x1)/2, (y0 + y1)/2);
-//	}
-
-/* inside includes "on the edge" */
-//	private boolean isInside(CDXPoint2D pt) {
-//		CDXRectangle norm = getNormalizedRectangle();
-//		return
-//			pt.x >= norm.x0 && pt.x <= norm.x1 &&
-//			pt.y >= norm.y0 && pt.y <= norm.y1;
-//	}
-
-/* includes "on the edge"; returns null if no intersection */
-//	private CDXRectangle intersection(CDXRectangle r) {
-//		CDXRectangle norm = getNormalizedRectangle();
-//		CDXRectangle rNorm = r.getNormalizedRectangle();
-//		int x0max = Math.max(norm.x0, rNorm.x0);
-//		int x1min = Math.min(norm.x1, rNorm.x1);
-//		int y0max = Math.max(norm.y0, rNorm.y0);
-//		int y1min = Math.min(norm.y1, rNorm.y1);
-//		if (x0max > x1min || y0max > y1min) return null;
-//		return new CDXRectangle(x0max, x1min, y0max, y1min);
-//	}
-
-/* is another Rectangle in this direction? if intersects()
-return false. Direction can be combinations (ANYWHERE returns
-true if not intersects()) */
-//	private boolean isInDirection(CDXRectangle r, int direction) {
-//		CDXRectangle norm = getNormalizedRectangle();
-//		CDXRectangle rNorm = r.getNormalizedRectangle();
-//		if (norm.intersection(rNorm) != null) return false;
-//		if ((direction & ANYWHERE) == ANYWHERE) {
-//			LOG.warn("ANYWHERE NYI, sorry");
-//			return false;
-//		} else if ((direction & LEFT) == LEFT) {
-////			double
-//		}
-//		return true;
-//	}
-
-/* distance to rectangle in given direction; either X or Y
-(not cartesian). if they have common edges, returns 0; if greater
-intersection returns -1. Negative distances represent
-no complete rectangle in that direction*/
-//	private int distance(CDXRectangle r, int direction) {
-//		CDXRectangle norm = getNormalizedRectangle();
-//		CDXRectangle rNorm = r.getNormalizedRectangle();
-//		if (direction == LEFT) {
-//			return norm.x0 - rNorm.x1;
-//		} else if (direction == RIGHT) {
-//			return rNorm.x0 - norm.x1;
-//		} else if (direction == ABOVE) {
-//			return norm.y0 - rNorm.y1;
-//		} else if (direction == BELOW) {
-//			return rNorm.y0 - norm.y1;
-//		} else {
-//			LOG.warn("Unknown direction");
-//			return -1;
-//		}
-//	}
-
-/* some bounding boxes are identical. We can do integer comparison */
-//	private boolean equals(CDXRectangle r) {
-//		CDXRectangle norm = getNormalizedRectangle();
-//		CDXRectangle rNorm = r.getNormalizedRectangle();
-//		return
-//			rNorm.x0 == norm.x0 && rNorm.x1 == norm.x1 &&
-//			rNorm.y0 == norm.y0 && rNorm.y1 == norm.y1;
-//	}
 
 	/**
 	 * @return s
 	 */
     public String toString() {
-        return ""+Util.trimFloat(xx0)+"/"+Util.trimFloat(yy0)+","+Util.trimFloat(xx1)+"/"+Util.trimFloat(yy1);
+        return ""+CDXUtil.trimFloat(xx0)+"/"+CDXUtil.trimFloat(yy0)+","+CDXUtil.trimFloat(xx1)+"/"+CDXUtil.trimFloat(yy1);
     }
 
  };

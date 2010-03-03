@@ -20,7 +20,6 @@ import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.base.CMLUtil;
 import org.xmlcml.cml.chemdraw.CDXConstants;
 import org.xmlcml.cml.chemdraw.CDXML2CMLObject;
-import org.xmlcml.cml.element.CMLLabel;
 import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.cml.element.CMLReaction;
 
@@ -113,6 +112,8 @@ TLC Lane 	0x8024 	kCDXObj_TLCLane 	tlclane
 A logical object representing a series of spots arranged vertically on a TLC plate.
 TLC Spot 	0x8025 	kCDXObj_TLCSpot 	tlcspot
 A single spot on a TLC plate.
+Arrow 0x8027 kCDXObj_Arrow arrow 
+A line or arc, optionally with arrowheads on one or both ends 
 Splitter 	0x8015 	kCDXObj_Splitter 	splitter
 An object that divides the page into horizontal bands
 Chemical Property 	0x8026 	kCDXObj_ChemicalProperty 	chemicalproperty
@@ -197,6 +198,8 @@ An object used to indicate that its containing object has chemical meaning that 
     	kCDXObj_TLCPlate,					// 0x8023
     	kCDXObj_TLCLane,					// 0x8024
     	kCDXObj_TLCSpot,					// 0x8025
+    	kCDXObj_ChemicalProperty,		    // 0x8026  // ???
+    	kCDXObj_Arrow,   					// 0x8027
  */            
             makeObject(new CDXObject(0x8010, "Spectrum", "spectrum"));
             makeObject(0x8011, new CDXObjectTag());			//0x8011
@@ -206,16 +209,17 @@ An object used to indicate that its containing object has chemical meaning that 
             makeObject(new CDXObject(0x8015, "Splitter", "splitter"));
             makeObject(new CDXObject(0x8016, "Table", "table"));
             makeObject(0x8017, new CDXBracketedGroup());
-            makeObject(new CDXObject(0x8018, "BracketAttachment", "bracketattachment"));
+            makeObject(0x8018, new CDXBracketAttachment());
             makeObject(new CDXObject(0x8019, "CrossingBond", "crossingbond"));
 
             makeObject(new CDXObject(0x8020, "Border", "border"));
-            makeObject(new CDXObject(0x8021, "Geometry", "geometry"));
+            makeObject(0x8021, new CDXGeometry());
             makeObject(new CDXObject(0x8022, "Constraint", "constraint"));
             makeObject(new CDXObject(0x8023, "TLCPlate", "tlcplate"));
             makeObject(new CDXObject(0x8024, "TLCLane", "tlclane"));
             makeObject(new CDXObject(0x8025, "TLCSpot", "tlcspot"));
             makeObject(new CDXObject(0x8026, "ChemicalProperty", "chemicalproperty"));
+            makeObject(0x8027, new CDXArrow());
             
             makeObject(0x0100, new CDXFontTable());
             makeObject(0x0300, new CDXColorTable());
@@ -237,8 +241,8 @@ An object used to indicate that its containing object has chemical meaning that 
 
 	private static CDXObject getObject(int code) {
         CDXObject cdxObject = objTable.get(""+code);
-        LOG.debug("name: "+cdxObject.codeName.cdxName);
-        if (cdxObject.codeName.cdxName.equals("unknown")) {
+        LOG.debug("name: "+((cdxObject == null) ? null : cdxObject.codeName.cdxName));
+        if (cdxObject == null || cdxObject.codeName.cdxName.equals("unknown")) {
         	LOG.debug("unknown: "+code+"/"+Integer.toHexString(code));
         }
         return (cdxObject == null) ? cdxObject: cdxObject;
@@ -257,7 +261,9 @@ An object used to indicate that its containing object has chemical meaning that 
     private static void makeObject(int code, CDXObject obj) {
         makeObject(obj);
         if (code != obj.codeName.code) {
-            LOG.error("Codes do not agree: "+code+"/"+Integer.toHexString(code)+"/"+obj.codeName.code+"/"+obj.getClass().getName());
+        	new Exception().printStackTrace();
+            LOG.error("Codes do not agree: "+code+"/"+Integer.toHexString(code)+" != "
+            		+obj.codeName.code+"/"+Integer.toHexString(obj.codeName.code)+"("+obj.getClass().getName()+")");
         }
     };
 
@@ -266,11 +272,7 @@ An object used to indicate that its containing object has chemical meaning that 
     static String CDXNAME = "unknown";
 
     protected CodeName codeName;
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
+    
 // XML attributes
 	protected String id;
 	protected BoundingBox bbox;
@@ -279,37 +281,15 @@ An object used to indicate that its containing object has chemical meaning that 
 //    private int z = -99999999;
     private Vector<CDXProperty> propVector;
 
-	public CDXObject() {
-		this("object");
-		init();
-	}
-	
-	@SuppressWarnings("unused")
+//	@SuppressWarnings("unused")
 	private CDXML2CMLObject cdxmlObject = null;
 
     // only used for representatives
     protected CDXObject(int code, String name, String cdxName) {
-    	this(cdxName);
+    	super(cdxName);
         codeName = new CodeName(code, name, cdxName);
     }
 
-//    // only used for representatives
-//	protected CDXObject(CodeName codeName) {
-//        this(codeName.code, codeName.name, codeName.cdxName);
-//    }
-
-    // make new object from code in CDX file
-	protected CDXObject(int code) {
-		this(CDXObject.getObject(code), code);
-		init();
-	}
-
-    // uses representative to populate codename data
-	private CDXObject(CDXObject obj, double junk) {
-		this(obj.codeName.cdxName);
-        codeName = new CodeName(obj.codeName.code, obj.codeName.name, obj.codeName.cdxName);
-	}
-	
     /**
      * copy constructor. copies attributes, children and properties using the
      * copyFoo() routines (q.v.)
@@ -317,20 +297,22 @@ An object used to indicate that its containing object has chemical meaning that 
      * @param element
      */
     public CDXObject(CDXObject element) {
-        this(element.getLocalName());
+        super(element.getLocalName());
+        this.codeName = element.codeName;
         CMLElement.copyAttributesFromTo(element, this);
         CMLElement.copyChildrenFromTo(element, this);
     }
 
-	protected CDXObject (String tagName) {
+    /** only used for trivial objects (font, s, color)
+     * 
+     * @param tagName
+     */
+	private CDXObject (String tagName) {
 		super(tagName);
-        LOG.debug("Made CDXObject: "+this.getClass().getName());
         init();
 	}
 
 	private void init() {
-//        style = new Style();
-        setCodeName();
     }
 
 	static CDXObject newCDXObject(int code) {
@@ -339,8 +321,12 @@ An object used to indicate that its containing object has chemical meaning that 
         String name = (refObj == null) ? "object" : refObj.codeName.cdxName;
 		if (false) {
             ;
+		} else if (code == CDXArrow.CODE) {
+			obj = new CDXArrow();
 		} else if (code == CDXBond.CODE) {
 			obj = new CDXBond();
+		} else if (code == CDXBracketAttachment.CODE) {
+			obj = new CDXBracketAttachment();
 		} else if (code == CDXBracketedGroup.CODE) {
 			obj = new CDXBracketedGroup();
 		} else if (code == CDXColorTable.CODE) {
@@ -353,6 +339,8 @@ An object used to indicate that its containing object has chemical meaning that 
 			obj = new CDXFontTable();
 		} else if (code == CDXFragment.CODE) {
 			obj = new CDXFragment();
+		} else if (code == CDXGeometry.CODE) {
+			obj = new CDXGeometry();
 		} else if (code == CDXGraphic.CODE) {
 			obj = new CDXGraphic();
 		} else if (code == CDXGroup.CODE) {
@@ -369,15 +357,9 @@ An object used to indicate that its containing object has chemical meaning that 
 			obj = new CDXReactionStep();
 		} else if (code == CDXText.CODE) {
 			obj = new CDXText();
-		} else if (name.equals("unknown")) {
-			LOG.warn("unknown: "+code+"/"+Integer.toHexString(code));
-//			obj = new CDXObject(name);
-		} else if (!name.equals("object")) {
-			LOG.warn("generic object: "+code+"/"+Integer.toHexString(code));
-			obj = new CDXObject(name);
 		} else {
 			obj = new CDXObject(name);
-            LOG.error("Unknown CDX name, code = "+name+", "+code);
+            throw new RuntimeException("Unknown CDX name, code = "+name+", "+code+"/"+Integer.toHexString(code));
         }
         return obj;
 	}
@@ -484,7 +466,7 @@ An object used to indicate that its containing object has chemical meaning that 
 // this really requires the properties to be objects...
                 if (false) {
                     ;
-                } else if (name.equals("BoundingBox")) {
+                } else if (name.equals(BoundingBox.TAG)) {
                     processBoundingBox(value);
                 } else if (name.equals("p")) {
                     processPoint(value);
@@ -513,7 +495,24 @@ An object used to indicate that its containing object has chemical meaning that 
         this.removeAttribute("fontStyle");
         this.removeAttribute("LabelStyle");
         this.removeAttribute("CaptionStyle");
+        cleanBugs();
     }
+
+	private void cleanBugs() {
+//		Nodes cdxNodes = this.query("//*[namespace-uri()='"+CDXConstants.CDX_NAMESPACE+"']");
+		Nodes cdxNodes = this.query("//*[local-name()='"+CDXGeometry.CDXNAME+"']");
+		for (int i = 0; i < cdxNodes.size(); i++) {
+			if (cdxNodes.get(i) instanceof CDXObject) {
+				((CDXObject) cdxNodes.get(i)).fixBugs();
+			}
+		}
+	}
+
+	/** subclass when required
+	 * 
+	 */
+	protected void fixBugs() {
+	}
 
 	private void processBoundingBox(String value) {
         BoundingBox bbox = new BoundingBox();
@@ -581,31 +580,7 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
             int color = temp[4];
             CDXObject s = new CDXObject("s");
             this.appendChild(s);
-            CDXProperty fontProp = CDXProperty.createPropertyByCDXName("fontindex");
-            fontProp.setNames("font");
-            s.addProperty(fontProp);
-            fontProp.setValue(font);
-            s.setAttribute("font", ""+font);
-            if (face != 0) {
-                CDXProperty faceProp = CDXProperty.createPropertyByCDXName("fontface");
-                faceProp.setNames("face");
-                s.addProperty(faceProp);
-                faceProp.setValue(face);
-            }
-            if (size != 0) {
-                CDXProperty sizeProp = CDXProperty.createPropertyByCDXName("fontsize");
-                sizeProp.setNames("size");
-                s.addProperty(sizeProp);
-                sizeProp.setValue(size);
-                s.setAttribute("size", ""+size);
-            }
-            if (color != 0) {
-                CDXProperty colorProp = CDXProperty.createPropertyByCDXName("fontcolor");
-                colorProp.setNames("color");
-                s.addProperty(colorProp);
-                colorProp.setValue(color);
-                s.setAttribute("color", ""+color);
-            }
+            processFont(font, face, size, color, s);
             String vv = "";
             if (i < nrun-1) {
                 vv = value.substring(start[i], start[i+1]);
@@ -615,6 +590,47 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
             s.appendChild(new Text(vv));
         }
     }
+
+	private void processFont(int font, int face, int size, int color,
+			CDXObject s) {
+		CDXProperty fontProp = CDXProperty.createPropertyByCDXName("fontindex");
+		fontProp.setNames("font");
+		s.addProperty(fontProp);
+		fontProp.setValue(font);
+		s.setAttribute("font", ""+font);
+		setFontFace(face, s);
+		setFontSize(size, s);
+		setFontColor(color, s);
+	}
+
+	private void setFontFace(int face, CDXObject s) {
+		if (face != 0) {
+		    CDXProperty faceProp = CDXProperty.createPropertyByCDXName("fontface");
+		    faceProp.setNames("face");
+		    s.addProperty(faceProp);
+		    faceProp.setValue(face);
+		}
+	}
+
+	private void setFontSize(int size, CDXObject s) {
+		if (size != 0) {
+		    CDXProperty sizeProp = CDXProperty.createPropertyByCDXName("fontsize");
+		    sizeProp.setNames("size");
+		    s.addProperty(sizeProp);
+		    sizeProp.setValue(size);
+		    s.setAttribute("size", ""+size);
+		}
+	}
+
+	private void setFontColor(int color, CDXObject s) {
+		if (color != 0) {
+		    CDXProperty colorProp = CDXProperty.createPropertyByCDXName("fontcolor");
+		    colorProp.setNames("color");
+		    s.addProperty(colorProp);
+		    colorProp.setValue(color);
+		    s.setAttribute("color", ""+color);
+		}
+	}
 
 	private void processFontTable(String value) {
         CDXObject fontTable = new CDXFontTable();
@@ -853,6 +869,9 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
     }
     
 
+    public void debug(String msg) {
+    	CMLUtil.debug(this, msg);
+    }
 	/**
 	 * 
 	 * @return string
@@ -884,15 +903,23 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
 			element.appendChild(molecule);
 			((CDXFragment)moleculeFragment).process2CML(molecule);
 			moleculeFragment.copyAttributesTo(molecule);
-	  		moleculeFragment.detach();
+	  		copyParentIdToMolecule(moleculeFragment, molecule);
+			moleculeFragment.detach();
 	  	}
+	}
+
+	private void copyParentIdToMolecule(CDXObject moleculeFragment,
+			CMLMolecule molecule) {
+		String parentId = ((Element)moleculeFragment.getParent()).getAttributeValue("id");
+//		String parentId = ((Element)moleculeFragment).getAttributeValue("id");
+		molecule.setId(parentId);
 	}
 
 	/**
 	 * @param element
 	 * @throws RuntimeException
 	 */
-	void processFragmentsContainingFramentNodes(CMLElement element) throws RuntimeException {
+	void processFragmentsContainingFragmentNodes(CMLElement element) throws RuntimeException {
 		//        <fragment BoundingBox="241.6999 68.4799 290.4249 74.9749" id="97">
 		//          <n Z="165" p="244 71" NodeType="Fragment" AS="N" id="96">
 		//            <t temp_Text="[[0 3 97 6 3]]H2NCONH2H2O2" LineHeight="1" LabelAlignment="Left" p="241.6999 73.4749" BoundingBox="241.6999 68.4799 290.4249 74.9749" LabelLineHeight="1" LabelJustification="Left" id="0"/>
@@ -908,21 +935,36 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
 			CMLMolecule molecule = new CMLMolecule();
 			molecule.setRole("cdx:fragment");
 			element.appendChild(molecule);
-			CMLLabel label = ((CDXText) fragmentFragment.query("./n/t").get(0)).createLabelFromText();
-			molecule.appendChild(label);
-			CDXFragment subFragment = (CDXFragment) fragmentFragment.query("./n/fragment").get(0);
-			subFragment.process2CML(molecule);
-			subFragment.copyAttributesTo(molecule);
+			addLabelToMolecule(fragmentFragment, molecule);
+			processSubFragment(fragmentFragment, molecule);
 			molecule.setId(fragmentFragment.getAttributeValue("id"));
+	  		copyParentIdToMolecule(fragmentFragment, molecule);
 			fragmentFragment.detach();
 		}
 	}
 
+	private void addLabelToMolecule(CDXObject fragmentFragment,
+			CMLMolecule molecule) {
+		CDXText cdxText = getNodeTextGrandChild(fragmentFragment);
+		cdxText.addLabelToCMLElement(molecule);
+	}
+
+	private CDXText getNodeTextGrandChild(CDXObject fragmentFragment) {
+		CDXText cdxText = (CDXText) fragmentFragment.query("./n/t").get(0);
+		return cdxText;
+	}
+
+	private void processSubFragment(CDXObject fragmentFragment, CMLMolecule molecule) {
+		CDXFragment subFragment = (CDXFragment) fragmentFragment.query("./n/fragment").get(0);
+		subFragment.process2CML(molecule);
+		subFragment.copyAttributesTo(molecule);
+	}
+
 	/**
-	 * @param element
+	 * @param cmlElement
 	 * @throws RuntimeException
 	 */
-	void processFragmentsContainingUnspecfiedNodes(CMLElement element) throws RuntimeException {
+	void processFragmentsContainingUnspecfiedNodes(CMLElement cmlElement) throws RuntimeException {
 			//        <fragment BoundingBox="167.6457 96.5499 182.6457 105.5999" id="90">
 			//        <n Z="164" p="169.7551 100.0749" NodeType="Unspecified" AS="N" id="91">
 			//          <t temp_Text="[[0 3 1 9 3]]171" LineHeight="1" LabelAlignment="Left" p="167.6457 103.5999" BoundingBox="167.6457 96.5499 182.6457 105.5999" Warning="ChemDraw can't interpret this label." LabelLineHeight="1" LabelJustification="Left" id="0"/>
@@ -935,9 +977,8 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
 	    			" count(t)=1]]");
 	    	for (int i = 0; i < labelFragments.size(); i++) {
 	    		CDXObject labelFragment = (CDXObject) labelFragments.get(i);
-	    		CMLLabel label = ((CDXText) labelFragment.query("./n/t").get(0)).createLabelFromText();
-	    		element.appendChild(label);
-	    		labelFragment.copyAttributesTo(label);
+	    		CDXText cdxText = getNodeTextGrandChild(labelFragment);
+				cdxText.addLabelToCMLElement(cmlElement);
 	    		labelFragment.detach();
 	    	}
 		}
@@ -957,9 +998,9 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
 	void processTexts(CMLElement element) {
 		Nodes nodes = this.query("./t");
 		for (int i = 0; i < nodes.size(); i++) {
-			CDXObject child = (CDXObject) nodes.get(i);
+			CDXText text = (CDXText) nodes.get(i);
 			// don't bother with the Chemdraw warning
-			if (child.query("*").size() == 0) {
+			if (text.query("*").size() == 0) {
 //			if (child.query("*").size() == 0 &&
 //					child.query("@Warning[starts-with(.,'ChemDraw can')]").size()==1) {
 //    				child.query("@Warning[.='ChemDraw can't interpret this label."+"'").size()==1) {
@@ -967,18 +1008,12 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
 //      <t Z="103" temp_Text="[[0 3 1 6 3]]Racemic" LineHeight="1" 
 //        p="152.5 89" BoundingBox="152.5 84.0049 178.9734 90.5" 
 //        Warning="ChemDraw can't interpret this label." id="84"/>
-				CMLLabel label = new CMLLabel();
-				String vv = ((CDXText)child).getLabelText();
-				child.copyAttributesTo(label);
-				LOG.debug("Guessed caption: "+vv);
-				label.setCMLValue(vv);
-				// why is this lost?
-				element.appendChild(label);
+				text.addLabelToCMLElement(element);
 			} else {
-				((CDXText)child).process2CML(element);
+				text.process2CML(element);
 				LOG.warn("text child of page is unexpected");
 			}
-			child.detach();
+			text.detach();
 		}
 	}
 
@@ -1006,6 +1041,10 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
 		boolean curveErrors = false;
 		boolean bracketErrors = false;
     	for (int i = 0; i < childElements.size(); i++) {
+    		if (!(childElements.get(i) instanceof CDXObject))  {
+    			LOG.error("Cannot process: "+childElements.get(i));
+    			continue;
+    		}
     		CDXObject child = (CDXObject) childElements.get(i);
     		if (false) {
     		} else if (child instanceof CDXBracketedGroup) {
@@ -1023,8 +1062,8 @@ The line starts are inferred solely from the presence of end-of-line (0x0D) char
     			((CDXFragment)child).process2CML(element);
     		} else if (child instanceof CDXReactionScheme) {
     			((CDXReactionScheme)child).process2CML(element);
-				LOG.error("Cannot yet deal with ReactionScheme");
-//    			LOG.error("******** UNPROCESSED SCHEME **********");
+    		} else if (child instanceof CDXArrow) {
+    			((CDXArrow)child).process2CML(element);
     		} else {
     			LOG.error("******************Unknown or unexpected child of page: "+child.getLocalName());
     		}

@@ -295,9 +295,9 @@ public class CDXProperty implements CDXConstants {
         byte[] bb;
         if (dataTypeS.equals("UINT8")) {
             bb = new byte[1];
-            bb[0] = Util.setUINT8(i);
+            bb[0] = CDXUtil.setUINT8(i);
         } else if (dataTypeS.equals("UINT16")) {
-            bb = Util.setUINT16(i);
+            bb = CDXUtil.setUINT16(i);
         } else {
             throw new RuntimeException("Cannot set int value for property with dataType: "+dataTypeS);
         }
@@ -307,9 +307,9 @@ public class CDXProperty implements CDXConstants {
 	void setValue(long l) {
         byte[] bb;
         if (dataTypeS.equals("UINT32")) {
-            bb = Util.setUINT32(l);
+            bb = CDXUtil.setUINT32(l);
         } else if (dataTypeS.equals("CDXObjectID")) {
-            bb = Util.setUINT32(l);
+            bb = CDXUtil.setUINT32(l);
         } else {
             throw new RuntimeException("Cannot set long value for property with dataType: "+dataTypeS);
         }
@@ -319,7 +319,7 @@ public class CDXProperty implements CDXConstants {
 	void setValue(double d) {
         byte[] bb;
         if (dataTypeS.equals("FLOAT64")) {
-            bb = Util.setFLOAT64(d);
+            bb = CDXUtil.setFLOAT64(d);
         } else {
             throw new RuntimeException("Cannot set double value for property with dataType: "+dataTypeS);
         }
@@ -379,6 +379,8 @@ public class CDXProperty implements CDXConstants {
         makeProperty(0x000F, "IgnoreWarnings", "IgnoreWarnings", "CDXBooleanImplied");
         makeProperty(0x0010, "ChemicalWarning", "Warning", "CDXString");
         makeProperty(0x0011, "Visible", "Visible", "CDXBoolean");
+        makeProperty(0x0012, "SupersededBy", "SupersededBy", "CDXString"); // shuold be ObjectID
+        makeProperty(0x0013, "Unknown13", "Unknopwn13", "CDXString");
         makeProperty(0x0100, "FontTable", "fonttable", "CDXFontTable");
 
     	// General properties.
@@ -476,6 +478,9 @@ If possible, a reasonable bounding box will be guessed. For example, if a boundi
         makeProperty(0x020A, "TopRight", "TopRight", "CDXPoint2D");
         makeProperty(0x020B, "BottomRight", "BottomRight", "CDXPoint2D");
         makeProperty(0x020C, "BottomLeft", "BottomLeft", "CDXPoint2D");
+        makeProperty(0x020D, "3DCenter", "Center3D", "CDXPoint3D");
+        makeProperty(0x020E, "3DMajorAxisEnd", "MajorAxisEnd3D", "CDXPoint3D");
+        makeProperty(0x020F, "3DMinorAxisEnd", "MinorAxisEnd3D", "CDXPoint3D");
 /*
 	// Colors.
 	kCDXProp_ColorTable = 0x0300,			// 0x0300 The color palette used throughout the document. (CDXColorTable)
@@ -707,6 +712,7 @@ A value of 3 is assumed, that being defined as the default foreground color in t
 //    	The type of enhanced stereochemistry present on this atom. This is an enumerated property.
         makeProperty(0x0447, "Atom_EnhancedStereoGroupNum", "EnhancedStereoGroupNum", "UINT16");
 //    	The group number associated with Or and And enhanced stereochemistry types.        
+        makeProperty(0x0448, "NewProp448", "NewProp448", "Unformatted");
 /*
         	// Molecule properties.
         	kCDXProp_Mole_Racemic = 0x0500,			// 0x0500 Indicates that the molecule is a racemic mixture. (CDXBoolean)
@@ -1069,6 +1075,9 @@ Value CDXML Name Description
         );
         makeProperty(0x0826, "FixInplaceGap", "FixInPlaceGap", "CDXPoint2D");
         makeProperty(0x0827, "CartridgeData", "CartridgeData", "Unformatted");
+        makeProperty(0x0828, "NewProp828", "NewProp828", "Unformatted");
+        makeProperty(0x0829, "NewProp829", "NewProp829", "Unformatted");
+        makeProperty(0x082a, "NewProp82a", "NewProp82a", "Unformatted");
 /*
         	// Window properties.
         	kCDXProp_Window_IsZoomed = 0x0900,		// 0x0900 Signifies whether the main viewing window is zoomed (maximized). (CDXBooleanImplied)
@@ -1314,6 +1323,70 @@ Value CDXML Name Description
         makeProperty(0x0A2C, "Bracket_BondID", "BondID", "CDXObjectID");
         makeProperty(0x0A2D, "Bracket_InnerAtomID", "InnerAtomID", "CDXObjectID");
         makeProperty(0x0A2E, "Curve_Points3D", "CurvePoints3D", "CDXCurvePoints3D");
+        makeProperty(0x0A2F, "Arrowhead_Type", "ArrowheadType", "INT16",
+        		// these values are guessed
+        		new IntValue[]{
+            	new IntValue(0, "Unknown"),
+            	new IntValue(1, "Solid"),
+        		}
+        		
+    		);
+/*
+0x0A30 kCDXProp_Arrowhead_CenterSize HeadCenterSize UINT16 
+ The size of the arrow's head from the tip to the back of the head.  
+0x0A31 kCDXProp_Arrowhead_Width HeadWidth UINT16 
+ The half-width of the arrow's head.  
+0x0A32 kCDXProp_ShadowSize ShadowSize UINT16 
+ The size of the object's shadow.  
+0x0A33 kCDXProp_Arrow_ShaftSpacing ArrowShaftSpacing UINT16 
+ The width of the space between a multiple-component arrow shaft, as in an equilibrium arrow.  
+0x0A34 kCDXProp_Arrow_EquilibriumRatio ArrowEquilibriumRatio UINT16 
+ The ratio of the length of the left component of an equilibrium arrow (viewed from the end to the start) to the right component.  
+0x0A35 kCDXProp_Arrow_ArrowHead_Head ArrowHeadHead INT16 
+ The type of arrowhead at the head of the arrow. This is an enumerated property.  
+0x0A36 kCDXProp_Arrow_ArrowHead_Tail ArrowHeadTail INT16 
+ The type of arrowhead at the tail of the arrow. This is an enumerated property.  
+0x0A37 kCDXProp_Fill_Type FillType INT16 
+ The type of the fill, for objects that can be filled. This is an enumerated property.  
+0x0A38 kCDXProp_Curve_Spacing CurveSpacing UINT16 
+ The width of the space between a a Doubled curve.  
+0x0A38 kCDXProp_Closed Closed CDXBoolean  ????? 0x0A39??
+ Signifies whether object is closed.  
+0x0A3A kCDXProp_Arrow_Dipole Dipole CDXBoolean 
+ Signifies whether the arrow is a dipole arrow.  
+0x0A3B kCDXProp_Arrow_NoGo NoGo INT8 
+ Signifies whether arrow is a no-go arrow, and the type of no-go (crossed-through or hashed-out) if so. This is an enumerated property.  
+0x0A3C kCDXProp_CornerRadius CornerRadius INT16 
+ The radius of the rounded corner of a rounded rectangle.  
+0x0A3D kCDXProp_Frame_Type FrameType INT16 
+ The type of frame on an object. This is an enumerated property.  
+ */
+        
+		makeProperty(0x0A30, "Arrowhead_CenterSize", "ArrowheadCenterSize", "UINT16");
+		makeProperty(0x0A31, "Arrowhead_Width", "ArrowheadWidth", "UINT16");
+		makeProperty(0x0A32, "ShadowSize", "ShadowSize", "UINT16");
+		makeProperty(0x0A33, "Arrow_ShaftSpacing", "ArrowShaftSpacing", "UINT16");
+		makeProperty(0x0A34, "Arrow_EquilibriumRatio", "ArrowEquilibriumRatio", "UINT16");
+		makeProperty(0x0A35, "Arrow_ArrowHead_Head", "ArrowheadHead", "INT16",
+				// guessed
+				new IntValue[] {
+				new IntValue(0, "None"),
+				new IntValue(2, "Full"),
+				}
+			);
+		makeProperty(0x0A36, "Arrow_ArrowHead_Tail", "ArrowHeadTail", "INT16");
+		makeProperty(0x0A37, "Fill_Type", "FillType", "INT16",
+	            new IntValue[] {
+                new IntValue(0, "Unknown"),
+                new IntValue(1, "None"),
+            }
+				);
+		makeProperty(0x0A38, "Curve_Spacing", "CurveSpacing", "UINT16");
+		makeProperty(0x0A39, "Closed", "Closed", "CDXBoolean"); ///????? 0x0A39??
+		makeProperty(0x0A3A, "Arrow_Dipole", "Dipole", "CDXBoolean");
+		makeProperty(0x0A3B, "Arrow_NoGo", "NoGo", "INT8");
+		makeProperty(0x0A3C, "CornerRadius", "CornerRadius", "INT16");
+		makeProperty(0x0A3D, "Frame_Type", "FrameType", "INT16");
 /*
         	// Embedded pictures.
         	kCDXProp_Picture_Edition = 0x0A60,		// 0x0A60 The section information (SectionHandle) of the Macintosh Publish & Subscribe edition embedded in the CDX picture object. (Unformatted)

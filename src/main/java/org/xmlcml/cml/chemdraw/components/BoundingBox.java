@@ -8,6 +8,8 @@ public /**
  *
  */
 class BoundingBox {
+	public final static String TAG = "BoundingBox";
+	
     double x0;
     double x1;
     double y0;

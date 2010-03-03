@@ -1,6 +1,7 @@
 package org.xmlcml.cml.chemdraw.components; 
 
 import org.apache.log4j.Logger;
+import org.xmlcml.cml.base.CMLConstants;
 import org.xmlcml.cml.chemdraw.CDXConstants;
 
 
@@ -9,8 +10,8 @@ import org.xmlcml.cml.chemdraw.CDXConstants;
 /**
  * 
  */
-public class Util implements CDXConstants {
-	private static Logger LOG = Logger.getLogger(Util.class);
+public class CDXUtil implements CDXConstants {
+	private static Logger LOG = Logger.getLogger(CDXUtil.class);
 	/**
 	 * @param b
 	 * @return int
@@ -250,11 +251,6 @@ FLOAT64
             if (
                 Character.isWhitespace(ch) || 
                 (ch > 32 && ch < 127)
-//                Character.isDigit(ch) || 
-//                Character.isLetter(ch) || 
-//                ch == '-' ||
-//                ch == '_' ||
-//                ch == '.'
                 ) {
                 sb.append(ch);
             } else {
@@ -263,31 +259,6 @@ FLOAT64
         return sb.toString();
     }
         
-//    private static String escapeXML(String s) {
-//        String ss = null;
-//        if (s != null) {
-//            StringBuffer sb = new StringBuffer();
-//            for (int i = 0; i < s.length(); i++) {
-//                char c = s.charAt(i);
-//                if (c == '"') {
-//                    sb.append("&quot;");
-//                } else if (c == '&') {
-//                    sb.append("&amp;");
-//                } else if (c == '<') {
-//                    sb.append("&lt;");
-//                } else {
-//                    sb.append(c);
-//                }
-//            }
-//            ss = sb.toString();
-//        }
-//        return ss;
-//	}
-
-//    private static String error(String s) {
-//		System.err.println(s);
-//		return s;
-//	}
 
     /** trims trailing zeros and points.
     */
@@ -333,16 +304,38 @@ FLOAT64
             -123.45,
         };
         for (int i = 0; i < d.length; i++) {
-            byte[] b = Util.setFLOAT64(d[i]);
+            byte[] b = CDXUtil.setFLOAT64(d[i]);
             String s = ""+d[i]+" => ";
             for (int j = 0; j < 8; j++) {
                 String ss = Integer.toHexString(b[j]);
                 s += " "+((ss.length() == 8) ? ss.substring(6,8) : ss);
             }
-            double dd = Util.getFLOAT64(b, 0);
+            double dd = CDXUtil.getFLOAT64(b, 0);
             LOG.trace(s+" => "+dd);
         }
     }
+    
+	public static String toXHex(int iProp) {
+		return "x"+Integer.toHexString(iProp);
+	}
+
+	private final static String ID_START = "x";
+	public static String ensureXMLID(String value) {
+		char c = value.charAt(0);
+		if (c != '_' && !Character.isLetter(c)) {
+			value = ID_START+value;
+		}
+		return value;
+	}
+
+
+	public static String ensureNumericID(String value) {
+		if (value.startsWith(ID_START)) {
+			value = value.substring(1);
+		}
+		return value;
+	}
+
 };
 
 

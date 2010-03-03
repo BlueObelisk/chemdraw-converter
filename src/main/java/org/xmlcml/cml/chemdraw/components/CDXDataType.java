@@ -39,21 +39,21 @@ public abstract class CDXDataType implements CDXConstants {
     static String styleRunString(byte[] bytes, int offset) {
 //   	 conflict with documentation; I get FL = 8
 //       int fontLength = bytes.length;
-       int fontIndex = Util.getUINT16(bytes, offset);
+       int fontIndex = CDXUtil.getUINT16(bytes, offset);
        offset += 2;
        // store temporarily as font-face-size-color
        String s = ""+fontIndex;
-       int typeFace = Util.getUINT16(bytes, offset);
+       int typeFace = CDXUtil.getUINT16(bytes, offset);
        s += " "+typeFace;
        offset += 2;
 //   	 I think this is a UINT16, not 32 as in doc
 //   	 also the scale appears to be /20
 //   	        long lsize = Util.getUINT32(bytes, offset);
-       int size = Util.getINT16(bytes, offset);
+       int size = CDXUtil.getINT16(bytes, offset);
        size = size / 20;
        s += " "+size;
        offset += 2;
-       int color = Util.getUINT16(bytes, offset);
+       int color = CDXUtil.getUINT16(bytes, offset);
        s += " "+color;
        return s;
    }
@@ -76,7 +76,7 @@ class _CDXBoolean extends CDXDataType {
      */
     public _CDXBoolean(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        bool = Util.getINT8(bytes[0]) != 0;
+        bool = CDXUtil.getINT8(bytes[0]) != 0;
         s = "" + bool;
     }
 };
@@ -103,14 +103,14 @@ class _CDXCurvePoints extends CDXDataType {
      */
     public _CDXCurvePoints(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        int nCurves = Util.getUINT16(bytes[0], bytes[1]);
+        int nCurves = CDXUtil.getUINT16(bytes[0], bytes[1]);
         xCurve = new int[nCurves];
         yCurve = new int[nCurves];
         int nBytes = 2;
         s = "";
         for (int i = 0; i < nCurves; i++) {
-            yCurve[i] = Util.getINT32(bytes[nBytes++], bytes[nBytes++], bytes[nBytes++], bytes[nBytes++]);
-            xCurve[i] = Util.getINT32(bytes[nBytes++], bytes[nBytes++], bytes[nBytes++], bytes[nBytes++]);
+            yCurve[i] = CDXUtil.getINT32(bytes[nBytes++], bytes[nBytes++], bytes[nBytes++], bytes[nBytes++]);
+            xCurve[i] = CDXUtil.getINT32(bytes[nBytes++], bytes[nBytes++], bytes[nBytes++], bytes[nBytes++]);
             s += " "+xCurve[i]+" "+yCurve[i];
         }
     }
@@ -151,7 +151,7 @@ class _CDXColorTable extends CDXDataType {
      */
     public _CDXColorTable(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        int nEntries = Util.getUINT16(bytes[0], bytes[1]);
+        int nEntries = CDXUtil.getUINT16(bytes[0], bytes[1]);
         if (bytes.length != 6 * nEntries + 2) {
             throw new RuntimeException("CDXColorTable wrong length");
         }
@@ -160,7 +160,7 @@ class _CDXColorTable extends CDXDataType {
         for (int i = 0; i < nEntries; i++) {
             colorTable[i] = new int[3];
             for (int j = 0; j < 3; j++) {
-                colorTable[i][j] = Util.getUINT16(bytes[byteCount++], bytes[byteCount++]);
+                colorTable[i][j] = CDXUtil.getUINT16(bytes[byteCount++], bytes[byteCount++]);
             }
         }
         // save temporarily by separating each table by ;
@@ -185,7 +185,7 @@ class _CDXCoordinate extends CDXDataType {
      */
     public _CDXCoordinate(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        coor2 = Util.getINT32(bytes);
+        coor2 = CDXUtil.getINT32(bytes);
         s = new CDXCoordinate(coor2).getAttributeValue();
         num = new Integer(coor2);
     }
@@ -206,7 +206,7 @@ class _CDXDate extends CDXDataType {
         date = new int[7];
         int nByte = 0;
         for (int i = 0; i < 7; i++) {
-            date[i] = Util.getINT16(bytes[nByte++], bytes[nByte++]);
+            date[i] = CDXUtil.getINT16(bytes[nByte++], bytes[nByte++]);
         }
         s = "" + date[0]+":"+ date[1]+":"+ date[2]+":"+ date[3]+":"+ date[4]+":"+ date[5]+":"+ date[6]+":";
     }
@@ -223,7 +223,7 @@ class _CDXElementList extends CDXDataType {
     public _CDXElementList(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
         excludeElems = false;
-        int nElem = Util.getINT16(bytes[0], bytes[1]);
+        int nElem = CDXUtil.getINT16(bytes[0], bytes[1]);
         if (nElem < 0) {
             excludeElems = true;
             nElem = -nElem;
@@ -235,7 +235,7 @@ class _CDXElementList extends CDXDataType {
         int nByte = 2;
         s = "";
         for (int i = 0; i < nElem; i++) {
-            element[i] = Util.getINT16(bytes[nByte++], bytes[nByte++]);
+            element[i] = CDXUtil.getINT16(bytes[nByte++], bytes[nByte++]);
             if (i >0) s += " ";
             s += element[i];
         }
@@ -325,14 +325,14 @@ class _CDXFontTable extends CDXDataType {
             bb[i] = bytes[nstart + i];
         }
         nstart += 2;
-        int platform = Util.getUINT16(bb);
+        int platform = CDXUtil.getUINT16(bb);
         LOG.debug("Platform "+platform);
         for (int i = 0; i < 2; i++) {
             bb[i] = bytes[nstart + i];
         }
         nstart += 2;
         s = "";
-        int nFont = Util.getUINT16(bb);
+        int nFont = CDXUtil.getUINT16(bb);
         LOG.debug("nFont "+nFont);
         for (int j = 0; j < nFont; j++) {
             if (j > 0) {
@@ -341,21 +341,21 @@ class _CDXFontTable extends CDXDataType {
             for (int i = 0; i < 2; i++) {
                 bb[i] = bytes[nstart + i];
             }
-            int id = Util.getUINT16(bb);
+            int id = CDXUtil.getUINT16(bb);
             s += id+"/";
             LOG.debug("id "+id);
             nstart += 2;
             for (int i = 0; i < 2; i++) {
                 bb[i] = bytes[nstart + i];
             }
-            int charset = Util.getUINT16(bb);
+            int charset = CDXUtil.getUINT16(bb);
             s += charset+"/";
             LOG.debug("charset "+charset);
             nstart += 2;
             for (int i = 0; i < 2; i++) {
                 bb[i] = bytes[nstart + i];
             }
-            int fontlen = Util.getUINT16(bb);
+            int fontlen = CDXUtil.getUINT16(bb);
             LOG.debug("fontlen "+fontlen);
             nstart += 2;
             bf = new byte[fontlen];
@@ -364,7 +364,7 @@ class _CDXFontTable extends CDXDataType {
             }
             String font = "";
             try {
-                font = Util.getAsciiString(bf, 0);
+                font = CDXUtil.getAsciiString(bf, 0);
                 LOG.debug("font "+font);
             } catch (Exception e) {
                 LOG.warn("Bad font: "+e);
@@ -383,7 +383,7 @@ class _CDXObjectID extends CDXDataType {
      */
     public _CDXObjectID(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        u32 = Util.getUINT32(bytes);
+        u32 = CDXUtil.getUINT32(bytes);
         s = "" + u32;
     }
 };
@@ -407,7 +407,7 @@ class _CDXObjectIDArray extends CDXDataType {
             for (int j = 0; j < 4; j++) {
                 bb[j] = bytes[4*i + j];
             }
-            idArray[i] = Util.getUINT32(bb);
+            idArray[i] = CDXUtil.getUINT32(bb);
         }
         s = "";
         for (int i = 0; i < idCount; i++) {
@@ -426,7 +426,7 @@ class _CDXObjectIDArrayWithCounts extends CDXDataType {
      */
     public _CDXObjectIDArrayWithCounts(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        int idCount = Util.getINT16(bytes[0], bytes[1]);
+        int idCount = CDXUtil.getINT16(bytes[0], bytes[1]);
         if (bytes.length != idCount*4 + 2) {
             throw new RuntimeException("CDXObjectIDArrayWithCounts bad length "+bytes.length+"/"+idCount);
         }
@@ -437,7 +437,7 @@ class _CDXObjectIDArrayWithCounts extends CDXDataType {
             for (int j = 0; j < 4; j++) {
                 bb[j] = bytes[4*i + j];
             }
-            idArray[i] = Util.getUINT32(bb);
+            idArray[i] = CDXUtil.getUINT32(bb);
         }
         s = "";
         for (int i = 0; i < idCount; i++) {
@@ -459,8 +459,8 @@ class _CDXPoint2D extends CDXDataType {
         super(bytes, prop);
         int nBytes=0;
 // note order!
-        iy2 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
-        ix2 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        iy2 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        ix2 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
         point = new CDXPoint2D(ix2, iy2);
         s = point.getAttributeValue();
     }
@@ -469,6 +469,7 @@ class _CDXPoint3D extends CDXDataType {
     int ix3;
     int iy3;
     int iz3;
+    CDXPoint3D point;
     /**
      * 
      * @param bytes
@@ -477,13 +478,16 @@ class _CDXPoint3D extends CDXDataType {
      */
     public _CDXPoint3D(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        if (bytes.length != 12) throw new RuntimeException("CDXPoint3D bad length: "+bytes.length);
+        if (bytes.length != 12) {
+        	throw new RuntimeException("CDXPoint3D bad length: "+bytes.length);
+        }
         int nBytes=0;
 // note order!
-        iz3 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
-        iy3 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
-        ix3 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
-        s = "" + ix3+" "+iy3+" "+iz3;
+        iz3 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        iy3 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        ix3 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        point = new CDXPoint3D(ix3, iy3, iz3);
+        s = point.getAttributeValue();
     }
 };
 class _CDXRectangle extends CDXDataType {
@@ -497,10 +501,10 @@ class _CDXRectangle extends CDXDataType {
     public _CDXRectangle(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
         int nBytes=0;
-        itop2 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
-        ileft2 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
-        ibottom2 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
-        iright2 = Util.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        itop2 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        ileft2 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        ibottom2 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
+        iright2 = CDXUtil.getINT32(bytes[nBytes++],bytes[nBytes++],bytes[nBytes++],bytes[nBytes++]);
         rect = new CDXRectangle(ileft2, iright2, itop2, ibottom2);
         s = rect.getAttributeValue();
     }
@@ -563,7 +567,7 @@ class _CDXString extends CDXDataType {
     public _CDXString(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
         int offset = 0;
-        int nFontRuns = Util.getUINT16(bytes, offset);
+        int nFontRuns = CDXUtil.getUINT16(bytes, offset);
         // I have found an example in objecttag where font runs is not mentioned
         // KLUDGE
         if (nFontRuns < 0 || nFontRuns > 100) {
@@ -573,13 +577,13 @@ class _CDXString extends CDXDataType {
 	        offset += 2;
 	        StringBuilder sb = new StringBuilder();
 	        for (int i = 0; i < nFontRuns; i++) {
-	            int startChar = Util.getUINT16(bytes, offset);
+	            int startChar = CDXUtil.getUINT16(bytes, offset);
 	            offset += 2;
 	// pack info temporarily into concatenated chars
 	            sb.append(FLBRAK+startChar+" "+_CDXFontStyle.styleRunString(bytes, offset)+FRBRAK);
 	            offset += 8;
 	        }
-	        sb.append(Util.getEscapedAsciiString(bytes, offset));
+	        sb.append(CDXUtil.getEscapedAsciiString(bytes, offset));
 	        s = sb.toString();
         }
     }
@@ -621,8 +625,8 @@ class _FLOAT64 extends CDXDataType {
      */
     public _FLOAT64(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        f64 = Util.getFLOAT64(bytes, 0);
-        s = Util.trimFloat(f64);
+        f64 = CDXUtil.getFLOAT64(bytes, 0);
+        s = CDXUtil.trimFloat(f64);
         num = new Double(f64);
     }
 };
@@ -635,7 +639,7 @@ class _INT8 extends CDXDataType {
      */
     public _INT8(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        int8 = Util.getINT8(bytes[0]);
+        int8 = CDXUtil.getINT8(bytes[0]);
         s = "" + int8;
         num = new Integer(int8);
     }
@@ -649,7 +653,7 @@ class _INT16 extends CDXDataType {
      */
     public _INT16(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        int16 = Util.getINT16(bytes);
+        int16 = CDXUtil.getINT16(bytes);
         s = "" + int16;
         num = new Integer(int16);
     }
@@ -665,13 +669,13 @@ class _INT16ListWithCounts extends CDXDataType {
     public _INT16ListWithCounts(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
         int nBytes = 0;
-        int nInt = Util.getUINT16(bytes[nBytes++], bytes[nBytes++]);
+        int nInt = CDXUtil.getUINT16(bytes[nBytes++], bytes[nBytes++]);
         if (nInt*2 + 2 != bytes.length) {
             LOG.error("INT16ListWithCounts bad length"+nInt+"/"+bytes.length);
         }
         int16List = new int[nInt];
         for (int i = 0; i < nInt; i++) {
-            int16List[i] = Util.getUINT16(bytes[nBytes++], bytes[nBytes++]);
+            int16List[i] = CDXUtil.getUINT16(bytes[nBytes++], bytes[nBytes++]);
         }
         s = "";
         for (int i = 0; i < nInt; i++) {
@@ -689,7 +693,7 @@ class _INT32 extends CDXDataType {
      */
     public _INT32(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        int32 = Util.getINT32(bytes);
+        int32 = CDXUtil.getINT32(bytes);
         s = "" + int32;
         num = new Integer(int32);
     }
@@ -703,7 +707,7 @@ class _UINT8 extends CDXDataType {
      */
     public _UINT8(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        u8 = Util.getUINT8(bytes[0]);
+        u8 = CDXUtil.getUINT8(bytes[0]);
         s = "" + u8;
         num = new Long(u8);
     }
@@ -717,7 +721,7 @@ class _UINT16 extends CDXDataType {
      */
     public _UINT16(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        u16 = Util.getUINT16(bytes);
+        u16 = CDXUtil.getUINT16(bytes);
         s = "" + u16;
         num = new Long(u16);
     }
@@ -731,7 +735,7 @@ class _UINT32 extends CDXDataType {
      */
     public _UINT32(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        u32 = Util.getUINT32(bytes);
+        u32 = CDXUtil.getUINT32(bytes);
         s = "" + u32;
         num = new Long(u32);
     }
@@ -745,7 +749,7 @@ class _Unformatted extends CDXDataType {
      */
     public _Unformatted(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
-        s = Util.getEscapedAsciiString(bytes, 0);
+        s = CDXUtil.getEscapedAsciiString(bytes, 0);
     }
 };
 

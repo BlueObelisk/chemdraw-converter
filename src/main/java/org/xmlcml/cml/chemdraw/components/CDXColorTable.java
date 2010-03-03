@@ -34,15 +34,9 @@ public class CDXColorTable extends CDXObject {
    <color r="1" g="0" b="1"/>
   </colortable>
 --*/
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
 
     public CDXColorTable() {
-		super(CDXNAME);
-        setCodeName();
+        super(CODE, NAME, CDXNAME);
 	}
 
     /**

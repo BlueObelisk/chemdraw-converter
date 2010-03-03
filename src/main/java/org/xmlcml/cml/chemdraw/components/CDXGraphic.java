@@ -7,7 +7,9 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.chemdraw.CDX2CDXML;
-import org.xmlcml.cml.element.CMLScalar;
+import org.xmlcml.cml.chemdraw.CDXConstants;
+import org.xmlcml.cml.element.CMLArray;
+import org.xmlcml.euclid.RealArray;
 
 /** tries to interpret CDX graphics
 */
@@ -38,14 +40,6 @@ public class CDXGraphic extends CDXObject {
     public final static String NAME = "Graphic";
     public final static String CDXNAME = "graphic";
 
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
-//	private int graphicTable;
-//	private int lineTable;
-//	private int arrowTable;
 	private String arrowType = "";
 	// may be used later
 	String lineType = "";
@@ -53,14 +47,8 @@ public class CDXGraphic extends CDXObject {
 
 	public CDXGraphic() {
         super(CODE, NAME, CDXNAME);
-        setCodeName();
 	}
 
-	protected CDXGraphic(CDX2CDXML cdxDoc) {
-		super(CDXNAME);
-        setCodeName();
-	}
-	
     /**
      * copy node .
      * @return Node
@@ -110,14 +98,12 @@ public class CDXGraphic extends CDXObject {
             arrowType.equals("Hollow") ||      // deprecated if used for Retro
             arrowType.equals("Retrosynthetic")
             ) {
-            CMLScalar arrow = new CMLScalar();
-            this.copyAttributesTo(arrow);
-            arrow.setDictRef("cdxml:arrowType");
+        	
+            CMLArray arrow = CDXArrow.createArrowArray(this);
             element.appendChild(arrow);
         } else {
         	LOG.debug("Unknown arrow: "+arrowType);
-// there are not normally any children, but include anyway
-//            processChildren2CML(cmlNode);
+// there are not normally any children
         }
     }
 

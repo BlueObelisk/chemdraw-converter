@@ -24,15 +24,9 @@ public class CDXCurve extends CDXObject {
     public final static String CDXNAME = "curve";
 /*--
 --*/
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
 
     public CDXCurve() {
-		super(CDXNAME);
-        setCodeName();
+        super(CODE, NAME, CDXNAME);
 	}
 
     /**

@@ -28,19 +28,8 @@ public class CDXBond extends CDXObject {
     public final static String NAME = "Bond";
     public final static String CDXNAME = "b";
 
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
 	public CDXBond() {
         super(CODE, NAME, CDXNAME);
-        setCodeName();
-	}
-
-	protected CDXBond(CDX2CDXML cdxDoc) {
-		super(CDXNAME);
-        setCodeName();
 	}
 
     /**
@@ -153,7 +142,6 @@ public class CDXBond extends CDXObject {
             bond.setOrder(order);
             addCDXAttribute(bond, this, "EndAttach");
             if (this.query("*").size() > 0) {
-//            	processChildren2CML(bond);
             	throw new RuntimeException("Unexpected bond children");
             }
             this.copyAttributesTo(bond);

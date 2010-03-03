@@ -21,11 +21,6 @@ public class CDXList extends CDXObject {
     public final static String NAME = "cdxList";
     public final static String CDXNAME = "cdxList";
 
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
 	public CDXList() {
         super(CODE, NAME, CDXNAME);
 	}

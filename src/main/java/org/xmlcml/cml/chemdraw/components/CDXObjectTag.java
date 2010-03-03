@@ -22,17 +22,9 @@ public class CDXObjectTag extends CDXObject {
     public final static int CODE = 0x8011;
     public final static String NAME = "ObjectTag";
     public final static String CDXNAME = "objecttag";
-/*--
---*/
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
-
+    
     public CDXObjectTag() {
-		super(CDXNAME);
-        setCodeName();
+        super(CODE, NAME, CDXNAME);
 	}
 
     /**

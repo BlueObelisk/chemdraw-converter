@@ -21,14 +21,8 @@ public class CDXML extends CDXObject {
     public final static String NAME = "CDXML";
     public final static String CDXNAME = "CDXML";
 
-    protected CodeName setCodeName() {
-        codeName = new CodeName(CODE, NAME, CDXNAME);
-        return codeName;
-    };
-
     public CDXML() {
         super(CODE, NAME, CDXNAME);
-        setCodeName();
 	}
 
     /**

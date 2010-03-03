@@ -56,7 +56,7 @@ public class CDXCoordinate implements CDXConstants {
 	}
 
 	String getAttributeValue() {
-		return ""+Util.trimFloat(xx);
+		return ""+CDXUtil.trimFloat(xx);
 	}
 
 //    private double getX2() {
@@ -67,7 +67,7 @@ public class CDXCoordinate implements CDXConstants {
 	 * @return string
 	 */
     public String toString() {
-        return ""+Util.trimFloat(xx);
+        return ""+CDXUtil.trimFloat(xx);
     }
 
 };
