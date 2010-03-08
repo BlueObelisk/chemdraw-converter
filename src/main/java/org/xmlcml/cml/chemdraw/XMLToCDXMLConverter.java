@@ -35,7 +35,7 @@ import org.xmlcml.cml.chemdraw.components.CDXText;
 
 public class XMLToCDXMLConverter {
 
-	static Logger LOG = Logger.getLogger(XMLToCDXMLConverter.class);
+	private static Logger LOG = Logger.getLogger(XMLToCDXMLConverter.class);
 	static {
 		LOG.setLevel(Level.INFO);
 	}

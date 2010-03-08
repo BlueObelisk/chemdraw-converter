@@ -47,7 +47,7 @@
 		<repository>
 			<id>wwmm-repo</id>
 			<name>WWMM Maven2</name>
-			<url>http://wwmm.ch.cam.ac.uk/maven2
+			<url>https://wwmm.ch.cam.ac.uk/maven2
 			</url>
 		</repository>
 	</repositories>

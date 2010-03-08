@@ -249,9 +249,6 @@ public class CDXParser implements CDXConstants {
 					") at byte "+byteCount+"/"+Integer.toHexString(byteCount)+" in "+bb.length);
 			throw new ChemdrawRuntimeException("UNKNOWN PROP");
 			
-//			cre.setProperty(iProp);
-//			cre.setByteCount(byteCount);
-//			throw cre;
 		} else {
             LOG.trace("PROPERTY ... "+prop.getCDXName());
 		}
@@ -272,9 +269,7 @@ public class CDXParser implements CDXConstants {
             if (byteCount >= bytes.length) {
                 LOG.error("?Premature EOF after "+byteCount+ "bytes; reading "+length);
                 prop = null;
-                throw new RuntimeException("ABORT");
-//    			byteCount = lastHeader+16;
-//                break;
+                throw new RuntimeException("Abort ChemDraw parsing");
             }
 			bs[i] = bytes[byteCount++];
 		}
@@ -282,9 +277,7 @@ public class CDXParser implements CDXConstants {
 		if (prop == null) {
 			return;
 		}
-//		if (unknown) {
 		LOG.trace("Reading Property: "+prop.getCDXName()+"/"+Integer.toHexString(iProp));
-//		}
         String value = "";
 		try {
 			if ("objecttag".equals(parsedObject.codeName.cdxName)) {
@@ -298,6 +291,7 @@ public class CDXParser implements CDXConstants {
 			LOG.error("misread? "+value+"/"+propS+"("+Integer.toHexString(iProp)+") /"+
 					prop.getCDXName()+"/"+iae+" at byteCount: "+byteCount+"; recover to next header");
 			byteCount = lastHeader+16;
+			throw new RuntimeException("Cannot recover from misparse");
 		} catch (ArrayIndexOutOfBoundsException e) {
 			LOG.error("Premature EOF? "+byteCount+" recover to next header");
 			byteCount = lastHeader+16;
@@ -306,6 +300,7 @@ public class CDXParser implements CDXConstants {
 			LOG.error("misread? "+value+"/"+propS+"("+Integer.toHexString(iProp)+") /"+
 					prop.getCDXName()+"/"+cde+" at byteCount: "+byteCount+"; recover to next header");
 			byteCount = lastHeader+16;
+			throw new RuntimeException("Cannot recover from misparse");
 		}
 		if (unknown) {
 			LOG.warn("Read unknown Property: "+prop.getCDXName());

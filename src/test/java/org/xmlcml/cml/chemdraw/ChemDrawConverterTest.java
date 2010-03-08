@@ -71,8 +71,6 @@ public class ChemDrawConverterTest {
 		}
 		CDXObject parsedObject = cd.getCDXMLObject();
 		CMLUtil.debug(parsedObject, "CDX");
-//		Element ref = JumboTestUtils.parseValidFile(outRef);
-//		JumboTestUtils.assertEqualsIncludingFloat("parsed CDX", ref, parsedObject.getChildElements().get(0), true, 0.02);
 		CDXML2CMLObject cdxml2cmlObject = new CDXML2CMLObject();
 		cdxml2cmlObject.convertParsedXMLToCML(parsedObject);
 		CMLElement cml = cdxml2cmlObject.getCML();

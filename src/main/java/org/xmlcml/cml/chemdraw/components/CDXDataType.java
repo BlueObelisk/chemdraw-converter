@@ -571,7 +571,7 @@ class _CDXString extends CDXDataType {
         // I have found an example in objecttag where font runs is not mentioned
         // KLUDGE
         if (nFontRuns < 0 || nFontRuns > 100) {
-        	LOG.warn("no font runs given");
+//        	LOG.warn("no font runs given");
         	s = new String(bytes);
         } else {
 	        offset += 2;
