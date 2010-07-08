@@ -1,6 +1,7 @@
 package org.xmlcml.cml.chemdraw;
 
 import java.util.HashMap;
+
 import java.util.Map;
 
 import nu.xom.Attribute;
