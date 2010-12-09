@@ -319,9 +319,7 @@ An object used to indicate that its containing object has chemical meaning that 
         CDXObject obj = null;
         CDXObject refObj = getObject(code);
         String name = (refObj == null) ? "object" : refObj.codeName.cdxName;
-		if (false) {
-            ;
-		} else if (code == CDXArrow.CODE) {
+		if (code == CDXArrow.CODE) {
 			obj = new CDXArrow();
 		} else if (code == CDXBond.CODE) {
 			obj = new CDXBond();
@@ -358,8 +356,13 @@ An object used to indicate that its containing object has chemical meaning that 
 		} else if (code == CDXText.CODE) {
 			obj = new CDXText();
 		} else {
-			obj = new CDXObject(name);
-            throw new RuntimeException("Unknown CDX name, code = "+name+", "+code+"/"+Integer.toHexString(code));
+			if (refObj==null){
+				obj = new CDXObject(code, name, name);
+			}
+			else{
+				obj = new CDXObject(code, name, refObj.codeName.cdxName);
+			}
+            LOG.error("Unknown CDX name, code = "+name+", "+code+"/"+Integer.toHexString(code));
         }
         return obj;
 	}
