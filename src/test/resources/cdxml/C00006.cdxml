@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdxList id="null">
+  <CDXML CreationProgram="ChemDraw 8.0" Name="00026001.cdx" BoundingBox="17.5311 18.844 216.1043 75.9592" WindowPosition="0 0" WindowSize="728.25 690" FractionalWidths="yes" InterpretChemically="true" ShowAtomQuery="true" ShowAtomStereo="false" ShowAtomNumber="false" ShowBondQuery="true" ShowBondRxn="true" ShowBondStereo="false" Magnification="1086" HashSpacing="1.6992" MarginWidth="1.25" LineWidth="0.5" BoldWidth="2" BondLength="16" BondSpacing="120" ChainAngle="7864320" LabelJustification="6" CaptionJustification="Left" PrintMargins="36 36 361 36" LabelFont="4" LabelFace="96" LabelSize="7" LabelColor="3" CaptionFont="4" CaptionFace="0" CaptionSize="7" CaptionColor="3" id="0">
+    <page BoundingBox="0 0 214.8999 720" HeaderPosition="36" FooterPosition="36" HeightPages="1" WidthPages="1" PageDefinition="IDTerm" id="45">
+      <group BoundingBox="17.5311 25.644 185.5036 75.9592" id="43">
+        <fragment BoundingBox="23.793 29.31 162.9744 72.8315" id="11">
+          <n p="31.0888 72.5815" Z="1" AS="N" id="8"/>
+          <n p="47.0888 72.5815" Z="3" AS="N" id="10"/>
+          <n p="52.0331 57.3646" Z="5" Element="7" NumHydrogens="0" LabelDisplay="Above" id="12">
+            <t p="49.6815 60.0146" BoundingBox="49.6815 54.7146 54.7315 60.0646" Warning="An atom in this label has an invalid valence." LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]N" id="0"/>
+          </n>
+          <n p="39.0888 47.96" Z="7" id="14"/>
+          <n p="26.1445 57.3646" Z="9" Element="7" NumHydrogens="0" AS="N" LabelDisplay="Right" id="16">
+            <t p="23.793 60.0146" BoundingBox="23.793 54.7146 28.843 60.0646" LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]N" id="0"/>
+          </n>
+          <n p="39.0888 31.96" Z="16" NodeType="Unspecified" AS="N" LabelDisplay="Left" id="23">
+            <t p="36.6279 34.61" BoundingBox="36.6279 29.31 44.0409 36.6564" Warning="ChemDraw can't interpret this label." LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]R6" id="0"/>
+          </n>
+          <n p="65.8895 49.3646" Z="18" NumHydrogens="2" AS="N" LabelDisplay="Left" id="25">
+            <t p="63.5926 52.0146" BoundingBox="63.5926 46.7146 75.9176 54.0026" LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]CH2" id="0"/>
+          </n>
+          <n p="65.8895 65.3646" Z="20" NodeType="Unspecified" AS="N" LabelDisplay="Left" id="27">
+            <t p="63.4286 68.0146" BoundingBox="63.4286 62.7146 70.8416 70.0609" Warning="ChemDraw can't interpret this label." LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]R7" id="0"/>
+          </n>
+          <n p="86.7676 49.3646" Z="22" NumHydrogens="2" AS="N" LabelDisplay="Left" id="29">
+            <t p="84.4707 52.0146" BoundingBox="84.4707 46.7146 96.7957 54.0026" LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]CH2" id="0"/>
+          </n>
+          <n p="107.6457 49.3646" Z="24" NodeType="Unspecified" AS="N" LabelDisplay="Left" id="31">
+            <t p="105.2942 52.0146" BoundingBox="105.2942 46.7146 122.4898 53.7693" Warning="ChemDraw can't interpret this label." LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]N(R8)" id="0"/>
+          </n>
+          <n p="137.1442 49.3646" Z="26" NodeType="Fragment" AS="N" BondOrdering="34 36" LabelDisplay="Left" id="33">
+            <fragment ConnectionOrder="52 53" id="46">
+              <n p="128.5239 65.3646" NumHydrogens="0" id="46"/>
+              <n p="128.5239 49.3646" Element="8" NumHydrogens="0" id="47"/>
+              <n NodeType="ExternalConnectionPoint" id="52"/>
+              <n NodeType="ExternalConnectionPoint" id="53"/>
+              <b B="52" E="46" id="48"/>
+              <b B="53" E="46" id="49"/>
+              <b B="46" E="47" Order="2" DoublePosition="Right" id="50"/>
+            </fragment>
+            <t p="134.8473 52.0146" BoundingBox="134.8473 46.7146 144.706 52.3722" LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]CO" id="0"/>
+          </n>
+          <n p="158.0223 49.3646" Z="28" NodeType="Unspecified" AS="N" LabelDisplay="Left" id="35">
+            <t p="155.5614 52.0146" BoundingBox="155.5614 46.7146 162.9744 54.0609" Warning="ChemDraw can't interpret this label." LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]R5" id="0"/>
+          </n>
+          <b Z="11" B="8" E="10" BS="N" id="18"/>
+          <b Z="12" B="10" E="12" BS="N" id="19"/>
+          <b Z="13" B="12" E="14" BS="N" id="20"/>
+          <b Z="14" B="14" E="16" Order="2" DoublePosition="Right" BondCircularOrdering="20 24 0 22" id="21"/>
+          <b Z="15" B="16" E="8" BS="N" id="22"/>
+          <b Z="17" B="14" E="23" BS="N" id="24"/>
+          <b Z="19" B="12" E="25" BS="N" id="26"/>
+          <b Z="21" B="12" E="27" BS="N" id="28"/>
+          <b Z="23" B="25" E="29" BS="N" BeginAttach="1" id="30"/>
+          <b Z="25" B="29" E="31" BS="N" BeginAttach="1" id="32"/>
+          <b Z="27" B="31" E="33" BS="N" BeginAttach="4" id="34"/>
+          <b Z="29" B="33" E="35" BS="N" BeginAttach="1" id="36"/>
+        </fragment>
+        <fragment BoundingBox="178.6911 45.3646 185.5036 52.0146" id="40">
+          <n p="181.2067 49.3646" Z="34" NodeType="Unspecified" AS="N" LabelDisplay="Left" id="41">
+            <t p="178.6911 52.0146" BoundingBox="178.6911 45.3646 185.5036 52.0146" Warning="ChemDraw can't interpret this label." LabelJustification="Left" LineHeight="0" temp_Text="[[0 4 96 7 3]]X-" id="0"/>
+          </n>
+        </fragment>
+        <graphic BoundingBox="19.3463 74.144 19.3463 27.9975" Z="31" GraphicType="Bracket" BracketType="Square" LipSize="60" id="38"/>
+        <graphic BoundingBox="167.283 27.9975 167.283 74.144" Z="32" GraphicType="Bracket" BracketType="Square" LipSize="60" BracketUsage="SRU" id="39">
+          <objecttag TagTable="Unknown" PositioningTable="offset" PositioningOffset="2.0312 1.6464" Name="bracketusage" id="0">
+            <t p="169.3143 29.644" BoundingBox="169.3143 25.644 172.2643 29.644" CaptionLineHeight="0" LineHeight="0" temp_Text="[[0 4 0 5 3]]+" id="0"/>
+          </objecttag>
+        </graphic>
+        <objecttag TagTable="Unknown" PositioningTable="absolute" Name="idterm" id="0">
+          <t p="215.8999 24.144" BoundingBox="203.7999 18.844 216.1043 25.8987" CaptionJustification="Right" Justification="Right" LineHeight="1" temp_Text="[[0 4 0 7 3]](VI)" id="0"/>
+        </objecttag>
+      </group>
+      <splitter p="0 0" PageDefinition="IDTerm" id="1"/>
+      <bracketedgroup BracketedObjectIDs="27 23 8 10 12 14 16 25 29 31 33 35" BracketUsage="SRU" RepeatCount="2" SRULabel="+" id="54">
+        <bracketattachment GraphicID="38" id="55"/>
+        <bracketattachment GraphicID="39" id="56"/>
+      </bracketedgroup>
+    </page>
+    <colortable>
+      <color r="1" g="1" b="1"/>
+      <color r="0" g="0" b="0"/>
+      <color r="1" g="1" b="1"/>
+      <color r="0.9803921568627451" g="0.9803921568627451" b="0.9803921568627451"/>
+      <color r="0.9411764705882353" g="0.9411764705882353" b="0.9411764705882353"/>
+      <color r="0.8980392156862745" g="0.8980392156862745" b="0.8980392156862745"/>
+      <color r="0.8666666666666667" g="0.8666666666666667" b="0.8666666666666667"/>
+      <color r="0.8235294117647058" g="0.8235294117647058" b="0.8235294117647058"/>
+      <color r="0.7843137254901961" g="0.7843137254901961" b="0.7843137254901961"/>
+      <color r="0.7058823529411765" g="0.7058823529411765" b="0.7058823529411765"/>
+      <color r="0.6666666666666666" g="0.6666666666666666" b="0.6666666666666666"/>
+      <color r="0.6274509803921569" g="0.6274509803921569" b="0.6274509803921569"/>
+      <color r="0.5882352941176471" g="0.5882352941176471" b="0.5882352941176471"/>
+      <color r="0.5490196078431373" g="0.5490196078431373" b="0.5490196078431373"/>
+      <color r="0.5098039215686274" g="0.5098039215686274" b="0.5098039215686274"/>
+      <color r="0.47058823529411764" g="0.47058823529411764" b="0.47058823529411764"/>
+      <color r="0.43137254901960786" g="0.43137254901960786" b="0.43137254901960786"/>
+      <color r="0.39215686274509803" g="0.39215686274509803" b="0.39215686274509803"/>
+    </colortable>
+    <fonttable>
+      <font id="4" charset="1252" name="Times New Roman"/>
+    </fonttable>
+  </CDXML>
+</cdxList>
