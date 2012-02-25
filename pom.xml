@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cml</groupId>
+	
+	<parent>
+		<groupId>uk.ac.cam.ch.wwmm</groupId>
+		<artifactId>wwmm-parent</artifactId>
+		<version>3</version>
+    </parent>
+    
+	<groupId>org.xml-cml.chemdraw</groupId>
 	<artifactId>chemdraw-converter</artifactId>
-	<version>0.2-SNAPSHOT</version>
-	<description>Converts CDX and CDXML from and to CML
-	</description>
+	<version>0.3-SNAPSHOT</version>
+	<name>Chemdraw-converters</name>
+	
+	<description>Converts CDX and CDXML from and to CML</description>
 	<url>http://www.xml-cml.org/</url>
 	<scm />
+	
+	<properties>
+	    <chemdraw.groupId>org.xml-cml.chemdraw</chemdraw.groupId>
+	    
+		<junit.groupId>junit</junit.groupId>
+		<junit.artifactId>junit</junit.artifactId>
+		<junit.version>4.8.2</junit.version>
+		
+  	    <jumbo.groupId>org.xml-cml</jumbo.groupId>
+		<jumbo.version>6.1-SNAPSHOT</jumbo.version>
+		
+		<jumbo-testutil.version>1.1-SNAPSHOT</jumbo-testutil.version>
+	</properties>
+
 	<build>
 		<finalName>chemdraw-converter</finalName>
 		<plugins>
@@ -43,6 +66,7 @@
 			</plugin>			
 		</plugins>
 	</build>
+	
 	<repositories>
 		<repository>
 			<id>wwmm-repo</id>
@@ -50,16 +74,17 @@
 			<url>https://maven.ch.cam.ac.uk/m2repo</url>
 		</repository>
 	</repositories>
+	
 	<dependencies>
 		<dependency>
-			<groupId>cml</groupId>
+			<groupId>${jumbo.groupId}</groupId>
 			<artifactId>jumbo</artifactId>
-			<version>5.5.1-SNAPSHOT</version>
+			<version>${jumbo.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
+			<groupId>${junit.groupId}</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.0</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -68,12 +93,13 @@
 			<version>1.2.13</version>
 		</dependency>
       <dependency>
-         <groupId>cml</groupId>
+         <groupId>${jumbo.groupId}</groupId>
          <artifactId>jumbo-testutil</artifactId>
-	     <version>1.0-SNAPSHOT</version>
+			<version>${jumbo-testutil.version}</version>
          <scope>test</scope>
       </dependency>
 	</dependencies>
+	
 	<reporting>
 		<plugins>
 			<plugin>

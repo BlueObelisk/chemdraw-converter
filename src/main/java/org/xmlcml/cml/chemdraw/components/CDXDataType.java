@@ -318,7 +318,7 @@ class _CDXFontTable extends CDXDataType {
     public _CDXFontTable(byte[] bytes, CDXProperty prop) {
         super(bytes, prop);
         int ftLength = bytes.length;
-        LOG.debug("ftlength "+ftLength);
+        LOG.trace("ftlength "+ftLength);
         bb = new byte[2];
         int nstart = 0;
         for (int i =0 ; i < 2; i++) {
@@ -326,14 +326,14 @@ class _CDXFontTable extends CDXDataType {
         }
         nstart += 2;
         int platform = CDXUtil.getUINT16(bb);
-        LOG.debug("Platform "+platform);
+        LOG.trace("Platform "+platform);
         for (int i = 0; i < 2; i++) {
             bb[i] = bytes[nstart + i];
         }
         nstart += 2;
         s = "";
         int nFont = CDXUtil.getUINT16(bb);
-        LOG.debug("nFont "+nFont);
+        LOG.trace("nFont "+nFont);
         for (int j = 0; j < nFont; j++) {
             if (j > 0) {
                 s += ";";
@@ -343,20 +343,20 @@ class _CDXFontTable extends CDXDataType {
             }
             int id = CDXUtil.getUINT16(bb);
             s += id+"/";
-            LOG.debug("id "+id);
+            LOG.trace("id "+id);
             nstart += 2;
             for (int i = 0; i < 2; i++) {
                 bb[i] = bytes[nstart + i];
             }
             int charset = CDXUtil.getUINT16(bb);
             s += charset+"/";
-            LOG.debug("charset "+charset);
+            LOG.trace("charset "+charset);
             nstart += 2;
             for (int i = 0; i < 2; i++) {
                 bb[i] = bytes[nstart + i];
             }
             int fontlen = CDXUtil.getUINT16(bb);
-            LOG.debug("fontlen "+fontlen);
+            LOG.trace("fontlen "+fontlen);
             nstart += 2;
             bf = new byte[fontlen];
             for (int i = 0; i < fontlen; i++) {
@@ -365,9 +365,9 @@ class _CDXFontTable extends CDXDataType {
             String font = "";
             try {
                 font = CDXUtil.getAsciiString(bf, 0);
-                LOG.debug("font "+font);
+                LOG.trace("font "+font);
             } catch (Exception e) {
-                LOG.warn("Bad font: "+e);
+                LOG.trace("Bad font: "+e);
             }
             nstart += fontlen;
             s += font;
@@ -571,7 +571,7 @@ class _CDXString extends CDXDataType {
         // I have found an example in objecttag where font runs is not mentioned
         // KLUDGE
         if (nFontRuns < 0 || nFontRuns > 100) {
-//        	LOG.warn("no font runs given");
+//        	LOG.trace("no font runs given");
         	s = new String(bytes);
         } else {
 	        offset += 2;

@@ -73,17 +73,17 @@ public class ChemDrawReactionConverter implements CDXConstants {
 				Nodes nodes = scopeElement.query("./cml:scalar[@id='"+reactionStepArrows+"']", CML_XPATH);
 				if (nodes.size() == 1) {
 					CMLScalar arrow = (CMLScalar) nodes.get(0);
-					Real2Range boundingBox = CDXML2CMLObject.getNormalizedBoundingBox(arrow);
+					Real2Range boundingBox = CDXML2CMLProcessor.getNormalizedBoundingBox(arrow);
 					if (boundingBox == null) {
 						LOG.error("null boundingBox");
 					} else {
 						Nodes labelNodes = scopeElement.query("./cml:label", CML_XPATH);
-						List<CMLLabel> labels = CDXML2CMLObject.getVerticalLabels(
+						List<CMLLabel> labels = CDXML2CMLProcessor.getVerticalLabels(
 								scopeElement, labelNodes, boundingBox, 50, -50,
 								MIN_REACTION_LABEL_FONT_SIZE,
 								MAX_REACTION_LABEL_FONT_SIZE
 								);
-						labels = CDXML2CMLObject.sortLabelsByY(labels);
+						labels = CDXML2CMLProcessor.sortLabelsByY(labels);
 						for (CMLLabel label : labels) {
 							LOG.debug("L "+label.getCMLValue());
 							// conditions?

@@ -67,10 +67,7 @@ public class XMLToCDXMLConverter {
 		    // subsidiary classes
 		    classMap.put("color", Element.class);	
 		    classMap.put("font", Element.class);	
-		    classMap.put("object", Element.class);
-		    
-		    //Known to be ignorable
-		    classMap.put("splitter", Element.class);
+		    classMap.put("object", Element.class);	
 		} catch (Exception e) {
 			throw new RuntimeException("Cannot set up classMap in: "+base);
 		}
@@ -88,7 +85,9 @@ public class XMLToCDXMLConverter {
 		String localName = oldElement.getLocalName();
 		Class<?> theClass = classMap.get(localName);
 		if (theClass == null) {
-			throw new RuntimeException("******************Cannot find class for: "+localName);
+//			new Exception().printStackTrace();
+			System.err.println("******************Cannot find class for: "+localName);
+			return (Element) oldElement.copy();
 		}
 		String className = "";
 		Element newElement = null;

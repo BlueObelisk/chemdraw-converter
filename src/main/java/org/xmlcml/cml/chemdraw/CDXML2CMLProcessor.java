@@ -69,9 +69,9 @@ import org.xmlcml.util.CMLUtilNew;
  * @author pm286
  *
  */
-public class CDXML2CMLObject {
+public class CDXML2CMLProcessor {
 
-	final static Logger LOG = Logger.getLogger(CDXML2CMLObject.class);
+	final static Logger LOG = Logger.getLogger(CDXML2CMLProcessor.class);
 	static {
 		LOG.setLevel(Level.INFO);
 	}
@@ -95,7 +95,7 @@ public class CDXML2CMLObject {
 		this.removeCDXAttributes = removeCDXAttributes;
 	}
 
-	public CDXML2CMLObject() {
+	public CDXML2CMLProcessor() {
     	
     }
     
@@ -196,7 +196,7 @@ public class CDXML2CMLObject {
 		// main explorations of content
 		page.process2CML(cmlCml);
 		// tidying
-		CDXML2CMLObject.addLabelsToMolecules(cmlCml);
+		CDXML2CMLProcessor.addLabelsToMolecules(cmlCml);
 		addHydrogenAtomsToMolecules();
 //		this.processReactions();
 		this.processReactionsNew();
@@ -599,7 +599,7 @@ public class CDXML2CMLObject {
 			Nodes labelNodes = scopeElement.query("cml:label", CML_XPATH);
 			for (CMLMolecule molecule : moleculeList.getMoleculeElements()) {
 				if (molecule.getRef() == null || S_EMPTY == molecule.getRef()) {
-					CDXML2CMLObject.moveLabelsToMolecules(scopeElement, labelNodes, molecule);
+					CDXML2CMLProcessor.moveLabelsToMolecules(scopeElement, labelNodes, molecule);
 				}
 			}
 		}
@@ -626,17 +626,17 @@ public class CDXML2CMLObject {
 	static void moveLabelsToMolecules(CMLElement element, Nodes labelNodes, CMLMolecule molecule) {
 		// only take original molecules
 		if (!"cdx:fragment".equals(molecule.getRole())) {
-			Real2Range moleculeBB = CDXML2CMLObject.getNormalizedBoundingBox(molecule);
+			Real2Range moleculeBB = CDXML2CMLProcessor.getNormalizedBoundingBox(molecule);
 			if (moleculeBB != null) {
 				double molYMax = moleculeBB.getYRange().getMax();
-				List<CMLLabel> labels = CDXML2CMLObject.getVerticalLabels(
+				List<CMLLabel> labels = CDXML2CMLProcessor.getVerticalLabels(
 					element, labelNodes, moleculeBB, 100, -100,
 					MIN_MOLECULE_LABEL_FONT_SIZE,
 					MAX_MOLECULE_LABEL_FONT_SIZE
 				);
-				labels = CDXML2CMLObject.sortLabelsByY(labels);
+				labels = CDXML2CMLProcessor.sortLabelsByY(labels);
 				for (CMLLabel label : labels) {
-					Real2Range labelBB = CDXML2CMLObject.getNormalizedBoundingBox(label);
+					Real2Range labelBB = CDXML2CMLProcessor.getNormalizedBoundingBox(label);
 					double deltaY = labelBB.getYRange().getMin() - molYMax;
 					if (deltaY < MIN_MOLECULE_TO_LABEL_YDELTA ||
 						deltaY > MAX_MOLECULE_TO_LABEL_YDELTA) {
@@ -695,7 +695,7 @@ public class CDXML2CMLObject {
 			if (fontSize < minFont || fontSize > maxFont) {
 				continue;
 			}
-			Real2Range labelBoundingBox = CDXML2CMLObject.getNormalizedBoundingBox(label);
+			Real2Range labelBoundingBox = CDXML2CMLProcessor.getNormalizedBoundingBox(label);
 			if (labelBoundingBox != null) {
 				RealRange labelXRange = labelBoundingBox.getXRange();
 				RealRange labelYRange = labelBoundingBox.getYRange();

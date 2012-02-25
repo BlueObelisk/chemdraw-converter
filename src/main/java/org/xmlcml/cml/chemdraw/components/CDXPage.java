@@ -7,7 +7,7 @@ import nu.xom.Nodes;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
-import org.xmlcml.cml.chemdraw.CDXML2CMLObject;
+import org.xmlcml.cml.chemdraw.CDXML2CMLProcessor;
 /**
  * Chemdraw page
  * currently only a container
@@ -125,9 +125,9 @@ public class CDXPage extends CDXObject {
 		// now molecules    	
     	processMoleculeFragments(element);
 		// collect molecules in list	  	
-	  	CDXML2CMLObject.createMoleculeList(element);
+	  	CDXML2CMLProcessor.createMoleculeList(element);
 		// move labels to molecules if possible    	
-	  	CDXML2CMLObject.addLabelsToMolecules(element);
+	  	CDXML2CMLProcessor.addLabelsToMolecules(element);
 		// reactions depend on text and graphics having been processed
 	  	processReactions(element);
 	  	// should be nothing left except unknown or unprocessable elements

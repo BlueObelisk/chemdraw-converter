@@ -95,7 +95,7 @@ public class CDXBond extends CDXObject {
         }
         String atomRef1 = "a"+b;
         String atomRef2 = "a"+e;
-        LOG.debug("bond..."+" ("+atomRef1+"/"+atomRef2+")");
+        LOG.trace("bond..."+" ("+atomRef1+"/"+atomRef2+")");
         // if narrow is at end, swap atoms
         String newDisplay = newWedgeBondDisplay(display);
         if (!newDisplay.equals(display)) {
@@ -163,7 +163,7 @@ public class CDXBond extends CDXObject {
     private CMLAtom getOrCreateAndAddAtom(CMLMolecule molecule, String atomRef) {
     	CMLAtom atom = molecule.getAtomById(atomRef);
     	if (atom == null) {
-    		LOG.debug("bond requires undeclared atom: "+atomRef);
+    		LOG.trace("bond requires undeclared atom: "+atomRef);
     		atom = new CMLAtom(atomRef);
     		molecule.addAtom(atom);
     	}

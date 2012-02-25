@@ -61,7 +61,7 @@ public class CDX2CDXML {
 	}
 
 	public void parseCDX(byte[] bytes) {
-		LOG.debug("bytes: "+bytes.length);
+		LOG.trace("bytes: "+bytes.length);
 		parseAllowingForCorruptInput(bytes);
 		parsedObject = parser.getParsedObject();
 	}

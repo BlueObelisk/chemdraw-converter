@@ -19,7 +19,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.base.CMLUtil;
 import org.xmlcml.cml.chemdraw.CDXConstants;
-import org.xmlcml.cml.chemdraw.CDXML2CMLObject;
+import org.xmlcml.cml.chemdraw.CDXML2CMLProcessor;
 import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.cml.element.CMLReaction;
 
@@ -282,7 +282,7 @@ An object used to indicate that its containing object has chemical meaning that 
     private Vector<CDXProperty> propVector;
 
 //	@SuppressWarnings("unused")
-	private CDXML2CMLObject cdxmlObject = null;
+	private CDXML2CMLProcessor cdxmlObject = null;
 
     // only used for representatives
     protected CDXObject(int code, String name, String cdxName) {
@@ -319,7 +319,9 @@ An object used to indicate that its containing object has chemical meaning that 
         CDXObject obj = null;
         CDXObject refObj = getObject(code);
         String name = (refObj == null) ? "object" : refObj.codeName.cdxName;
-		if (code == CDXArrow.CODE) {
+		if (false) {
+            ;
+		} else if (code == CDXArrow.CODE) {
 			obj = new CDXArrow();
 		} else if (code == CDXBond.CODE) {
 			obj = new CDXBond();
@@ -356,13 +358,8 @@ An object used to indicate that its containing object has chemical meaning that 
 		} else if (code == CDXText.CODE) {
 			obj = new CDXText();
 		} else {
-			if (refObj==null){
-				obj = new CDXObject(code, name, name);
-			}
-			else{
-				obj = new CDXObject(code, name, refObj.codeName.cdxName);
-			}
-            LOG.error("Unknown CDX name, code = "+name+", "+code+"/"+Integer.toHexString(code));
+			obj = new CDXObject(name);
+            throw new RuntimeException("Unknown CDX name, code = "+name+", "+code+"/"+Integer.toHexString(code));
         }
         return obj;
 	}
@@ -389,7 +386,7 @@ An object used to indicate that its containing object has chemical meaning that 
         }
 	}
 
-	public void setChemDrawConverterRecursively(CDXML2CMLObject cdxmlObject) {
+	public void setChemDrawConverterRecursively(CDXML2CMLProcessor cdxmlObject) {
 		this.cdxmlObject = cdxmlObject;
 		Elements childElements = this.getChildElements();
 		for (int i = 0; i < childElements.size(); i++) {

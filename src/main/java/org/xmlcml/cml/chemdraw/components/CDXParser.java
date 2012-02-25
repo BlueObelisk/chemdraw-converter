@@ -140,7 +140,7 @@ public class CDXParser implements CDXConstants {
         while (true) {
 // run off end ?
             if (byteCount >= bytes.length) {
-            	LOG.warn("ran off end: "+byteCount);
+            	LOG.trace("ran off end: "+byteCount);
                 ok = false;
                 break;
             }
@@ -167,7 +167,7 @@ public class CDXParser implements CDXConstants {
             }
             byte b = bytes[byteCount++];
             if (b != 0 && !(b == -128 && byteCount - start == 12)) {
-                    LOG.warn("non-zero byte ("+b+") in CDX header (16 zeros expected) at: "+byteCount+"/"+Integer.toHexString(byteCount));
+                    LOG.trace("non-zero byte ("+b+") in CDX header (16 zeros expected) at: "+byteCount+"/"+Integer.toHexString(byteCount));
 //                    ok = false;
 //                    break;
             }
@@ -303,7 +303,7 @@ public class CDXParser implements CDXConstants {
 			throw new RuntimeException("Cannot recover from misparse");
 		}
 		if (unknown) {
-			LOG.warn("Read unknown Property: "+prop.getCDXName());
+			LOG.trace("Read unknown Property: "+prop.getCDXName());
 		}
 		LOG.trace("ByteCount "+byteCount);
 	}
@@ -318,7 +318,7 @@ public class CDXParser implements CDXConstants {
 //			misread = true;
 			byteCount = lastHeader+16;
 		} else if (obj.codeName.equals("unknown")) {
-			LOG.warn("UNKNOWN: "+iObj);
+			LOG.trace("UNKNOWN: "+iObj);
 		} else {
 		}
 
@@ -331,7 +331,7 @@ public class CDXParser implements CDXConstants {
 		int id = (int) CDXUtil.getUINT32(b);
 		startElement(obj, id, b);
 		if (parsedObject.codeName.cdxName.equals("unknown")) {
-			LOG.warn("UNKN "+iObj);
+			LOG.trace("UNKN "+iObj);
 		}
 		LOG.debug("Element: "+parsedObject.codeName.cdxName);
 		readPropertyOrObject();

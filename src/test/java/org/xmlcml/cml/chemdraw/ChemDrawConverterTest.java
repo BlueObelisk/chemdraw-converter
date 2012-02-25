@@ -2,6 +2,7 @@ package org.xmlcml.cml.chemdraw;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 import nu.xom.Attribute;
 import nu.xom.Builder;
@@ -36,7 +37,6 @@ public class ChemDrawConverterTest {
 			Assert.fail("failed to read file "+e.getMessage());
 		}
 		CDXObject parsedObject = cd.getCDXMLObject();
-		CMLUtil.debug(parsedObject, "CDX");
 		// from CDX docs (I have had to add and remove some attributes)
 		Element ref = CMLUtil.parseXML(
 "<?xml version='1.0' encoding='UTF-8' ?>"+
@@ -70,11 +70,30 @@ public class ChemDrawConverterTest {
 			Assert.fail("failed to read file "+e.getMessage());
 		}
 		CDXObject parsedObject = cd.getCDXMLObject();
-		CMLUtil.debug(parsedObject, "CDX");
-		CDXML2CMLObject cdxml2cmlObject = new CDXML2CMLObject();
-		cdxml2cmlObject.convertParsedXMLToCML(parsedObject);
-		CMLElement cml = cdxml2cmlObject.getCML();
-		cml.debug("CML");
+		CDXML2CMLProcessor cdxml2cmlProcessor = new CDXML2CMLProcessor();
+		cdxml2cmlProcessor.convertParsedXMLToCML(parsedObject);
+		CMLElement cml = cdxml2cmlProcessor.getCML();
+	}
+
+	@Test
+	public void testCDXML2CML() throws Exception {
+		File in = new File(TEST_RESOURCES+"/cdxml/C00006.cdxml");
+		File out = new File(TEST_RESOURCES+"/cdxml/C00006.cml");
+		File ref = new File(TEST_RESOURCES+"/cdxml/C00006.ref.cml");
+		CDXML2CMLProcessor processor = new CDXML2CMLProcessor();
+		try {
+			Element cdxml = CMLUtil.parseQuietlyToCMLDocument(new FileInputStream(in)).getRootElement();
+			processor.convertParsedXMLToCML(cdxml);
+		} catch (Exception e) {
+			Assert.fail("failed to read file "+e.getMessage());
+		}
+		CMLElement cml = processor.getCML();
+		CMLUtil.debug(cml, new FileOutputStream(out), 0);
+		JumboTestUtils.assertEqualsIncludingFloat(
+				"cdxml", 
+				CMLUtil.parseQuietlyIntoCML(ref),
+				CMLUtil.parseQuietlyIntoCML(out),
+				true, 0.000000001);
 	}
 
 	private void stripIds(Element test) {
