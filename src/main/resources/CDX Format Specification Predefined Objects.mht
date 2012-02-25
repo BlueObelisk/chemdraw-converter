@@ -1,0 +1,624 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: CDX Format Specification: Predefined Objects
+Date: Fri, 19 Feb 2010 11:13:12 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0005_01CAB154.869102A0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7100.0
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0005_01CAB154.869102A0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/cdx/AllCDXObjects.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>CDX Format Specification: Predefined Objects</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type><LINK=20
+rel=3Dstylesheet=20
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/style.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7100.0"></HEAD>
+<BODY bgColor=3D#ffffff><!--webbot bot=3D"Include" =
+U-Include=3D"/chemdraw/header.htm" TAG=3D"BODY" -->
+<H2>Predefined Objects</H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><FONT size=3D+1><B>Object</B></FONT></TD>
+    <TD><FONT size=3D+1><B>Value</B></FONT></TD>
+    <TD><FONT size=3D+1><B>Name</B></FONT></TD>
+    <TD><FONT size=3D+1><B>CDXML Name</B></FONT></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Document.htm">Document</A></B></FONT></TD>
+    <TD>0x8000</TD>
+    <TD>kCDXObj_Document</TD>
+    <TD>CDXML</TD></TR>
+  <TR>
+    <TD colSpan=3D4>The top-level CDX object. It contains all CDX =
+attributes and=20
+      objects.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Page.htm">Page</A></B></FONT></TD>
+    <TD>0x8001</TD>
+    <TD>kCDXObj_Page</TD>
+    <TD>page</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A drawing space that can contain other =
+objects.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Group.htm">Group</A></B></FONT></TD>
+    <TD>0x8002</TD>
+    <TD>kCDXObj_Group</TD>
+    <TD>group</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A logical collection of objects.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Fragment.htm">Fragment</A></B></FONT></TD>
+    <TD>0x8003</TD>
+    <TD>kCDXObj_Fragment</TD>
+    <TD>fragment</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A collection of nodes and their connectivity =
+(bonds).</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Node.htm">Node</A></B></FONT></TD>
+    <TD>0x8004</TD>
+    <TD>kCDXObj_Node</TD>
+    <TD>n</TD></TR>
+  <TR>
+    <TD colSpan=3D4>The basic building block of chemical objects, =
+usually=20
+      referring to a single atom</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Bond.htm">Bond</A></B></FONT></TD>
+    <TD>0x8005</TD>
+    <TD>kCDXObj_Bond</TD>
+    <TD>b</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A connection between two Node objects.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Text.htm">Text</A></B></FONT></TD>
+    <TD>0x8006</TD>
+    <TD>kCDXObj_Text</TD>
+    <TD>t</TD></TR>
+  <TR>
+    <TD colSpan=3D4>An arbitrary block of (possibly styled) =
+text.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Graphic.htm">Graphic</A></B></FONT></TD>
+    <TD>0x8007</TD>
+    <TD>kCDXObj_Graphic</TD>
+    <TD>graphic</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A (generally non-chemical) graphic object such as a =
+line,=20
+      arc, circle, or rectangle.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/BracketedGroup.htm">Bracketed=20
+      Group</A></B></FONT></TD>
+    <TD>0x8017</TD>
+    <TD>kCDXObj_BracketedGroup</TD>
+    <TD>bracketedgroup</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A collection of objects surrounded by brackets (or =
+braces or=20
+      parentheses).</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/BracketAttachment.htm">Bracket=20
+      Attachment</A></B></FONT></TD>
+    <TD>0x8018</TD>
+    <TD>kCDXObj_BracketAttachment</TD>
+    <TD>bracketattachment</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A linkage that connects a Bracketed Group to some =
+object=20
+      outside that group.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/CrossingBond.htm">Crossing=20
+      Bond</A></B></FONT></TD>
+    <TD>0x8019</TD>
+    <TD>kCDXObj_CrossingBond</TD>
+    <TD>crossingbond</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A Bond that connects a Bracketed Group to a Node =
+outside=20
+      that group.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Curve.htm">Curve</A></B></FONT></TD>
+    <TD>0x8008</TD>
+    <TD>kCDXObj_Curve</TD>
+    <TD>curve</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A B=E9zier curve.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/EmbeddedObject.htm">Embedded=20
+      Object</A></B></FONT></TD>
+    <TD>0x8009</TD>
+    <TD>kCDXObj_EmbeddedObject</TD>
+    <TD>embeddedobject</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A Macintosh PICT, a Windows Metafile, or a Windows =
+OLE=20
+      Object.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Table.htm">Table</A></B></FONT></TD>
+    <TD>0x8016</TD>
+    <TD>kCDXObj_Table</TD>
+    <TD>table</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A grid-like arrangement of drawing spaces.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/NamedAltGroup.htm">Named=20
+      Alternative Group</A></B></FONT></TD>
+    <TD>0x800A</TD>
+    <TD>kCDXObj_NamedAlternativeGroup</TD>
+    <TD>altgroup</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A container object holding fragments that represent=20
+      alternative substituents for a query.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/TemplateGrid.htm">Template=20
+      Grid</A></B></FONT></TD>
+    <TD>0x800B</TD>
+    <TD>kCDXObj_TemplateGrid</TD>
+    <TD>templategrid</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A TemplateGrid indicates how multiple CDX page =
+objects=20
+      should be arranged in a Template document.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/RegistryNumber.htm">Registry=20
+      Number</A></B></FONT></TD>
+    <TD>0x800C</TD>
+    <TD>kCDXObj_RegistryNumber</TD>
+    <TD>regnum</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A registry or catalog number, along with the name of =
+the=20
+      authority which issued the number.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/ReactionScheme.htm">Reaction=20
+      Scheme</A></B></FONT></TD>
+    <TD>0x800D</TD>
+    <TD>kCDXObj_ReactionScheme</TD>
+    <TD>scheme</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A description of a single- or multi-step reaction,=20
+      containing one or more Reaction Steps.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/ReactionStep.htm">Reaction=20
+      Step</A></B></FONT></TD>
+    <TD>0x800E</TD>
+    <TD>kCDXObj_ReactionStep</TD>
+    <TD>step</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A description of one step in a reaction. It contains =
+the=20
+      constituents, conditions, and products.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Spectrum.htm">Spectrum</A></B></FONT></TD>
+    <TD>0x8010</TD>
+    <TD>kCDXObj_Spectrum</TD>
+    <TD>spectrum</TD></TR>
+  <TR>
+    <TD colSpan=3D4>An NMR, MS, IR or other sort of spectral =
+plot.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/ObjectTag.htm">Object=20
+      Tag</A></B></FONT></TD>
+    <TD>0x8011</TD>
+    <TD>kCDXObj_ObjectTag</TD>
+    <TD>objecttag</TD></TR>
+  <TR>
+    <TD colSpan=3D4>Arbitrarily named property, one or more of which can =
+be=20
+      attached to any ChemDraw object.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Sequence.htm">Sequence</A></B></FONT></TD>
+    <TD>0x8013</TD>
+    <TD>kCDXObj_Sequence</TD>
+    <TD>sequence</TD></TR>
+  <TR>
+    <TD colSpan=3D4>One member of an ordered series; the contents of its =
+Text=20
+      object may change as other objects are added to or removed from =
+the=20
+    series.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/CrossReference.htm">Cross-Reference</A></B></FONT></TD>
+    <TD>0x8014</TD>
+    <TD>kCDXObj_CrossReference</TD>
+    <TD>crossreference</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A link to some Sequence object.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Border.htm">Border</A></B></FONT></TD>
+    <TD>0x8020</TD>
+    <TD>kCDXObj_Border</TD>
+    <TD>border</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A collection of information describing one edge of =
+an=20
+    object.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Geometry.htm">Geometry</A></B></FONT></TD>
+    <TD>0x8021</TD>
+    <TD>kCDXObj_Geometry</TD>
+    <TD>geometry</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A geometrical relationship between one or more=20
+objects.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Constraint.htm">Constraint</A></B></FONT></TD>
+    <TD>0x8022</TD>
+    <TD>kCDXObj_Constraint</TD>
+    <TD>constraint</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A distance or angle constraint between one or more=20
+    objects.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/TLCPlate.htm">TLC=20
+      Plate</A></B></FONT></TD>
+    <TD>0x8023</TD>
+    <TD>kCDXObj_TLCPlate</TD>
+    <TD>tlcplate</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A rectangular object representing a Thin Layer=20
+      Chromatography (TLC) plate.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/TLCLane.htm">TLC=20
+      Lane</A></B></FONT></TD>
+    <TD>0x8024</TD>
+    <TD>kCDXObj_TLCLane</TD>
+    <TD>tlclane</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A logical object representing a series of spots =
+arranged=20
+      vertically on a TLC plate.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/TLCSpot.htm">TLC=20
+      Spot</A></B></FONT></TD>
+    <TD>0x8025</TD>
+    <TD>kCDXObj_TLCSpot</TD>
+    <TD>tlcspot</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A single spot on a TLC plate.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Splitter.htm">Splitter</A></B></FONT></TD>
+    <TD>0x8015</TD>
+    <TD>kCDXObj_Splitter</TD>
+    <TD>splitter</TD></TR>
+  <TR>
+    <TD colSpan=3D4>An object that divides the page into horizontal =
+bands</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/ChemicalProperty.htm">Chemical=20
+      Property</A></B></FONT></TD>
+    <TD>0x8026</TD>
+    <TD>kCDXObj_ChemicalProperty</TD>
+    <TD>chemicalproperty</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A (physical) chemical property associated with a =
+collection=20
+      of objects, usually atoms and bonds.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/ColorTable.htm">Color=20
+      Table</A></B></FONT></TD>
+    <TD>0x0300</TD>
+    <TD>kCDXProp_ColorTable</TD>
+    <TD>colortable</TD></TR>
+  <TR>
+    <TD colSpan=3D4>The color palette used throughout the document. =
+Color=20
+      indexes 0 and 1 always correspond to black and white and are not =
+saved in=20
+      the color table. The first and second RGB values (color indexes 2 =
+and 3)=20
+      are the default background and foreground colors, and other colors =
+are=20
+      numbered sequentially.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Color.htm">Color</A></B></FONT></TD>
+    <TD>n/a</TD>
+    <TD>n/a</TD>
+    <TD>color</TD></TR>
+  <TR>
+    <TD colSpan=3D4>An RGB color.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/FontTable.htm">Font=20
+      Table</A></B></FONT></TD>
+    <TD>0x0100</TD>
+    <TD>kCDXProp_FontTable</TD>
+    <TD>fonttable</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A list of fonts used in the document.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Font.htm">Font</A></B></FONT></TD>
+    <TD>n/a</TD>
+    <TD>n/a</TD>
+    <TD>font</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A logical font definition.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Style.htm">Style</A></B></FONT></TD>
+    <TD>n/a</TD>
+    <TD>n/a</TD>
+    <TD>s</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A string of text in exactly one style.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Represent.htm">Represents=20
+      Property</A></B></FONT></TD>
+    <TD>0x000e</TD>
+    <TD>kCDXProp_RepresentsProperty</TD>
+    <TD>represent</TD></TR>
+  <TR>
+    <TD colSpan=3D4>An object used to indicate that its containing =
+object has=20
+      chemical meaning that is also represented in another =
+object.</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD><FONT size=3D+1><B><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/Arrow.htm">Arrow</A></B></FONT></TD>
+    <TD>0x8027</TD>
+    <TD>kCDXObj_Arrow</TD>
+    <TD>arrow</TD></TR>
+  <TR>
+    <TD colSpan=3D4>A line or arc, optionally with arrowheads on one or =
+both=20
+    ends</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P>
+<HR>
+<A=20
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/index.htm">CDX=20
+Documentation index</A> <!--webbot bot=3D"Include" =
+U-Include=3D"/footer.htm" TAG=3D"BODY" --></BODY></HTML>
+
+------=_NextPart_000_0005_01CAB154.869102A0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Location: http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/cdx/style.css
+
+BODY {
+	FONT-FAMILY: sans-serif
+}
+P {
+	FONT-FAMILY: sans-serif
+}
+H1 {
+	FONT-FAMILY: sans-serif
+}
+H2 {
+	FONT-FAMILY: sans-serif
+}
+H3 {
+	FONT-FAMILY: sans-serif
+}
+H4 {
+	FONT-FAMILY: sans-serif
+}
+H5 {
+	FONT-FAMILY: sans-serif
+}
+TD {
+	FONT-FAMILY: sans-serif
+}
+LI {
+	FONT-FAMILY: sans-serif
+}
+A {
+	FONT-FAMILY: sans-serif
+}
+DL {
+	FONT-FAMILY: sans-serif
+}
+TT {
+	FONT-FAMILY: monospace
+}
+PRE {
+	FONT-FAMILY: monospace
+}
+SUP {
+	FONT-SIZE: 60%
+}
+SUB {
+	FONT-SIZE: 60%
+}
+
+------=_NextPart_000_0005_01CAB154.869102A0--

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="9.162" errors="0" skipped="1" tests="5" name="org.xmlcml.cml.chemdraw.ChemDrawConverterTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_02\jre\bin"/>
+    <property name="java.vm.version" value="22.0-b10"/>
+    <property name="user.country.format" value="GB"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\petermr-workspace\chemdraw-converter"/>
+    <property name="java.runtime.version" value="1.7.0_02-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="D:\petermr-workspace\chemdraw-converter"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_02\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.real.class.path" value="D:\petermr-workspace\chemdraw-converter\target\surefire\surefirebooter1007722778047050396.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\pm286\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_02\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.7.0_02\bin;C:\Python26;C:\Tools\apache-maven-2.2.1\bin;C:\Tools\jmol-12.0.14;C:\tools\OpenBabel-2.2.3;C:\Tools\Pauthor-v1.2\bin;C:\Tools\inchi-1.03\win32;C:\Program Files (x86)\PuTTY;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Tools\cygwin\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseHg\;C:\Tools\apache-maven-3.0.3\bin;C:\Program Files (x86)\Mozilla Firefox;C:\Program Files (x86)\OpenBabel-2.3.0;C:\program Files\wordfind;C:\Tools\lensfield2-0.3-SNAPSHOT\bin;C:\MinGW\bin;C:\Program Files (x86)\Avogadro\bin;C:\Program Files (x86)\Mercurial;C:\Python26\Scripts;."/>
+    <property name="surefire.test.class.path" value="D:\petermr-workspace\chemdraw-converter\target\test-classes;D:\petermr-workspace\chemdraw-converter\target\classes;C:\Users\pm286\.m2\repository\org\xml-cml\jumbo\6.1-SNAPSHOT\jumbo-6.1-SNAPSHOT.jar;C:\Users\pm286\.m2\repository\org\xml-cml\euclid\1.1-SNAPSHOT\euclid-1.1-SNAPSHOT.jar;C:\Users\pm286\.m2\repository\commons-io\commons-io\2.0.1\commons-io-2.0.1.jar;C:\Users\pm286\.m2\repository\log4j\log4j\1.2.13\log4j-1.2.13.jar;C:\Users\pm286\.m2\repository\org\apache\commons\commons-math\2.2\commons-math-2.2.jar;C:\Users\pm286\.m2\repository\joda-time\joda-time\1.6.2\joda-time-1.6.2.jar;C:\Users\pm286\.m2\repository\org\xml-cml\cmlxom\3.2-SNAPSHOT\cmlxom-3.2-SNAPSHOT.jar;C:\Users\pm286\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2\tagsoup-1.2.jar;C:\Users\pm286\.m2\repository\xom\xom\1.2.5\xom-1.2.5.jar;C:\Users\pm286\.m2\repository\xml-apis\xml-apis\1.3.03\xml-apis-1.3.03.jar;C:\Users\pm286\.m2\repository\xerces\xercesImpl\2.8.0\xercesImpl-2.8.0.jar;C:\Users\pm286\.m2\repository\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Users\pm286\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\pm286\.m2\repository\org\xml-cml\jumbo-testutil\1.1-SNAPSHOT\jumbo-testutil-1.1-SNAPSHOT.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\pm286"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="pm286"/>
+    <property name="java.class.path" value="D:\petermr-workspace\chemdraw-converter\target\test-classes;D:\petermr-workspace\chemdraw-converter\target\classes;C:\Users\pm286\.m2\repository\org\xml-cml\jumbo\6.1-SNAPSHOT\jumbo-6.1-SNAPSHOT.jar;C:\Users\pm286\.m2\repository\org\xml-cml\euclid\1.1-SNAPSHOT\euclid-1.1-SNAPSHOT.jar;C:\Users\pm286\.m2\repository\commons-io\commons-io\2.0.1\commons-io-2.0.1.jar;C:\Users\pm286\.m2\repository\log4j\log4j\1.2.13\log4j-1.2.13.jar;C:\Users\pm286\.m2\repository\org\apache\commons\commons-math\2.2\commons-math-2.2.jar;C:\Users\pm286\.m2\repository\joda-time\joda-time\1.6.2\joda-time-1.6.2.jar;C:\Users\pm286\.m2\repository\org\xml-cml\cmlxom\3.2-SNAPSHOT\cmlxom-3.2-SNAPSHOT.jar;C:\Users\pm286\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2\tagsoup-1.2.jar;C:\Users\pm286\.m2\repository\xom\xom\1.2.5\xom-1.2.5.jar;C:\Users\pm286\.m2\repository\xml-apis\xml-apis\1.3.03\xml-apis-1.3.03.jar;C:\Users\pm286\.m2\repository\xerces\xercesImpl\2.8.0\xercesImpl-2.8.0.jar;C:\Users\pm286\.m2\repository\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Users\pm286\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\pm286\.m2\repository\org\xml-cml\jumbo-testutil\1.1-SNAPSHOT\jumbo-testutil-1.1-SNAPSHOT.jar;"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_02\jre"/>
+    <property name="sun.java.command" value="D:\petermr-workspace\chemdraw-converter\target\surefire\surefirebooter1007722778047050396.jar D:\petermr-workspace\chemdraw-converter\target\surefire\surefire7333469439237127072tmp D:\petermr-workspace\chemdraw-converter\target\surefire\surefire6471373163106374129tmp"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_02"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_02\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_02\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_02\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_02\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_02\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_02\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_02\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_02\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="localRepository" value="C:\Users\pm286\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0.996" classname="org.xmlcml.cml.chemdraw.ChemDrawConverterTest" name="testChemDrawConverter0"/>
+  <testcase time="5.75" classname="org.xmlcml.cml.chemdraw.ChemDrawConverterTest" name="testChemDrawConverter80"/>
+  <testcase time="0.41" classname="org.xmlcml.cml.chemdraw.ChemDrawConverterTest" name="testCDXML2CML"/>
+  <testcase time="1.87" classname="org.xmlcml.cml.chemdraw.ChemDrawConverterTest" name="testChemDrawConverter"/>
+  <testcase time="1.873" classname="org.xmlcml.cml.chemdraw.ChemDrawConverterTest" name="testChemDrawConverter3D">
+    <skipped/>
+  </testcase>
+</testsuite>

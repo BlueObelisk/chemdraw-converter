@@ -1,0 +1,4850 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: CDX Format Specification: Predefined Attributes
+Date: Fri, 19 Feb 2010 11:12:53 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CAB154.7B198640"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7100.0
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CAB154.7B198640
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/cdx/TableOfProperties.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>CDX Format Specification: Predefined =
+Attributes</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type><LINK=20
+rel=3Dstylesheet=20
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/style.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7100.0"></HEAD>
+<BODY bgColor=3D#ffffff><!--webbot bot=3D"Include" =
+U-Include=3D"/chemdraw/header.htm" TAG=3D"BODY" -->
+<H2>Predefined Attributes</H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD colSpan=3D4><FONT size=3D-3>(click column header to =
+sort)</FONT></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/TableOfProperties.htm"><B><FONT=20
+      size=3D+1>Value</FONT></B></A></TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/TableOfPropertiesByName.htm"><B>Name</B></A></TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/TableOfPropertiesByCDXMLName.htm"><B>CDXML=20
+      Name</B></A></TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/TableOfPropertiesByType.htm"><B>Type</B></A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D2><B>Description</B></TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0001</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CreationUserName.htm">kCDXProp_CreationUserName</A></TD>
+    <TD>CreationUserName</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The name of the creator (program user's name) of the =
+
+      document. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0002</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CreationDate.htm">kCDXProp_CreationDate</A></TD>
+    <TD>CreationDate</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/DateAndTime.htm">CDXDate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The time of object creation. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0003</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CreationProgram.htm">kCDXProp_CreationProgram</A></TD>
+    <TD>CreationProgram</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The name of the program, including version and =
+platform,=20
+      that created the associated CDX object. ChemDraw 4.0 uses =
+"ChemDraw 4.0"=20
+      as the value of CreationProgram. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0004</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ModificationUserName.htm">kCDXProp_ModificationUserName</A=
+></TD>
+    <TD>ModificationUserName</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The name of the last modifier (program user's name) =
+of the=20
+      document. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0005</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ModificationDate.htm">kCDXProp_ModificationDate</A></TD>
+    <TD>ModificationDate</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/DateAndTime.htm">CDXDate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Time of the last modification. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0006</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ModificationProgram.htm">kCDXProp_ModificationProgram</A><=
+/TD>
+    <TD>ModificationProgram</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The name of the program, including version and =
+platform, of=20
+      the last program to perform a modification. ChemDraw 4.0 uses =
+"ChemDraw=20
+      4.0" as the value of CreationProgram. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0008</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Name.htm">kCDXProp_Name</A></TD>
+    <TD>Name</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for =
+objecttags.</FONT> Name of=20
+      an object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0009</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Comment.htm">kCDXProp_Comment</A></TD>
+    <TD>Comment</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An arbitrary string intended to be meaningful to a =
+user.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x000A</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ZOrder.htm">kCDXProp_ZOrder</A></TD>
+    <TD>Z</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Back-to-front ordering index in 2D drawing. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x000B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/RegistryNumber.htm">kCDXProp_RegistryNumber</A></TD>
+    <TD>RegistryNumber</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A registry or catalog number of a molecule object. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x000C</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/RegistryAuthority.htm">kCDXProp_RegistryAuthority</A></TD>=
+
+    <TD>RegistryAuthority</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A string that specifies the authority which issued a =
+
+      registry or catalog number. Some examples of registry authorities =
+are CAS,=20
+      Beilstein, Aldrich, and Merck. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x000E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/RepresentsProperty.htm">kCDXProp_RepresentsProperty</A></T=
+D>
+    <TD>RepresentsProperty</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXRepresentsProperty.htm">CDXRepresentsProperty</A></TD></T=
+R>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates that this object represents some property =
+in some=20
+      other object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x000F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/IgnoreWarnings.htm">kCDXProp_IgnoreWarnings</A></TD>
+    <TD>IgnoreWarnings</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether chemical warnings should be =
+suppressed on=20
+      this object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0010</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ChemicalWarning.htm">kCDXProp_ChemicalWarning</A></TD>
+    <TD>Warning</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A warning concerning possible chemical problems with =
+this=20
+      object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0011</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Visible.htm">kCDXProp_Visible</A></TD>
+    <TD>Visible </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The object is visible if non-zero. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0012</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/SupersededBy.htm">kCDXProp_SupersededBy</A></TD>
+    <TD>SupersededBy</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectID</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The ID of the object that should be read instead of =
+this=20
+      one. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0100</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/FontTable.htm">kCDXProp_FontTable</A></TD>
+    <TD>fonttable</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXFontTable.htm">CDXFontTable</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required if fonts are =
+used.</FONT> A=20
+      list of fonts used in the document. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0200</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/2DPosition.htm">kCDXProp_2DPosition</A></TD>
+    <TD>p</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The 2D location (in the order of vertical and =
+horizontal=20
+      locations) of an object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0201</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/3DPosition.htm">kCDXProp_3DPosition</A></TD>
+    <TD>xyz</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint3D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The 3D location (in the order of X-, Y-, and =
+Z-locations in=20
+      right-handed coordinate system) of an object in CDX coordinate =
+units. The=20
+      precise meaning of this attribute varies depending on the type of =
+object.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0202</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/2DExtent.htm">kCDXProp_2DExtent</A></TD>
+    <TD>extent</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for =
+templategrids.</FONT> The=20
+      width and height of an object in CDX coordinate units. The precise =
+meaning=20
+      of this attribute varies depending on the type of object. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0203</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/3DExtent.htm">kCDXProp_3DExtent</A></TD>
+    <TD>extent3D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint3D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The width, height, and depth of an object in CDX =
+coordinate=20
+      units (right-handed coordinate system). The precise meaning of =
+this=20
+      attribute varies depending on the type of object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0204</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BoundingBox.htm">kCDXProp_BoundingBox</A></TD>
+    <TD>BoundingBox</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXRectangle</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for pictures and =
+spectra.=20
+      Required for graphics and text until 6.0.</FONT> The smallest =
+rectangle=20
+      that encloses the graphical representation of the object. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0205</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/RotationAngle.htm">kCDXProp_RotationAngle</A></TD>
+    <TD>RotationAngle</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT32</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The angular orientation of an object in degrees * =
+65536.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0207</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/3DHead.htm">kCDXProp_3DHead</A></TD>
+    <TD>Head3D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint3D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The 3D location (in the order of X-, Y-, and =
+Z-locations in=20
+      right-handed coordinate system) of the head of an object in CDX =
+coordinate=20
+      units. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0208</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/3DTail.htm">kCDXProp_3DTail</A></TD>
+    <TD>Tail3D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint3D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The 3D location (in the order of X-, Y-, and =
+Z-locations in=20
+      right-handed coordinate system) of the tail of an object in CDX =
+coordinate=20
+      units. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0209</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TopLeft.htm">kCDXProp_TopLeft</A></TD>
+    <TD>TopLeft</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The location of the top-left corner of a =
+quadrilateral=20
+      object, possibly in a rotated or skewed frame. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x020A</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TopRight.htm">kCDXProp_TopRight</A></TD>
+    <TD>TopRight</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The location of the top-right corner of a =
+quadrilateral=20
+      object, possibly in a rotated or skewed frame. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x020B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BottomRight.htm">kCDXProp_BottomRight</A></TD>
+    <TD>BottomRight</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The location of the bottom-right corner of a =
+quadrilateral=20
+      object, possibly in a rotated or skewed frame. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x020C</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BottomLeft.htm">kCDXProp_BottomLeft</A></TD>
+    <TD>BottomLeft</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The location of the bottom-left corner of a =
+quadrilateral=20
+      object, possibly in a rotated or skewed frame. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x020D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/3DCenter.htm">kCDXProp_3DCenter</A></TD>
+    <TD>Center3D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint3D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The 3D location of the logical center of an object. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x020E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/3DMajorAxisEnd.htm">kCDXProp_3DMajorAxisEnd</A></TD>
+    <TD>Center3D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint3D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The 3D location of the end of the major axis of an =
+object in=20
+      CDX coordinate units. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x020F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/3DMinorAxisEnd.htm">kCDXProp_3DMinorAxisEnd</A></TD>
+    <TD>Center3D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint3D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The 3D location of the end of the minor axis of an =
+object in=20
+      CDX coordinate units. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0300</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ColorTable.htm">kCDXProp_ColorTable</A></TD>
+    <TD>colortable</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXColorTable.htm">CDXColorTable</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The color palette used throughout the document. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0301</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ForegroundColor.htm">kCDXProp_ForegroundColor</A></TD>
+    <TD>color</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The foreground color of an object represented as the =
+
+      two-based index into the object's color table. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0302</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BackgroundColor.htm">kCDXProp_BackgroundColor</A></TD>
+    <TD>bgcolor</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The background color of an object represented as the =
+
+      two-based index into the object's color table. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0400</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Node_Type.htm">kCDXProp_Node_Type</A></TD>
+    <TD>NodeType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of a node object. This is an enumerated =
+property.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0401</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Node_LabelDisplay.htm">kCDXProp_Node_LabelDisplay</A></TD>=
+
+    <TD>LabelDisplay</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The characteristics of node label display. This is =
+an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0402</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Node_Element.htm">kCDXProp_Node_Element</A></TD>
+    <TD>Element</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The atomic number of the atom representing this =
+node. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0403</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_ElementList.htm">kCDXProp_Atom_ElementList</A></TD>
+    <TD>ElementList</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXElementList.htm">CDXElementList</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A list of atomic numbers. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0404</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_Formula.htm">kCDXProp_Atom_Formula</A></TD>
+    <TD>Formula</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXFormula.htm">CDXFormula</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The composition of a node representing a fragment =
+whose=20
+      composition is known, but whose connectivity is not. For example,=20
+      C<SUB>4</SUB>H<SUB>9</SUB> represents a mixture of the 4 butyl =
+isomers.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0420</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_Isotope.htm">kCDXProp_Atom_Isotope</A></TD>
+    <TD>Isotope</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The absolute isotopic mass of an atom (2 for =
+deuterium, 14=20
+      for carbon-14). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0421</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_Charge.htm">kCDXProp_Atom_Charge</A></TD>
+    <TD>Charge</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The atomic charge of an atom. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0422</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_Radical.htm">kCDXProp_Atom_Radical</A></TD>
+    <TD>Radical</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The atomic radical attribute of an atom. This is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0423</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_RestrictFreeSites.htm">kCDXProp_Atom_RestrictFreeSite=
+s</A></TD>
+    <TD>FreeSites</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates that up to the specified number of =
+additional=20
+      substituents are permitted on this atom. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0424</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_RestrictImplicitHydrogens.htm">kCDXProp_Atom_Restrict=
+ImplicitHydrogens</A></TD>
+    <TD>ImplicitHydrogens</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies that implicit hydrogens are not allowed on =
+this=20
+      atom. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0425</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_RestrictRingBondCount.htm">kCDXProp_Atom_RestrictRing=
+BondCount</A></TD>
+    <TD>RingBondCount</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The number of ring bonds attached to an atom. This =
+is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0426</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_RestrictUnsaturatedBonds.htm">kCDXProp_Atom_RestrictU=
+nsaturatedBonds</A></TD>
+    <TD>UnsaturatedBonds</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates whether unsaturation should be present or =
+absent.=20
+      This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0427</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_RestrictRxnChange.htm">kCDXProp_Atom_RestrictRxnChang=
+e</A></TD>
+    <TD>RxnChange</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>If present, signifies that the reaction change of an =
+atom=20
+      must be as specified. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0428</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_RestrictRxnStereo.htm">kCDXProp_Atom_RestrictRxnStere=
+o</A></TD>
+    <TD>RxnStereo</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The change of stereochemistry of an atom during a =
+reaction.=20
+      This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0429</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_AbnormalValence.htm">kCDXProp_Atom_AbnormalValence</A=
+></TD>
+    <TD>AbnormalValence</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies that an abnormal valence for an atom is =
+permitted.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x042B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_NumHydrogens.htm">kCDXProp_Atom_NumHydrogens</A></TD>=
+
+    <TD>NumHydrogens</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The number of (explicit) hydrogens in a labeled atom =
+
+      consisting of one heavy atom and (optionally) the symbol H (e.g.,=20
+      CH<SUB>3</SUB>). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x042E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_HDot.htm">kCDXProp_Atom_HDot</A></TD>
+    <TD>HDot</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies the presence of an implicit hydrogen with=20
+      stereochemistry specified equivalent to an explicit H atom with a =
+wedged=20
+      bond. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x042F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_HDash.htm">kCDXProp_Atom_HDash</A></TD>
+    <TD>HDash</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies the presence of an implicit hydrogen with=20
+      stereochemistry specified equivalent to an explicit H atom with a =
+hashed=20
+      bond. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0430</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_Geometry.htm">kCDXProp_Atom_Geometry</A></TD>
+    <TD>Geometry</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The geometry of the bonds about this atom. This is =
+an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0431</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_BondOrdering.htm">kCDXProp_Atom_BondOrdering</A></TD>=
+
+    <TD>BondOrdering </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An ordering of the bonds to this node, used for=20
+      stereocenters, fragments, and named alternative groups with more =
+than one=20
+      attachment. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0432</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Node_Attachments.htm">kCDXProp_Node_Attachments</A></TD>
+    <TD>Attachments </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArrayWithCounts</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for multi- and =
+variable=20
+      attached nodes.</FONT> For multicenter attachment nodes or =
+variable=20
+      attachment nodes, a list of IDs of the nodes which are multiply or =
+
+      variably attached to this node. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0433</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_GenericNickname.htm">kCDXProp_Atom_GenericNickname</A=
+></TD>
+    <TD>GenericNickname </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The name of the generic nickname. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0434</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_AltGroupID.htm">kCDXProp_Atom_AltGroupID</A></TD>
+    <TD>AltGroupID </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectID</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The ID of the alternative group object that =
+describes this=20
+      node. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0435</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_RestrictSubstituentsUpTo.htm">kCDXProp_Atom_RestrictS=
+ubstituentsUpTo</A></TD>
+    <TD>SubstituentsUpTo </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates that substitution is restricted to no more =
+than=20
+      the specified value. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0436</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_RestrictSubstituentsExactly.htm">kCDXProp_Atom_Restri=
+ctSubstituentsExactly</A></TD>
+    <TD>SubstituentsExactly</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates that exactly the specified number of =
+substituents=20
+      must be present. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0437</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_CIPStereochemistry.htm">kCDXProp_Atom_CIPStereochemis=
+try</A></TD>
+    <TD>AS</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The node's absolute stereochemistry according to the =
+
+      Cahn-Ingold-Prelog system. This is an enumerated property. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0438</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_Translation.htm">kCDXProp_Atom_Translation</A></TD>
+    <TD>Translation</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Provides for restrictions on whether a given node =
+may match=20
+      other more- or less-general nodes. This is an enumerated property. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0439</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_AtomNumber.htm">kCDXProp_Atom_AtomNumber</A></TD>
+    <TD>AtomNumber</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Atom number, as text. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x043A</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_ShowQuery.htm">kCDXProp_Atom_ShowQuery</A></TD>
+    <TD>ShowAtomQuery</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the query indicator if non-zero. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x043B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_ShowStereo.htm">kCDXProp_Atom_ShowStereo</A></TD>
+    <TD>ShowAtomStereo</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the stereochemistry indicator if non-zero. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x043C</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_ShowAtomNumber.htm">kCDXProp_Atom_ShowAtomNumber</A><=
+/TD>
+    <TD>ShowAtomNumber</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the atom number if non-zero. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x043D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_LinkCountLow.htm">kCDXProp_Atom_LinkCountLow</A></TD>=
+
+    <TD>LinkCountLow</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Low end of repeat count for link nodes. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x043E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_LinkCountHigh.htm">kCDXProp_Atom_LinkCountHigh</A></T=
+D>
+    <TD>LinkCountHigh</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>High end of repeat count for link nodes. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x043F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_IsotopicAbundance.htm">kCDXProp_Atom_IsotopicAbundanc=
+e</A></TD>
+    <TD>IsotopicAbundance</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Isotopic abundance of this atom's isotope. This is =
+an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0440</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_ExternalConnectionType.htm">kCDXProp_Atom_ExternalCon=
+nectionType</A></TD>
+    <TD>ExternalConnectionType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Type of external connection, for atoms of type=20
+      kCDXNodeType_ExternalConnectionPoint. This is an enumerated =
+property.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0441</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_GenericList.htm">kCDXProp_Atom_GenericList</A></TD>
+    <TD>GenericList</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXGenericList.htm">CDXGenericList</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A list of generic nicknames. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0442</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_ShowTerminalCarbonLabels.htm">kCDXProp_Atom_ShowTermi=
+nalCarbonLabels</A></TD>
+    <TD>ShowTerminalCarbonLabels</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether terminal carbons (carbons with =
+zero or one=20
+      bond) should display a text label with the element symbol and =
+appropriate=20
+      hydrogens. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0443</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_ShowNonTerminalCarbonLabels.htm">kCDXProp_Atom_ShowNo=
+nTerminalCarbonLabels</A></TD>
+    <TD>ShowNonTerminalCarbonLabels</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether non-terminal carbons (carbons with =
+more=20
+      than one bond) should display a text label with the element symbol =
+and=20
+      appropriate hydrogens. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0444</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_HideImplicitHydrogens.htm">kCDXProp_Atom_HideImplicit=
+Hydrogens</A></TD>
+    <TD>HideImplicitHydrogens</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether implicit hydrogens should be =
+displayed on=20
+      otherwise-atomic atom labels (NH2 versus N). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0445</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_ShowEnhancedStereo.htm">kCDXProp_Atom_ShowEnhancedSte=
+reo</A></TD>
+    <TD>ShowAtomEnhancedStereo</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the enhanced stereochemistry indicator if =
+non-zero.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0446</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_EnhancedStereoType.htm">kCDXProp_Atom_EnhancedStereoT=
+ype</A></TD>
+    <TD>EnhancedStereoType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of enhanced stereochemistry present on this =
+atom.=20
+      This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0447</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Atom_EnhancedStereoGroupNum.htm">kCDXProp_Atom_EnhancedSte=
+reoGroupNum</A></TD>
+    <TD>EnhancedStereoGroupNum</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The group number associated with Or and And enhanced =
+
+      stereochemistry types. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0500</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Mole_Racemic.htm">kCDXProp_Mole_Racemic</A></TD>
+    <TD>Racemic</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates that the molecule is a racemic mixture. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0501</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Mole_Absolute.htm">kCDXProp_Mole_Absolute</A></TD>
+    <TD>Absolute</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates that the molecule has known absolute=20
+      configuration. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0502</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Mole_Relative.htm">kCDXProp_Mole_Relative</A></TD>
+    <TD>Relative</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates that the molecule has known relative=20
+      stereochemistry, but unknown absolute configuration. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0503</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Mole_Formula.htm">kCDXProp_Mole_Formula</A></TD>
+    <TD>Formula</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXFormula.htm">CDXFormula</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The molecular formula representation of a molecule =
+object.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0504</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Mole_Weight.htm">kCDXProp_Mole_Weight</A></TD>
+    <TD>Weight</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The average molecular weight of a molecule object. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0505</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Frag_ConnectionOrder.htm">kCDXProp_Frag_ConnectionOrder</A=
+></TD>
+    <TD>ConnectionOrder</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An ordered list of attachment points within a =
+fragment.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0600</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_Order.htm">kCDXProp_Bond_Order</A></TD>
+    <TD>Order</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The order of a bond object. This is a bit-encoded =
+property.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0601</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_Display.htm">kCDXProp_Bond_Display</A></TD>
+    <TD>Display</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The display type of a bond object. This is an =
+enumerated=20
+      property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0602</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_Display2.htm">kCDXProp_Bond_Display2</A></TD>
+    <TD>Display2</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The display type for the second line of a double =
+bond. This=20
+      is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0603</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_DoublePosition.htm">kCDXProp_Bond_DoublePosition</A><=
+/TD>
+    <TD>DoublePosition</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The position of the second line of a double bond. =
+This is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0604</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_Begin.htm">kCDXProp_Bond_Begin</A></TD>
+    <TD>B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectID</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for bonds.</FONT> The =
+ID of the=20
+      CDX node object at the first end of a bond. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0605</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_End.htm">kCDXProp_Bond_End</A></TD>
+    <TD>E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectID</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for bonds.</FONT> The =
+ID of the=20
+      CDX node object at the second end of a bond. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0606</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_RestrictTopology.htm">kCDXProp_Bond_RestrictTopology<=
+/A></TD>
+    <TD>Topology</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates the desired topology of a bond in a query. =
+This is=20
+      an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0607</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_RestrictRxnParticipation.htm">kCDXProp_Bond_RestrictR=
+xnParticipation</A></TD>
+    <TD>RxnParticipation</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Specifies that a bond is affected by a reaction. =
+This is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0608</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_BeginAttach.htm">kCDXProp_Bond_BeginAttach</A></TD>
+    <TD>BeginAttach</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates where within the Bond_Begin node a bond is =
+
+      attached. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0609</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_EndAttach.htm">kCDXProp_Bond_EndAttach</A></TD>
+    <TD>EndAttach</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Indicates where within the Bond_End node a bond is =
+attached.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x060A</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_CIPStereochemistry.htm">kCDXProp_Bond_CIPStereochemis=
+try</A></TD>
+    <TD>BS</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The bond's absolute stereochemistry according to the =
+
+      Cahn-Ingold-Prelog system. This is an enumerated property. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x060B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_BondOrdering.htm">kCDXProp_Bond_BondOrdering</A></TD>=
+
+    <TD>BondCircularOrdering</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Ordered list of attached bond IDs. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x060C</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_ShowQuery.htm">kCDXProp_Bond_ShowQuery</A></TD>
+    <TD>ShowBondQuery</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the query indicator if non-zero. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x060D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_ShowStereo.htm">kCDXProp_Bond_ShowStereo</A></TD>
+    <TD>ShowBondStereo</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the stereochemistry indicator if non-zero. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x060E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_CrossingBonds.htm">kCDXProp_Bond_CrossingBonds</A></T=
+D>
+    <TD>CrossingBonds</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The set of bonds that cross a given bond. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x060F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bond_ShowRxn.htm">kCDXProp_Bond_ShowRxn</A></TD>
+    <TD>ShowBondRxn</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the reaction-change indicator if non-zero. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0700</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Text.htm">kCDXProp_Text</A></TD>
+    <TD>(not used)</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for text =
+objects.</FONT> The=20
+      text of a text object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0701</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Justification.htm">kCDXProp_Justification</A></TD>
+    <TD>Justification</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The horizontal justification of a text object. This =
+is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0702</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LineHeight.htm">kCDXProp_LineHeight</A></TD>
+    <TD>LineHeight</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The line height of a text object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0703</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/WordWrapWidth.htm">kCDXProp_WordWrapWidth</A></TD>
+    <TD>WordWrapWidth</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The word-wrap width of a text object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0704</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LineStarts.htm">kCDXProp_LineStarts</A></TD>
+    <TD>LineStarts</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/INT16ListWithCounts.htm">INT16ListWithCounts</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The number of lines of a text object followed by =
+that many=20
+      values indicating the zero-based text position of each line start. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0705</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LabelAlignment.htm">kCDXProp_LabelAlignment</A></TD>
+    <TD>LabelAlignment</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The alignment of the text with respect to the node =
+position.=20
+      This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0706</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LabelLineHeight.htm">kCDXProp_LabelLineHeight</A></TD>
+    <TD>LabelLineHeight</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Text line height for atom labels </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0707</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CaptionLineHeight.htm">kCDXProp_CaptionLineHeight</A></TD>=
+
+    <TD>CaptionLineHeight</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Text line height for non-atomlabel text objects =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0708</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/InterpretChemically.htm">kCDXProp_InterpretChemically</A><=
+/TD>
+    <TD>InterpretChemically</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether to the text label should be =
+interpreted=20
+      chemically (if possible). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0800</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/MacPrintInfo.htm">kCDXProp_MacPrintInfo</A></TD>
+    <TD>MacPrintInfo</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The 120 byte Macintosh TPrint data associated with =
+the CDX=20
+      document object. Refer to Macintosh Toolbox manual for detailed=20
+      description. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0801</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/WinPrintInfo.htm">kCDXProp_WinPrintInfo</A></TD>
+    <TD>WinPrintInfo</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The Windows DEVMODE structure associated with the =
+CDX=20
+      document object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0802</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/PrintMargins.htm">kCDXProp_PrintMargins</A></TD>
+    <TD>PrintMargins</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXRectangle</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The outer margins of the Document. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0803</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ChainAngle.htm">kCDXProp_ChainAngle</A></TD>
+    <TD>ChainAngle</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT32</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default chain angle setting in degrees * 65536. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0804</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BondSpacing.htm">kCDXProp_BondSpacing</A></TD>
+    <TD>BondSpacing </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The spacing between segments of a multiple bond, =
+measured=20
+      relative to bond length. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0805</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BondLength.htm">kCDXProp_BondLength</A></TD>
+    <TD>BondLength </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default bond length. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0806</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BoldWidth.htm">kCDXProp_BoldWidth</A></TD>
+    <TD>BoldWidth </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default bold bond width. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0807</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LineWidth.htm">kCDXProp_LineWidth</A></TD>
+    <TD>LineWidth </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default line width. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0808</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/MarginWidth.htm">kCDXProp_MarginWidth</A></TD>
+    <TD>MarginWidth </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default amount of space surrounding atom labels. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0809</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/HashSpacing.htm">kCDXProp_HashSpacing</A></TD>
+    <TD>HashSpacing </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default spacing between hashed lines used in =
+wedged=20
+      hashed bonds. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x080A</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LabelStyle.htm">kCDXProp_LabelStyle</A></TD>
+    <TD>(not used)</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXFontStyle</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default style for atom labels.. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x080B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CaptionStyle.htm">kCDXProp_CaptionStyle</A></TD>
+    <TD>(not used)</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXFontStyle</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default style for non-atomlabel text objects.. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x080C</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CaptionJustification.htm">kCDXProp_CaptionJustification</A=
+></TD>
+    <TD>CaptionJustification</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The horizontal justification of a caption =
+(non-atomlabel=20
+      text object) This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x080D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/FractionalWidths.htm">kCDXProp_FractionalWidths</A></TD>
+    <TD>FractionalWidths</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether to use fractional width =
+information when=20
+      drawing text. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x080E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Magnification.htm">kCDXProp_Magnification</A></TD>
+    <TD>Magnification</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The view magnification factor </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x080F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/WidthPages.htm">kCDXProp_WidthPages</A></TD>
+    <TD>WidthPages</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The width of the document in pages. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0810</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/HeightPages.htm">kCDXProp_HeightPages</A></TD>
+    <TD>HeightPages</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The height of the document in pages. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0811</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/DrawingSpaceType.htm">kCDXProp_DrawingSpaceType</A></TD>
+    <TD>DrawingSpace</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of drawing space used for this document. =
+This is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0812</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Width.htm">kCDXProp_Width</A></TD>
+    <TD>Width</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The width of an object in CDX coordinate units, =
+possibly in=20
+      a rotated or skewed frame. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0813</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Height.htm">kCDXProp_Height</A></TD>
+    <TD>Height</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The height of an object in CDX coordinate units, =
+possibly in=20
+      a rotated or skewed frame. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0814</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/PageOverlap.htm">kCDXProp_PageOverlap</A></TD>
+    <TD>PageOverlap</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The amount of overlap of pages when a poster is =
+tiled.=20
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0815</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Header.htm">kCDXProp_Header</A></TD>
+    <TD>Header</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The text of the header. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0816</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/HeaderPosition.htm">kCDXProp_HeaderPosition</A></TD>
+    <TD>HeaderPosition</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The vertical offset of the header baseline from the =
+top of=20
+      the page. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0817</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Footer.htm">kCDXProp_Footer</A></TD>
+    <TD>Footer</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The text of the footer. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0818</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/FooterPosition.htm">kCDXProp_FooterPosition</A></TD>
+    <TD>FooterPosition</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The vertical offset of the footer baseline from the =
+bottom=20
+      of the page. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0819</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/PrintTrimMarks.htm">kCDXProp_PrintTrimMarks</A></TD>
+    <TD>PrintTrimMarks</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>If present, trim marks are to printed in the =
+margins. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x081A</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LabelStyleFont.htm">kCDXProp_LabelStyleFont</A></TD>
+    <TD>LabelFont</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default font family for atom labels. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x081B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CaptionStyleFont.htm">kCDXProp_CaptionStyleFont</A></TD>
+    <TD>CaptionFont</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default font style for captions (non-atom-label =
+text=20
+      objects). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x081C</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LabelStyleSize.htm">kCDXProp_LabelStyleSize</A></TD>
+    <TD>LabelSize</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default font size for atom labels. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x081D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CaptionStyleSize.htm">kCDXProp_CaptionStyleSize</A></TD>
+    <TD>CaptionSize</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default font size for captions (non-atom-label =
+text=20
+      objects). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x081E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LabelStyleFace.htm">kCDXProp_LabelStyleFace</A></TD>
+    <TD>LabelFace</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default font style for atom labels. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x081F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CaptionStyleFace.htm">kCDXProp_CaptionStyleFace</A></TD>
+    <TD>CaptionFace</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default font face for captions (non-atom-label =
+text=20
+      objects). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0820</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LabelStyleColor.htm">kCDXProp_LabelStyleColor</A></TD>
+    <TD>LabelColor</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default color for atom labels </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0821</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CaptionStyleColor.htm">kCDXProp_CaptionStyleColor</A></TD>=
+
+    <TD>CaptionColor</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default color for captions (non-atom-label text=20
+      objects). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0822</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BondSpacingAbs.htm">kCDXProp_BondSpacingAbs</A></TD>
+    <TD>BondSpacingAbs</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The absolute distance between segments of a multiple =
+bond.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0823</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/LabelJustification.htm">kCDXProp_LabelJustification</A></T=
+D>
+    <TD>LabelJustification</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The default justification for atom labels. This is =
+an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0824</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/FixInplaceExtent.htm">kCDXProp_FixInplaceExtent</A></TD>
+    <TD>FixInPlaceExtent</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Defines a size for OLE In-Place editing. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0825</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Side.htm">kCDXProp_Side</A></TD>
+    <TD>Side</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required.</FONT> A specific =
+side of an=20
+      object (rectangle). This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0826</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/FixInplaceGap.htm">kCDXProp_FixInplaceGap</A></TD>
+    <TD>FixInPlaceGap</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Defines a padding for OLE In-Place editing. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0827</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CartridgeData.htm">kCDXProp_CartridgeData</A></TD>
+    <TD>CartridgeData</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Transient data used by the CambridgeSoft Oracle =
+Cartridge.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0900</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Window_IsZoomed.htm">kCDXProp_Window_IsZoomed</A></TD>
+    <TD>WindowIsZoomed</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether the main viewing window is zoomed=20
+      (maximized). </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0901</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Window_Position.htm">kCDXProp_Window_Position</A></TD>
+    <TD>WindowPosition</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The top-left position of the main viewing window. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0902</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Window_Size.htm">kCDXProp_Window_Size</A></TD>
+    <TD>WindowSize</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Height and width of the document window. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A00</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Graphic_Type.htm">kCDXProp_Graphic_Type</A></TD>
+    <TD>GraphicType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of graphical object. This is an enumerated=20
+      property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A01</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Line_Type.htm">kCDXProp_Line_Type</A></TD>
+    <TD>LineType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of a line object. This is an enumerated =
+property.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A02</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrow_Type.htm">kCDXProp_Arrow_Type</A></TD>
+    <TD>ArrowType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of arrow object, which represents line, =
+arrow, arc,=20
+      rectangle, or orbital. This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A03</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Rectangle_Type.htm">kCDXProp_Rectangle_Type</A></TD>
+    <TD>RectangleType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of a rectangle object. This is an =
+enumerated=20
+      property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A04</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Oval_Type.htm">kCDXProp_Oval_Type</A></TD>
+    <TD>OvalType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of an arrow object that represents a circle =
+or=20
+      ellipse. This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A05</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Orbital_Type.htm">kCDXProp_Orbital_Type</A></TD>
+    <TD>OrbitalType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of orbital object. This is an enumerated =
+property.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A06</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_Type.htm">kCDXProp_Bracket_Type</A></TD>
+    <TD>BracketType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of symbol object. This is an enumerated =
+property.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A07</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Symbol_Type.htm">kCDXProp_Symbol_Type</A></TD>
+    <TD>SymbolType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of symbol object. This is an enumerated =
+property.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A08</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Curve_Type.htm">kCDXProp_Curve_Type</A></TD>
+    <TD>CurveType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of curve object. This is a bit-encoded =
+property.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A20</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrowhead_Size.htm">kCDXProp_Arrowhead_Size</A></TD>
+    <TD>HeadSize </TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The size of the arrow's head. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A21</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arc_AngularSize.htm">kCDXProp_Arc_AngularSize</A></TD>
+    <TD>AngularSize</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The size of an arc (in degrees * 10, so 90 degrees =
+=3D 900).=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A22</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_LipSize.htm">kCDXProp_Bracket_LipSize</A></TD>
+    <TD>LipSize</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The size of a bracket. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A23</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Curve_Points.htm">kCDXProp_Curve_Points</A></TD>
+    <TD>CurvePoints</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCurvePoints.htm">CDXCurvePoints</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for curves.</FONT> =
+The B=E9zier=20
+      curve's control point locations. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A24</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_Usage.htm">kCDXProp_Bracket_Usage</A></TD>
+    <TD>BracketUsage</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The syntactical chemical meaning of the bracket =
+(SRU, mer,=20
+      mon, xlink, etc). This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A25</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Polymer_RepeatPattern.htm">kCDXProp_Polymer_RepeatPattern<=
+/A></TD>
+    <TD>PolymerRepeatPattern</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The head-to-tail connectivity of objects contained =
+within=20
+      the bracket. This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A26</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Polymer_FlipType.htm">kCDXProp_Polymer_FlipType</A></TD>
+    <TD>PolymerFlipType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The flip state of objects contained within the =
+bracket. This=20
+      is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A27</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BracketedObjects.htm">kCDXProp_BracketedObjects</A></TD>
+    <TD>BracketedObjectIDs</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The set of objects contained in a BracketedGroup. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A28</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_RepeatCount.htm">kCDXProp_Bracket_RepeatCount</A><=
+/TD>
+    <TD>RepeatCount</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The number of times a multiple-group BracketedGroup =
+is=20
+      repeated. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A29</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_ComponentOrder.htm">kCDXProp_Bracket_ComponentOrde=
+r</A></TD>
+    <TD>ComponentOrder</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The component order associated with a =
+BracketedGroup. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A2A</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_SRULabel.htm">kCDXProp_Bracket_SRULabel</A></TD>
+    <TD>SRULabel</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The label associated with a BracketedGroup that =
+represents=20
+      an SRU. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A2B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_GraphicID.htm">kCDXProp_Bracket_GraphicID</A></TD>=
+
+    <TD>GraphicID</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectID</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The ID of a graphical object (bracket, brace, or=20
+      parenthesis) associated with a Bracket Attachment. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A2C</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_BondID.htm">kCDXProp_Bracket_BondID</A></TD>
+    <TD>BondID</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectID</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required.</FONT> The ID of a =
+bond that=20
+      crosses a Bracket Attachment. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A2D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Bracket_InnerAtomID.htm">kCDXProp_Bracket_InnerAtomID</A><=
+/TD>
+    <TD>InnerAtomID</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectID</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required.</FONT> The ID of the =
+node=20
+      located within the Bracketed Group and attached to a bond that =
+crosses a=20
+      Bracket Attachment. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A2E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Curve_Points3D.htm">kCDXProp_Curve_Points3D</A></TD>
+    <TD>CurvePoints3D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCurvePoints3D.htm">CDXCurvePoints3D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The B=E9zier curve's control point locations in 3D =
+space.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A2F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrowhead_Type.htm">kCDXProp_Arrowhead_Type</A></TD>
+    <TD>ArrowHeadType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of arrowhead. This is an enumerated =
+property.=20
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A30</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrowhead_CenterSize.htm">kCDXProp_Arrowhead_CenterSize</A=
+></TD>
+    <TD>HeadCenterSize</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The size of the arrow's head from the tip to the =
+back of the=20
+      head. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A31</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrowhead_Width.htm">kCDXProp_Arrowhead_Width</A></TD>
+    <TD>HeadWidth</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The half-width of the arrow's head. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A32</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ShadowSize.htm">kCDXProp_ShadowSize</A></TD>
+    <TD>ShadowSize</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The size of the object's shadow. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A33</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrow_ShaftSpacing.htm">kCDXProp_Arrow_ShaftSpacing</A></T=
+D>
+    <TD>ArrowShaftSpacing</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The width of the space between a multiple-component =
+arrow=20
+      shaft, as in an equilibrium arrow. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A34</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrow_EquilibriumRatio.htm">kCDXProp_Arrow_EquilibriumRati=
+o</A></TD>
+    <TD>ArrowEquilibriumRatio</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The ratio of the length of the left component of an=20
+      equilibrium arrow (viewed from the end to the start) to the right=20
+      component. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A35</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrow_ArrowHead_Head.htm">kCDXProp_Arrow_ArrowHead_Head</A=
+></TD>
+    <TD>ArrowHeadHead</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of arrowhead at the head of the arrow. This =
+is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A36</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrow_ArrowHead_Tail.htm">kCDXProp_Arrow_ArrowHead_Tail</A=
+></TD>
+    <TD>ArrowHeadTail</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of arrowhead at the tail of the arrow. This =
+is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A37</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Fill_Type.htm">kCDXProp_Fill_Type</A></TD>
+    <TD>FillType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of the fill, for objects that can be =
+filled. This=20
+      is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A38</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Curve_Spacing.htm">kCDXProp_Curve_Spacing</A></TD>
+    <TD>CurveSpacing</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The width of the space between a a Doubled curve. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A38</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Closed.htm">kCDXProp_Closed</A></TD>
+    <TD>Closed</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether object is closed. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A3A</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrow_Dipole.htm">kCDXProp_Arrow_Dipole</A></TD>
+    <TD>Dipole</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether the arrow is a dipole arrow. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A3B</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Arrow_NoGo.htm">kCDXProp_Arrow_NoGo</A></TD>
+    <TD>NoGo</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether arrow is a no-go arrow, and the =
+type of=20
+      no-go (crossed-through or hashed-out) if so. This is an enumerated =
+
+      property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A3C</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CornerRadius.htm">kCDXProp_CornerRadius</A></TD>
+    <TD>CornerRadius</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The radius of the rounded corner of a rounded =
+rectangle.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A3D</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Frame_Type.htm">kCDXProp_Frame_Type</A></TD>
+    <TD>FrameType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of frame on an object. This is an =
+enumerated=20
+      property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A60</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Picture_Edition.htm">kCDXProp_Picture_Edition</A></TD>
+    <TD>Edition</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The section information (SectionHandle) of the =
+Macintosh=20
+      Publish &amp; Subscribe edition embedded in the CDX picture =
+object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A61</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Picture_EditionAlias.htm">kCDXProp_Picture_EditionAlias</A=
+></TD>
+    <TD>EditionAlias</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The alias information of the Macintosh Publish &amp; =
+
+      Subscribe edition embedded in the CDX picture object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A62</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/MacPICT.htm">kCDXProp_MacPICT</A></TD>
+    <TD>MacPICT</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A Macintosh PICT data object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A63</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/WindowsMetafile.htm">kCDXProp_WindowsMetafile</A></TD>
+    <TD>WindowsMetafile</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A Microsoft Windows Metafile object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A64</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/OLEObject.htm">kCDXProp_OLEObject</A></TD>
+    <TD>OLEObject</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An OLE object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A65</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/EnhancedMetafile.htm">kCDXProp_EnhancedMetafile</A></TD>
+    <TD>EnhancedMetafile</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A Microsoft Windows Enhanced Metafile object. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A6E</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/GIF.htm">kCDXProp_GIF</A></TD>
+    <TD>GIF</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A binary GIF data object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A6F</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TIFF.htm">kCDXProp_TIFF</A></TD>
+    <TD>TIFF</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A binary TIFF data object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A70</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/PNG.htm">kCDXProp_PNG</A></TD>
+    <TD>PNG</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A binary PNG data object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A71</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/JPEG.htm">kCDXProp_JPEG</A></TD>
+    <TD>JPEG</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A binary JPEG data object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A72</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BMP.htm">kCDXProp_BMP</A></TD>
+    <TD>BMP</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/Unformatted.htm">Unformatted</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A binary BMP data object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A80</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_XSpacing.htm">kCDXProp_Spectrum_XSpacing</A></TD>=
+
+    <TD>XSpacing</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for spectra.</FONT> =
+The spacing=20
+      in logical units (ppm, Hz, wavenumbers) between points along the =
+X-axis of=20
+      an evenly-spaced grid. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A81</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_XLow.htm">kCDXProp_Spectrum_XLow</A></TD>
+    <TD>XLow</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for spectra.</FONT> =
+The first=20
+      data point for the X-axis of an evenly-spaced grid. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A82</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_XType.htm">kCDXProp_Spectrum_XType</A></TD>
+    <TD>XType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of units the X-axis represents. This is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A83</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_YType.htm">kCDXProp_Spectrum_YType</A></TD>
+    <TD>YType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of units the Y-axis represents. This is an=20
+      enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A84</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_XAxisLabel.htm">kCDXProp_Spectrum_XAxisLabel</A><=
+/TD>
+    <TD>XAxisLabel</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A label for the X-axis. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A85</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_YAxisLabel.htm">kCDXProp_Spectrum_YAxisLabel</A><=
+/TD>
+    <TD>YAxisLabel</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A label for the Y-axis. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A86</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_DataPoint.htm">kCDXProp_Spectrum_DataPoint</A></T=
+D>
+    <TD>(not used)</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for spectra.</FONT> =
+The Y-axis=20
+      values for the spectrum. It is an array of double values =
+corresponding to=20
+      X-axis values. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A87</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_Class.htm">kCDXProp_Spectrum_Class</A></TD>
+    <TD>Class</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of spectrum represented. This is an =
+enumerated=20
+      property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A88</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_YLow.htm">kCDXProp_Spectrum_YLow</A></TD>
+    <TD>YLow</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Y value to be used to offset data when storing XML. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0A89</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Spectrum_YScale.htm">kCDXProp_Spectrum_YScale</A></TD>
+    <TD>YScale</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Y scaling used to scale data when storing XML. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AA0</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_OriginFraction.htm">kCDXProp_TLC_OriginFraction</A></T=
+D>
+    <TD>OriginFraction</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The distance of the origin line from the bottom of a =
+TLC=20
+      Plate, as a fraction of the total height of the plate. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AA1</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_SolventFrontFraction.htm">kCDXProp_TLC_SolventFrontFra=
+ction</A></TD>
+    <TD>SolventFrontFraction</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The distance of the solvent front from the top of a =
+TLC=20
+      Plate, as a fraction of the total height of the plate. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AA2</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_ShowOrigin.htm">kCDXProp_TLC_ShowOrigin</A></TD>
+    <TD>ShowOrigin</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the origin line near the base of the TLC Plate =
+if=20
+      non-zero. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AA3</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_ShowSolventFront.htm">kCDXProp_TLC_ShowSolventFront</A=
+></TD>
+    <TD>ShowSolventFront</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the solvent front line near the top of the TLC =
+Plate if=20
+      non-zero. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AA4</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_ShowBorders.htm">kCDXProp_TLC_ShowBorders</A></TD>
+    <TD>ShowBorders</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show borders around the edges of the TLC Plate if =
+non-zero.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AA5</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_ShowSideTicks.htm">kCDXProp_TLC_ShowSideTicks</A></TD>=
+
+    <TD>ShowSideTicks</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show tickmarks up the side of the TLC Plate if =
+non-zero.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AB0</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_Rf.htm">kCDXProp_TLC_Rf</A></TD>
+    <TD>Rf</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The Retention Factor (R<SUB>f</SUB>) of an =
+individual spot.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AB1</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_Tail.htm">kCDXProp_TLC_Tail</A></TD>
+    <TD>Tail</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The length of the "tail" of an individual spot. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0AB2</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/TLC_ShowRf.htm">kCDXProp_TLC_ShowRf</A></TD>
+    <TD>ShowRf</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Show the spot's Retention Fraction (R<SUB>f</SUB>) =
+value if=20
+      non-zero.. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B00</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/NamedAlternativeGroup_TextFrame.htm">kCDXProp_NamedAlterna=
+tiveGroup_TextFrame</A></TD>
+    <TD>TextFrame</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXRectangle</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The bounding box of upper portion of the Named =
+Alternative=20
+      Group, containing the name of the group. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B01</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/NamedAlternativeGroup_GroupFrame.htm">kCDXProp_NamedAltern=
+ativeGroup_GroupFrame</A></TD>
+    <TD>GroupFrame</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXRectangle</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The bounding box of the lower portion of the Named=20
+      Alternative Group, containing the definition of the group. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B02</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/NamedAlternativeGroup_Valence.htm">kCDXProp_NamedAlternati=
+veGroup_Valence</A></TD>
+    <TD>Valence</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The number of attachment points in each alternative =
+in a=20
+      named alternative group. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B80</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/GeometricFeature.htm">kCDXProp_GeometricFeature</A></TD>
+    <TD>GeometricFeature</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of the geometrical feature (point, line, =
+plane,=20
+      etc.). This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B81</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/RelationValue.htm">kCDXProp_RelationValue</A></TD>
+    <TD>RelationValue</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The numeric relationship (if any) among the basis =
+objects=20
+      used to define this object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B82</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BasisObjects.htm">kCDXProp_BasisObjects</A></TD>
+    <TD>BasisObjects</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for geometries and=20
+      constraints.</FONT> An ordered list of objects used to define this =
+object.=20
+    </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B83</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ConstraintType.htm">kCDXProp_ConstraintType</A></TD>
+    <TD>ConstraintType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The constraint type (distance, angle, or exclusion =
+sphere).=20
+      This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B84</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ConstraintMin.htm">kCDXProp_ConstraintMin</A></TD>
+    <TD>ConstraintMin</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The minimum value of the constraint. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B85</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ConstraintMax.htm">kCDXProp_ConstraintMax</A></TD>
+    <TD>ConstraintMax</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">FLOAT64</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The maximum value of the constraint. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B86</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/IgnoreUnconnectedAtoms.htm">kCDXProp_IgnoreUnconnectedAtom=
+s</A></TD>
+    <TD>IgnoreUnconnectedAtoms</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether unconnected atoms should be =
+ignored within=20
+      the exclusion sphere. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B87</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/DihedralIsChiral.htm">kCDXProp_DihedralIsChiral</A></TD>
+    <TD>DihedralIsChiral</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Signifies whether a dihedral is signed or unsigned. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0B88</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/PointIsDirected.htm">kCDXProp_PointIsDirected</A></TD>
+    <TD>PointIsDirected</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBooleanImplied</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>For a point based on a normal, signifies whether it =
+is in a=20
+      specific direction relative to the reference point. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0BB0</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ChemicalPropertyType.htm">kCDXProp_ChemicalPropertyType</A=
+></TD>
+    <TD>ChemicalPropertyType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">UINT32</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The type of property (name, formula, molecular =
+weight,=20
+      etc.). This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0BB1</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ChemicalPropertyDisplayID.htm">kCDXProp_ChemicalPropertyDi=
+splayID</A></TD>
+    <TD>ChemicalPropertyDisplayID</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectID</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The ID of a graphical object used to display the =
+property=20
+      value. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0BB2</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ChemicalPropertyIsActive.htm">kCDXProp_ChemicalPropertyIsA=
+ctive</A></TD>
+    <TD>ChemicalPropertyIsActive</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Whether the property should be recalculated in =
+response to=20
+      changes in the basis objects. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C00</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_Atom_Map.htm">kCDXProp_ReactionStep_Atom_Map<=
+/A></TD>
+    <TD>ReactionStepAtomMap</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Represents pairs of mapped atom IDs; each pair is a =
+reactant=20
+      atom mapped to to a product atom. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C01</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_Reactants.htm">kCDXProp_ReactionStep_Reactant=
+s</A></TD>
+    <TD>ReactionStepReactants</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An order list of reactants present in the Reaction =
+Step.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C02</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_Products.htm">kCDXProp_ReactionStep_Products<=
+/A></TD>
+    <TD>ReactionStepProducts</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An order list of products present in the Reaction =
+Step.=20
+  </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C03</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_Plusses.htm">kCDXProp_ReactionStep_Plusses</A=
+></TD>
+    <TD>ReactionStepPlusses</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An ordered list of pluses used to separate =
+components of the=20
+      Reaction Step. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C04</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_Arrows.htm">kCDXProp_ReactionStep_Arrows</A><=
+/TD>
+    <TD>ReactionStepArrows</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An ordered list of arrows used to separate =
+components of the=20
+      Reaction Step. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C05</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_ObjectsAboveArrow.htm">kCDXProp_ReactionStep_=
+ObjectsAboveArrow</A></TD>
+    <TD>ReactionStepObjectsAboveArrow</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An order list of objects above the arrow in the =
+Reaction=20
+      Step. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C06</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_ObjectsBelowArrow.htm">kCDXProp_ReactionStep_=
+ObjectsBelowArrow</A></TD>
+    <TD>ReactionStepObjectsBelowArrow</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An order list of objects below the arrow in the =
+Reaction=20
+      Step. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C07</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_Atom_Map_Manual.htm">kCDXProp_ReactionStep_At=
+om_Map_Manual</A></TD>
+    <TD>ReactionStepAtomMapManual</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Represents pairs of mapped atom IDs; each pair is a =
+reactant=20
+      atom mapped to to a product atom. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0C08</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ReactionStep_Atom_Map_Auto.htm">kCDXProp_ReactionStep_Atom=
+_Map_Auto</A></TD>
+    <TD>ReactionStepAtomMapAuto</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Represents pairs of mapped atom IDs; each pair is a =
+reactant=20
+      atom mapped to to a product atom. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0D00</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ObjectTag_Type.htm">kCDXProp_ObjectTag_Type</A></TD>
+    <TD>TagType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The tag's data type. This is an enumerated property. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0D03</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ObjectTag_Tracking.htm">kCDXProp_ObjectTag_Tracking</A></T=
+D>
+    <TD>Tracking</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The tag will participate in tracking if non-zero. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0D04</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ObjectTag_Persistent.htm">kCDXProp_ObjectTag_Persistent</A=
+></TD>
+    <TD>Persistent</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The tag will be resaved to a CDX file if non-zero. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0D05</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/ObjectTag_Value.htm">kCDXProp_ObjectTag_Value</A></TD>
+    <TD>Value</TD>
+    <TD>varies</TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The value is a INT32, FLOAT64 or unformatted string=20
+      depending on the value of ObjectTag_Type. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0D06</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Positioning.htm">kCDXProp_Positioning</A></TD>
+    <TD>PositioningType</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>How the object should be positioned with respect to =
+its=20
+      containing object. This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0D07</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/PositioningAngle.htm">kCDXProp_PositioningAngle</A></TD>
+    <TD>PositioningAngle</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT32</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Angular positioning, in degrees * 65536. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0D08</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/PositioningOffset.htm">kCDXProp_PositioningOffset</A></TD>=
+
+    <TD>PositioningOffset</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXPoint2D</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>Offset positioning. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0E00</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Sequence_Identifier.htm">kCDXProp_Sequence_Identifier</A><=
+/TD>
+    <TD>SequenceIdentifier</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for sequences.</FONT> =
+A unique=20
+      (but otherwise random) identifier for a given Sequence object. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0F00</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CrossReference_Container.htm">kCDXProp_CrossReference_Cont=
+ainer</A></TD>
+    <TD>CrossReferenceContainer</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An external object containing (as an embedded =
+object) the=20
+      document containing the Sequence object being referenced. =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0F01</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CrossReference_Document.htm">kCDXProp_CrossReference_Docum=
+ent</A></TD>
+    <TD>CrossReferenceDocument</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An external document containing the Sequence object =
+being=20
+      referenced. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0F02</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CrossReference_Identifier.htm">kCDXProp_CrossReference_Ide=
+ntifier</A></TD>
+    <TD>CrossReferenceIdentifier</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for =
+cross-references..</FONT> A=20
+      unique (but otherwise random) identifier for a given =
+Cross-Reference=20
+      object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x0F03</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/CrossReference_Sequence.htm">kCDXProp_CrossReference_Seque=
+nce</A></TD>
+    <TD>CrossReferenceSequence</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXString.htm">CDXString</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for =
+cross-references..</FONT> A=20
+      value matching the SequenceIdentifier of the Sequence object to be =
+
+      referenced. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x1000</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Template_PaneHeight.htm">kCDXProp_Template_PaneHeight</A><=
+/TD>
+    <TD>PaneHeight</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXCoordinate</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for =
+templategrids.</FONT> The=20
+      height of the viewing window of a template grid. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x1001</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Template_NumRows.htm">kCDXProp_Template_NumRows</A></TD>
+    <TD>NumRows</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for =
+templategrids.</FONT> The=20
+      number of rows of the CDX TemplateGrid object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x1002</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Template_NumColumns.htm">kCDXProp_Template_NumColumns</A><=
+/TD>
+    <TD>NumColumns</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT16</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3><FONT color=3D#ff0000>Required for =
+templategrids.</FONT> The=20
+      number of columns of the CDX TemplateGrid object. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x1100</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/Group_Integral.htm">kCDXProp_Group_Integral</A></TD>
+    <TD>Integral</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXBoolean.htm">CDXBoolean</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The group is considered to be integral =
+(non-subdivisible) if=20
+      non-zero. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x1FF0</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/SplitterPositions.htm">kCDXProp_SplitterPositions</A></TD>=
+
+    <TD>SplitterPositions</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXObjectID.htm">CDXObjectIDArray</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>An array of vertical positions that subdivide a page =
+into=20
+      regions. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x1FF1</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/PageDefinition.htm">kCDXProp_PageDefinition</A></TD>
+    <TD>PageDefinition</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXNumeric.htm">INT8</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>A description of the type of formatting used by the =
+page, or=20
+      by the splitter. This is an enumerated property. </TD></TR>
+  <TR>
+    <TD colSpan=3D4></TD></TR>
+  <TR>
+    <TD>0x206</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/properties/BoundsInParent.htm">kCDXProp_BoundsInParent</A></TD>
+    <TD>BoundsInParent</TD>
+    <TD><A=20
+      =
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/DataType/CDXCoordinates.htm">CDXRectangle</A></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD colSpan=3D3>The rectangle containing a page in the coordinate =
+space of=20
+      the containing page. </TD></TR></TBODY></TABLE>
+<P>&nbsp;</P>
+<HR>
+<A=20
+href=3D"http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/=
+cdx/index.htm">CDX=20
+Documentation index</A> <!--webbot bot=3D"Include" =
+U-Include=3D"/footer.htm" TAG=3D"BODY" --></BODY></HTML>
+
+------=_NextPart_000_0000_01CAB154.7B198640
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Location: http://www.cambridgesoft.com/services/documentation/sdk/chemdraw/cdx/style.css
+
+BODY {
+	FONT-FAMILY: sans-serif
+}
+P {
+	FONT-FAMILY: sans-serif
+}
+H1 {
+	FONT-FAMILY: sans-serif
+}
+H2 {
+	FONT-FAMILY: sans-serif
+}
+H3 {
+	FONT-FAMILY: sans-serif
+}
+H4 {
+	FONT-FAMILY: sans-serif
+}
+H5 {
+	FONT-FAMILY: sans-serif
+}
+TD {
+	FONT-FAMILY: sans-serif
+}
+LI {
+	FONT-FAMILY: sans-serif
+}
+A {
+	FONT-FAMILY: sans-serif
+}
+DL {
+	FONT-FAMILY: sans-serif
+}
+TT {
+	FONT-FAMILY: monospace
+}
+PRE {
+	FONT-FAMILY: monospace
+}
+SUP {
+	FONT-SIZE: 60%
+}
+SUB {
+	FONT-SIZE: 60%
+}
+
+------=_NextPart_000_0000_01CAB154.7B198640--

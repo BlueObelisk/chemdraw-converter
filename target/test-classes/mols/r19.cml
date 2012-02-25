@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml xmlns="http://www.xml-cml.org/schema" xmlns:cdx="http://www.xml-cml/namespaces/cdx">
+ <moleculeList>
+  <molecule role="cdx:fragment" cdx:BoundingBox="219.0299 57.7405 273.6799 87.9999" id="97">
+   <label value="H2NCONH2{{149}}H2O2" cdx:temp_Text="[[0 3 97 6 3]]H2NCONH2{{149}}H2O2" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="241.6999 73.4749" cdx:BoundingBox="241.6999 68.4799 290.4249 74.9749" cdx:LabelLineHeight="1" cdx:LabelJustification="Left" id="0" cdx:fontIndex="3" cdx:typeFace="97" cdx:size="6" cdx:color="3"/>
+   <atomArray>
+    <atom id="a107" elementType="N" hydrogenCount="2" cdx:Z="59" cdx:p="261.6174 60.8905" cdx:AS="U" cdx:Element="7" cdx:NumHydrogens="2" x2="43.06461030590831" y2="39.97686830527361">
+     <label value="NH2"/>
+    </atom>
+    <atom id="a108" elementType="C" cdx:Z="60" cdx:p="255.5424 71.4127" cdx:AS="U" hydrogenCount="0" x2="42.06460989458861" y2="38.24481821013151"/>
+    <atom id="a109" elementType="O" hydrogenCount="0" cdx:Z="61" cdx:p="261.6174 81.9349" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="43.06461030590831" y2="36.51276811498942"/>
+    <atom id="a110" elementType="N" hydrogenCount="2" cdx:Z="62" cdx:p="243.3924 71.4127" cdx:AS="U" cdx:Element="7" cdx:NumHydrogens="2" x2="40.06460907194919" y2="38.24481821013151">
+     <label value="NH2"/>
+    </atom>
+    <atom id="a111" elementType="O" hydrogenCount="2" cdx:Z="63" cdx:p="231.2424 71" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="2" x2="38.06460824930977" y2="38.31275239445277">
+     <label value="OH2"/>
+    </atom>
+    <atom id="a112" elementType="O" hydrogenCount="2" cdx:Z="64" cdx:p="231.2424 83.1499" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="2" x2="38.06460824930977" y2="36.31276803272547">
+     <label value="OH2"/>
+    </atom>
+   </atomArray>
+   <bondArray>
+    <bond atomRefs2="a107 a108" id="a107_a108" order="1" cdx:Z="65" cdx:B="107" cdx:E="108" cdx:BS="U"/>
+    <bond atomRefs2="a108 a109" id="a108_a109" order="2" cdx:Z="66" cdx:Order="2" cdx:B="108" cdx:E="109" cdx:BS="U"/>
+    <bond atomRefs2="a108 a110" id="a108_a110" order="1" cdx:Z="67" cdx:B="108" cdx:E="110" cdx:BS="U"/>
+   </bondArray>
+  </molecule>
+  <molecule role="cdx:fragment" cdx:BoundingBox="222.6909 66.9409 290.7242 101.9881" id="99">
+   <label value="(CF3CO)2O" cdx:temp_Text="[[0 3 97 6 3]](CF3CO)2O" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="244.8999 65.9749" cdx:BoundingBox="244.8999 60.9799 276.7374 67.4749" cdx:LabelLineHeight="1" cdx:LabelJustification="Left" id="0" cdx:fontIndex="3" cdx:typeFace="97" cdx:size="6" cdx:color="3"/>
+   <atomArray>
+    <atom id="a117" elementType="C" cdx:Z="71" cdx:p="277.8645 88.3159" cdx:AS="U" hydrogenCount="0" x2="45.739008694200514" y2="35.462404452759735"/>
+    <atom id="a118" elementType="F" hydrogenCount="0" cdx:Z="72" cdx:p="271.7895 98.8381" cdx:AS="U" cdx:Element="9" cdx:NumHydrogens="0" x2="44.739008774033415" y2="33.73035520831823"/>
+    <atom id="a119" elementType="F" hydrogenCount="0" cdx:Z="73" cdx:p="283.9395 77.7937" cdx:AS="U" cdx:Element="9" cdx:NumHydrogens="0" x2="46.7390086143676" y2="37.19445369720124"/>
+    <atom id="a120" elementType="F" hydrogenCount="0" cdx:Z="74" cdx:p="288.3867 94.3909" cdx:AS="U" cdx:Element="9" cdx:NumHydrogens="0" x2="47.47105793864202" y2="34.46240453259264"/>
+    <atom id="a121" elementType="C" cdx:Z="75" cdx:p="267.3423 82.2409" cdx:AS="U" hydrogenCount="0" x2="44.00695944975901" y2="36.46240437292683"/>
+    <atom id="a122" elementType="O" hydrogenCount="0" cdx:Z="76" cdx:p="267.3423 70.0909" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="44.00695944975901" y2="38.462404213261"/>
+    <atom id="a123" elementType="C" cdx:Z="77" cdx:p="235.7756 88.3159" cdx:AS="U" hydrogenCount="0" x2="38.81079525553045" y2="35.462404452759735"/>
+    <atom id="a124" elementType="F" hydrogenCount="0" cdx:Z="78" cdx:p="241.8506 98.8381" cdx:AS="U" cdx:Element="9" cdx:NumHydrogens="0" x2="39.81079517569754" y2="33.73035520831823"/>
+    <atom id="a125" elementType="F" hydrogenCount="0" cdx:Z="79" cdx:p="225.2534 94.3909" cdx:AS="U" cdx:Element="9" cdx:NumHydrogens="0" x2="37.078746011088946" y2="34.46240453259264"/>
+    <atom id="a126" elementType="F" hydrogenCount="0" cdx:Z="80" cdx:p="229.7006 77.7937" cdx:AS="U" cdx:Element="9" cdx:NumHydrogens="0" x2="37.810795335363366" y2="37.19445369720124"/>
+    <atom id="a127" elementType="C" cdx:Z="81" cdx:p="246.2978 82.2409" cdx:AS="U" hydrogenCount="0" x2="40.542844499971956" y2="36.46240437292683"/>
+    <atom id="a128" elementType="O" hydrogenCount="0" cdx:Z="82" cdx:p="246.2978 70.0909" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="40.542844499971956" y2="38.462404213261"/>
+    <atom id="a129" elementType="O" hydrogenCount="0" cdx:Z="83" cdx:p="256.8201 88.3159" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="42.274910205317504" y2="35.462404452759735"/>
+   </atomArray>
+   <bondArray>
+    <bond atomRefs2="a117 a118" id="a117_a118" order="1" cdx:Z="84" cdx:B="117" cdx:E="118" cdx:BS="U"/>
+    <bond atomRefs2="a117 a119" id="a117_a119" order="1" cdx:Z="85" cdx:B="117" cdx:E="119" cdx:BS="U"/>
+    <bond atomRefs2="a117 a120" id="a117_a120" order="1" cdx:Z="86" cdx:B="117" cdx:E="120" cdx:BS="U"/>
+    <bond atomRefs2="a117 a121" id="a117_a121" order="1" cdx:Z="87" cdx:B="117" cdx:E="121" cdx:BS="U"/>
+    <bond atomRefs2="a121 a122" id="a121_a122" order="2" cdx:Z="88" cdx:Order="2" cdx:B="121" cdx:E="122" cdx:BS="U"/>
+    <bond atomRefs2="a121 a129" id="a121_a129" order="1" cdx:Z="89" cdx:B="121" cdx:E="129" cdx:BS="U"/>
+    <bond atomRefs2="a123 a124" id="a123_a124" order="1" cdx:Z="90" cdx:B="123" cdx:E="124" cdx:BS="U"/>
+    <bond atomRefs2="a123 a125" id="a123_a125" order="1" cdx:Z="91" cdx:B="123" cdx:E="125" cdx:BS="U"/>
+    <bond atomRefs2="a123 a126" id="a123_a126" order="1" cdx:Z="92" cdx:B="123" cdx:E="126" cdx:BS="U"/>
+    <bond atomRefs2="a123 a127" id="a123_a127" order="1" cdx:Z="93" cdx:B="123" cdx:E="127" cdx:BS="U"/>
+    <bond atomRefs2="a127 a128" id="a127_a128" order="2" cdx:Z="94" cdx:Order="2" cdx:B="127" cdx:E="128" cdx:BS="U"/>
+    <bond atomRefs2="a127 a129" id="a127_a129" order="1" cdx:Z="95" cdx:B="127" cdx:E="129" cdx:BS="U"/>
+   </bondArray>
+  </molecule>
+  <molecule role="cdx:fragment" cdx:BoundingBox="224.9048 63.2159 270.3742 90.6604" id="102">
+   <label value="Na2HPO4" cdx:temp_Text="[[0 3 97 6 3]]Na2HPO4" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="248.6999 80.4749" cdx:BoundingBox="248.6999 75.4799 275.1374 81.9749" cdx:Warning="An atom in this label has an invalid valence." cdx:LabelLineHeight="1" cdx:LabelJustification="Left" id="0" cdx:fontIndex="3" cdx:typeFace="97" cdx:size="6" cdx:color="3"/>
+   <atomArray>
+    <atom id="a143" elementType="Na" hydrogenCount="0" cdx:Z="99" cdx:p="259.5964 70.8131" cdx:AS="U" cdx:Element="11" cdx:NumHydrogens="0" x2="42.73183028506279" y2="38.34354647768929"/>
+    <atom id="a144" elementType="Na" hydrogenCount="0" cdx:Z="100" cdx:p="242.9992 66.3659" cdx:AS="U" cdx:Element="11" cdx:NumHydrogens="0" x2="39.99978649089906" y2="39.07559436295939"/>
+    <atom id="a145" elementType="P" hydrogenCount="1" cdx:Z="101" cdx:p="249.0742 76.8881" cdx:AS="U" cdx:Element="15" cdx:NumHydrogens="1" x2="40.999784445345874" y2="37.343548523242475">
+     <label value="PH"/>
+    </atom>
+    <atom id="a146" elementType="O" hydrogenCount="0" cdx:Z="102" cdx:p="255.1492 87.4104" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="41.999782399792686" y2="35.61148622265389"/>
+    <atom id="a147" elementType="O" hydrogenCount="0" cdx:Z="103" cdx:p="238.552 82.9631" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="39.26773860562896" y2="36.34355056879566"/>
+    <atom id="a148" elementType="O" hydrogenCount="0" cdx:Z="104" cdx:p="267.2993 87.4104" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="43.999794769557994" y2="35.61148622265389"/>
+    <atom id="a149" elementType="O" hydrogenCount="0" cdx:Z="105" cdx:p="228.0298 76.8881" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="37.535692765912046" y2="37.343548523242475"/>
+   </atomArray>
+   <bondArray>
+    <bond atomRefs2="a143 a145" id="a143_a145" order="1" cdx:Z="106" cdx:B="143" cdx:E="145" cdx:BS="U"/>
+    <bond atomRefs2="a144 a145" id="a144_a145" order="1" cdx:Z="107" cdx:B="144" cdx:E="145" cdx:BS="U"/>
+    <bond atomRefs2="a145 a146" id="a145_a146" order="1" cdx:Z="108" cdx:B="145" cdx:E="146" cdx:BS="U"/>
+    <bond atomRefs2="a145 a147" id="a145_a147" order="1" cdx:Z="109" cdx:B="145" cdx:E="147" cdx:BS="U"/>
+    <bond atomRefs2="a146 a148" id="a146_a148" order="1" cdx:Z="110" cdx:B="146" cdx:E="148" cdx:BS="U"/>
+    <bond atomRefs2="a147 a149" id="a147_a149" order="1" cdx:Z="111" cdx:B="147" cdx:E="149" cdx:BS="U"/>
+   </bondArray>
+  </molecule>
+  <molecule cdx:BoundingBox="138.9999 67.0011 214.1269 91.6999" id="19">
+   <atomArray>
+    <atom id="a18" elementType="C" cdx:Z="121" cdx:p="140.1129 88.4499" cdx:AS="N" hydrogenCount="3" x2="23.347592000477558" y2="35.26122735534672"/>
+    <atom id="a20" elementType="C" cdx:Z="122" cdx:p="150.6777 82.3503" cdx:AS="N" hydrogenCount="1" x2="25.108048317966134" y2="36.27762892983496"/>
+    <atom id="a22" elementType="C" cdx:Z="124" cdx:p="161.2426 88.4499" cdx:AS="N" hydrogenCount="1" x2="26.86852129886829" y2="35.26122735534672"/>
+    <atom id="a24" elementType="C" cdx:Z="126" cdx:p="171.8074 82.3503" cdx:AS="N" hydrogenCount="1" x2="28.628977616356867" y2="36.27762892983496"/>
+    <atom id="a26" elementType="C" cdx:Z="128" cdx:p="182.3722 88.4499" cdx:AS="N" hydrogenCount="1" x2="30.389433933845446" y2="35.26122735534672"/>
+    <atom id="a28" elementType="C" cdx:Z="130" cdx:p="192.9371 82.3503" cdx:AS="U" hydrogenCount="0" x2="32.149906914747596" y2="36.27762892983496"/>
+    <atom id="a30" elementType="O" hydrogenCount="0" cdx:Z="132" cdx:p="192.9371 70.1511" cdx:AS="N" cdx:Element="8" cdx:NumHydrogens="0" x2="32.149906914747596" y2="38.31043207881143"/>
+    <atom id="a73" elementType="O" hydrogenCount="0" cdx:Z="114" cdx:p="203.4629 82.3503" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="33.903864500941495" y2="36.27762892983496"/>
+    <atom id="a74" elementType="C" cdx:Z="115" cdx:p="224.5073 82.3503" cdx:AS="U" hydrogenCount="3" x2="37.410579907551806" y2="36.27762892983496"/>
+    <atom id="a75" elementType="C" cdx:Z="116" cdx:p="213.9851 88.4253" cdx:AS="U" hydrogenCount="2" x2="35.65722220424665" y2="35.265326555086446"/>
+    <atom id="a18_h1" elementType="H"/>
+    <atom id="a18_h2" elementType="H"/>
+    <atom id="a18_h3" elementType="H"/>
+    <atom id="a20_h1" elementType="H"/>
+    <atom id="a22_h1" elementType="H"/>
+    <atom id="a24_h1" elementType="H"/>
+    <atom id="a26_h1" elementType="H"/>
+    <atom id="a74_h1" elementType="H"/>
+    <atom id="a74_h2" elementType="H"/>
+    <atom id="a74_h3" elementType="H"/>
+    <atom id="a75_h1" elementType="H"/>
+    <atom id="a75_h2" elementType="H"/>
+   </atomArray>
+   <bondArray>
+    <bond atomRefs2="a18 a20" id="a18_a20" order="1" cdx:Z="123" cdx:B="18" cdx:E="20" cdx:BS="N"/>
+    <bond atomRefs2="a20 a22" id="a20_a22" order="2" cdx:Z="125" cdx:Order="2" cdx:DoublePosition="Right" cdx:B="20" cdx:E="22" cdx:BS="U" cdx:BondCircularOrdering="0 21 0 25"/>
+    <bond atomRefs2="a22 a24" id="a22_a24" order="1" cdx:Z="127" cdx:B="22" cdx:E="24" cdx:BS="N"/>
+    <bond atomRefs2="a24 a26" id="a24_a26" order="2" cdx:Z="129" cdx:Order="2" cdx:DoublePosition="Right" cdx:B="24" cdx:E="26" cdx:BS="U" cdx:BondCircularOrdering="0 25 0 29"/>
+    <bond atomRefs2="a26 a28" id="a26_a28" order="1" cdx:Z="131" cdx:B="26" cdx:E="28" cdx:BS="N"/>
+    <bond atomRefs2="a28 a30" id="a28_a30" order="2" cdx:Z="133" cdx:Order="2" cdx:B="28" cdx:E="30" cdx:BS="U"/>
+    <bond atomRefs2="a73 a75" id="a73_a75" order="1" cdx:Z="119" cdx:B="73" cdx:E="75" cdx:BS="U"/>
+    <bond atomRefs2="a74 a75" id="a74_a75" order="1" cdx:Z="120" cdx:B="74" cdx:E="75" cdx:BS="U"/>
+    <bond atomRefs2="a28 a73" order="1" id="a28_a73"/>
+    <bond atomRefs2="a18 a18_h1" id="a18_a18_h1" order="1"/>
+    <bond atomRefs2="a18 a18_h2" id="a18_a18_h2" order="1"/>
+    <bond atomRefs2="a18 a18_h3" id="a18_a18_h3" order="1"/>
+    <bond atomRefs2="a20 a20_h1" id="a20_a20_h1" order="1"/>
+    <bond atomRefs2="a22 a22_h1" id="a22_a22_h1" order="1"/>
+    <bond atomRefs2="a24 a24_h1" id="a24_a24_h1" order="1"/>
+    <bond atomRefs2="a26 a26_h1" id="a26_a26_h1" order="1"/>
+    <bond atomRefs2="a74 a74_h1" id="a74_a74_h1" order="1"/>
+    <bond atomRefs2="a74 a74_h2" id="a74_a74_h2" order="1"/>
+    <bond atomRefs2="a74 a74_h3" id="a74_a74_h3" order="1"/>
+    <bond atomRefs2="a75 a75_h1" id="a75_a75_h1" order="1"/>
+    <bond atomRefs2="a75 a75_h2" id="a75_a75_h2" order="1"/>
+   </bondArray>
+   <label value="171" cdx:temp_Text="[[0 3 1 9 3]]171" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="167.6457 103.5999" cdx:Warning="ChemDraw can't interpret this label." cdx:LabelLineHeight="1" cdx:LabelJustification="Left" id="0" cdx:fontIndex="3" cdx:typeFace="1" cdx:size="9" cdx:color="3" cdx:BoundingBox="167.6457 96.5499 182.6457 105.5999" cdx:ydelta="-4.849999999999994"/>
+  </molecule>
+  <molecule cdx:BoundingBox="318.4999 68.0011 393.6269 92.6999" id="37">
+   <atomArray>
+    <atom id="a38" elementType="C" cdx:Z="145" cdx:p="319.6129 89.4499" cdx:AS="N" hydrogenCount="3" x2="53.10004062906099" y2="35.13891859726112"/>
+    <atom id="a39" elementType="C" cdx:Z="146" cdx:p="330.1777 83.3503" cdx:AS="U" hydrogenCount="1" x2="54.855261739466435" y2="36.15229761863672"/>
+    <atom id="a40" elementType="C" cdx:Z="148" cdx:p="340.7426 89.4499" cdx:AS="U" hydrogenCount="1" x2="56.61049946373215" y2="35.13891859726112"/>
+    <atom id="a41" elementType="C" cdx:Z="150" cdx:p="351.3074 83.3503" cdx:AS="N" hydrogenCount="1" x2="58.36572057413759" y2="36.15229761863672"/>
+    <atom id="a42" elementType="C" cdx:Z="152" cdx:p="361.8722 89.4499" cdx:AS="N" hydrogenCount="1" x2="60.120941684543034" y2="35.13891859726112"/>
+    <atom id="a43" elementType="C" cdx:Z="154" cdx:p="372.4371 83.3503" cdx:AS="U" hydrogenCount="0" x2="61.87617940880875" y2="36.15229761863672"/>
+    <atom id="a44" elementType="O" hydrogenCount="0" cdx:Z="156" cdx:p="372.4371 71.1511" cdx:AS="N" cdx:Element="8" cdx:NumHydrogens="0" x2="61.87617940880875" y2="38.17905566138794"/>
+    <atom id="a61" elementType="O" hydrogenCount="0" cdx:Z="160" cdx:p="340.7426 77.2507" cdx:AS="N" cdx:Element="8" cdx:NumHydrogens="0" x2="56.61049946373215" y2="37.165676640012336"/>
+    <atom id="a47" elementType="O" hydrogenCount="0" cdx:Z="138" cdx:p="382.9629 83.3503" cdx:AS="U" cdx:Element="8" cdx:NumHydrogens="0" x2="63.62492111370668" y2="36.15229761863672"/>
+    <atom id="a48" elementType="C" cdx:Z="139" cdx:p="404.0073 83.3503" cdx:AS="U" hydrogenCount="3" x2="67.12120832556268" y2="36.15229761863672"/>
+    <atom id="a49" elementType="C" cdx:Z="140" cdx:p="393.4851 89.4253" cdx:AS="U" hydrogenCount="2" x2="65.37306471963467" y2="35.143005606888934"/>
+    <atom id="a38_h1" elementType="H"/>
+    <atom id="a38_h2" elementType="H"/>
+    <atom id="a38_h3" elementType="H"/>
+    <atom id="a39_h1" elementType="H"/>
+    <atom id="a40_h1" elementType="H"/>
+    <atom id="a41_h1" elementType="H"/>
+    <atom id="a42_h1" elementType="H"/>
+    <atom id="a48_h1" elementType="H"/>
+    <atom id="a48_h2" elementType="H"/>
+    <atom id="a48_h3" elementType="H"/>
+    <atom id="a49_h1" elementType="H"/>
+    <atom id="a49_h2" elementType="H"/>
+   </atomArray>
+   <bondArray>
+    <bond atomRefs2="a38 a39" id="a38_a39" order="1" cdx:Z="147" cdx:B="38" cdx:E="39" cdx:BS="N"/>
+    <bond atomRefs2="a39 a40" id="a39_a40" order="1" cdx:Z="149" cdx:B="39" cdx:E="40" cdx:BS="N"/>
+    <bond atomRefs2="a40 a41" id="a40_a41" order="1" cdx:Z="151" cdx:B="40" cdx:E="41" cdx:BS="N"/>
+    <bond atomRefs2="a41 a42" id="a41_a42" order="2" cdx:Z="153" cdx:Order="2" cdx:DoublePosition="Right" cdx:B="41" cdx:E="42" cdx:BS="U" cdx:BondCircularOrdering="0 56 0 58"/>
+    <bond atomRefs2="a42 a43" id="a42_a43" order="1" cdx:Z="155" cdx:B="42" cdx:E="43" cdx:BS="N"/>
+    <bond atomRefs2="a43 a44" id="a43_a44" order="2" cdx:Z="157" cdx:Order="2" cdx:B="43" cdx:E="44" cdx:BS="U"/>
+    <bond atomRefs2="a39 a61" id="a39_a61" order="1" cdx:Z="161" cdx:B="39" cdx:E="61" cdx:BS="N"/>
+    <bond atomRefs2="a40 a61" id="a40_a61" order="1" cdx:Z="162" cdx:B="40" cdx:E="61" cdx:BS="N"/>
+    <bond atomRefs2="a47 a49" id="a47_a49" order="1" cdx:Z="143" cdx:B="47" cdx:E="49" cdx:BS="U"/>
+    <bond atomRefs2="a48 a49" id="a48_a49" order="1" cdx:Z="144" cdx:B="48" cdx:E="49" cdx:BS="U"/>
+    <bond atomRefs2="a43 a47" order="1" id="a43_a47"/>
+    <bond atomRefs2="a38 a38_h1" id="a38_a38_h1" order="1"/>
+    <bond atomRefs2="a38 a38_h2" id="a38_a38_h2" order="1"/>
+    <bond atomRefs2="a38 a38_h3" id="a38_a38_h3" order="1"/>
+    <bond atomRefs2="a39 a39_h1" id="a39_a39_h1" order="1"/>
+    <bond atomRefs2="a40 a40_h1" id="a40_a40_h1" order="1"/>
+    <bond atomRefs2="a41 a41_h1" id="a41_a41_h1" order="1"/>
+    <bond atomRefs2="a42 a42_h1" id="a42_a42_h1" order="1"/>
+    <bond atomRefs2="a48 a48_h1" id="a48_a48_h1" order="1"/>
+    <bond atomRefs2="a48 a48_h2" id="a48_a48_h2" order="1"/>
+    <bond atomRefs2="a48 a48_h3" id="a48_a48_h3" order="1"/>
+    <bond atomRefs2="a49 a49_h1" id="a49_a49_h1" order="1"/>
+    <bond atomRefs2="a49 a49_h2" id="a49_a49_h2" order="1"/>
+   </bondArray>
+   <label value="172" cdx:temp_Text="[[0 3 1 9 3]]172" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="351.2457 104.9499" cdx:Warning="ChemDraw can't interpret this label." cdx:LabelLineHeight="1" cdx:LabelJustification="Left" id="0" cdx:fontIndex="3" cdx:typeFace="1" cdx:size="9" cdx:color="3" cdx:BoundingBox="351.2457 97.8999 366.2457 106.9499" cdx:ydelta="-5.200000000000003"/>
+  </molecule>
+ </moleculeList>
+ <reaction cdx:ReactionStepReactants="19 99 102 97" cdx:ReactionStepProducts="90 37 69" cdx:ReactionStepArrows="34" id="162">
+  <reactantList>
+   <reactant>
+    <molecule ref="19">
+     <label value="171" cdx:temp_Text="[[0 3 1 9 3]]171" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="167.6457 103.5999" cdx:Warning="ChemDraw can't interpret this label." cdx:LabelLineHeight="1" cdx:LabelJustification="Left" cdx:fontIndex="3" cdx:typeFace="1" cdx:size="9" cdx:color="3" cdx:BoundingBox="167.6457 96.5499 182.6457 105.5999" cdx:ydelta="-4.849999999999994"/>
+    </molecule>
+   </reactant>
+   <reactant>
+    <molecule ref="99" role="reagent">
+     <label value="(CF3CO)2O" cdx:temp_Text="[[0 3 97 6 3]](CF3CO)2O" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="244.8999 65.9749" cdx:BoundingBox="244.8999 60.9799 276.7374 67.4749" cdx:LabelLineHeight="1" cdx:LabelJustification="Left" cdx:fontIndex="3" cdx:typeFace="97" cdx:size="6" cdx:color="3"/>
+    </molecule>
+   </reactant>
+   <reactant>
+    <molecule ref="102" role="reagent">
+     <label value="Na2HPO4" cdx:temp_Text="[[0 3 97 6 3]]Na2HPO4" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="248.6999 80.4749" cdx:BoundingBox="248.6999 75.4799 275.1374 81.9749" cdx:Warning="An atom in this label has an invalid valence." cdx:LabelLineHeight="1" cdx:LabelJustification="Left" cdx:fontIndex="3" cdx:typeFace="97" cdx:size="6" cdx:color="3"/>
+    </molecule>
+   </reactant>
+   <reactant>
+    <molecule ref="97" role="reagent">
+     <label value="H2NCONH2{{149}}H2O2" cdx:temp_Text="[[0 3 97 6 3]]H2NCONH2{{149}}H2O2" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="241.6999 73.4749" cdx:BoundingBox="241.6999 68.4799 290.4249 74.9749" cdx:LabelLineHeight="1" cdx:LabelJustification="Left" cdx:fontIndex="3" cdx:typeFace="97" cdx:size="6" cdx:color="3"/>
+    </molecule>
+   </reactant>
+  </reactantList>
+  <productList>
+   <product>
+    <molecule ref="37">
+     <label value="172" cdx:temp_Text="[[0 3 1 9 3]]172" cdx:LineHeight="1" cdx:LabelAlignment="Left" cdx:p="351.2457 104.9499" cdx:Warning="ChemDraw can't interpret this label." cdx:LabelLineHeight="1" cdx:LabelJustification="Left" cdx:fontIndex="3" cdx:typeFace="1" cdx:size="9" cdx:color="3" cdx:BoundingBox="351.2457 97.8999 366.2457 106.9499" cdx:ydelta="-5.200000000000003"/>
+    </molecule>
+   </product>
+  </productList>
+  <conditionList>
+   <parameter dictRef="cml:reactionCondition">
+    <scalar dataType="xsd:string">DCM</scalar>
+   </parameter>
+   <parameter role="temperature">
+    <scalar dataType="xsd:double" units="units:c">0.0</scalar>
+   </parameter>
+   <parameter role="duration">
+    <scalar dataType="xsd:double" units="units:hour">0.5</scalar>
+   </parameter>
+  </conditionList>
+ </reaction>
+</cml>

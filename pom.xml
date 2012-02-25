@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>uk.ac.cam.ch.wwmm</groupId>
+		<artifactId>wwmm-parent</artifactId>
+		<version>3</version>
+    </parent>
+    
+	<groupId>org.xml-cml.chemdraw</groupId>
+	<artifactId>chemdraw-converter</artifactId>
+	<version>0.3-SNAPSHOT</version>
+	<name>Chemdraw-converters</name>
+	
+	<description>Converts CDX and CDXML from and to CML</description>
+	<url>http://www.xml-cml.org/</url>
+	<scm />
+	
+	<properties>
+	    <chemdraw.groupId>org.xml-cml.chemdraw</chemdraw.groupId>
+	    
+		<junit.groupId>junit</junit.groupId>
+		<junit.artifactId>junit</junit.artifactId>
+		<junit.version>4.8.2</junit.version>
+		
+  	    <jumbo.groupId>org.xml-cml</jumbo.groupId>
+		<jumbo.version>6.1-SNAPSHOT</jumbo.version>
+		
+		<jumbo-testutil.version>1.1-SNAPSHOT</jumbo-testutil.version>
+	</properties>
+
+	<build>
+		<finalName>chemdraw-converter</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies
+						</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>org.xmlcml.cml.chemdraw.ChemdrawConverter
+							</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>org/xmlcml/util/TestUtils.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>			
+		</plugins>
+	</build>
+	
+	<repositories>
+		<repository>
+			<id>wwmm-repo</id>
+			<name>WWMM Maven2</name>
+			<url>https://maven.ch.cam.ac.uk/m2repo</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+		<dependency>
+			<groupId>${jumbo.groupId}</groupId>
+			<artifactId>jumbo</artifactId>
+			<version>${jumbo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${junit.groupId}</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.13</version>
+		</dependency>
+      <dependency>
+         <groupId>${jumbo.groupId}</groupId>
+         <artifactId>jumbo-testutil</artifactId>
+			<version>${jumbo-testutil.version}</version>
+         <scope>test</scope>
+      </dependency>
+	</dependencies>
+	
+	<reporting>
+		<plugins>
+			<plugin>
+				<artifactId>maven-project-info-reports-plugin
+				</artifactId>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>dependencies</report>
+							<report>project-team</report>
+							<report>license</report>
+							<report>scm</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
+	<distributionManagement>
+		<repository>
+			<id>wwmm-dav</id>
+			<name>WWMM</name>
+			<url>dav:http://wwmm.ch.cam.ac.uk/maven2
+			</url>
+		</repository>
+	</distributionManagement>
+</project>
