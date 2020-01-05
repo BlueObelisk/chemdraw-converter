@@ -10,10 +10,8 @@ import org.apache.log4j.Logger;
 import org.xmlcml.cml.chemdraw.CDXConstants;
 
 /**
-This code is open source under the Artistic License
-see http://www.opensource.org for conditions
-@author P.Murray-Rust, 2001-2004
-*/
+ * @author P.Murray-Rust, 2001-2004
+ **/
 
 public class CDXParser implements CDXConstants {
 
@@ -74,7 +72,7 @@ public class CDXParser implements CDXConstants {
 		bytes = IOUtils.toByteArray(is);
 		parseCDX();
 	}
-	
+
     /** read data from an input stream.
     * @param is the InputStream
     * @throws IOException
@@ -87,7 +85,7 @@ public class CDXParser implements CDXConstants {
     	parseBlocks();
     }
 
-	
+
 
 	private void makeBlocks(byte[] bytes) {
         blockManager = new BlockManager();
@@ -248,7 +246,7 @@ public class CDXParser implements CDXConstants {
 					"UNKNOWN PROP : "+propS+"("+CDXUtil.toXHex(iProp)+")"+
 					") at byte "+byteCount+"/"+Integer.toHexString(byteCount)+" in "+bb.length);
 			throw new ChemdrawRuntimeException("UNKNOWN PROP");
-			
+
 		} else {
             LOG.trace("PROPERTY ... "+prop.getCDXName());
 		}
@@ -307,7 +305,7 @@ public class CDXParser implements CDXConstants {
 		}
 		LOG.trace("ByteCount "+byteCount);
 	}
-	
+
 	private void processObject(byte[] bb) {
 		LOG.debug("processObject");
 //		MYFINE = Level.INFO;
@@ -343,8 +341,3 @@ public class CDXParser implements CDXConstants {
 	}
 
 };
-
-
-
-
-

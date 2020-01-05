@@ -2,32 +2,41 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>uk.ac.cam.ch.wwmm</groupId>
 		<artifactId>wwmm-parent</artifactId>
 		<version>6</version>
-    </parent>
-    
+	</parent>
+
 	<groupId>org.xml-cml.chemdraw</groupId>
 	<artifactId>chemdraw-converter</artifactId>
 	<version>0.3-SNAPSHOT</version>
 	<name>Chemdraw-converters</name>
-	
+	<inceptionYear>2001</inceptionYear>
 	<description>Converts CDX and CDXML from and to CML</description>
 	<url>http://www.xml-cml.org/</url>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
 	<scm />
-	
+
 	<properties>
-	    <chemdraw.groupId>org.xml-cml.chemdraw</chemdraw.groupId>
-	    
+		<chemdraw.groupId>org.xml-cml.chemdraw</chemdraw.groupId>
+
 		<junit.groupId>junit</junit.groupId>
 		<junit.artifactId>junit</junit.artifactId>
 		<junit.version>4.8.2</junit.version>
-		
-  	    <jumbo.groupId>org.xml-cml</jumbo.groupId>
+
+		<jumbo.groupId>org.xml-cml</jumbo.groupId>
 		<jumbo.version>6.1-SNAPSHOT</jumbo.version>
-		
+
 		<jumbo-testutil.version>1.1-SNAPSHOT</jumbo-testutil.version>
 	</properties>
 
@@ -63,10 +72,38 @@
 						<exclude>org/xmlcml/util/TestUtils.java</exclude>
 					</excludes>
 				</configuration>
-			</plugin>			
+			</plugin>
+			<!-- Licence Maven Plugin (add license info to source files) -->
+			<plugin>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>2.11</version>
+				<configuration>
+					<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+					<properties>
+						<owner>Peter Murray-Rust</owner>
+						<email>pm286@cam.ac.uk</email>
+					</properties>
+					<excludes>
+						<exclude>**/README.md</exclude>
+						<exclude>LICENSE.txt</exclude>
+						<exclude>.gitignore</exclude>
+						<exclude>src/test/resources/**</exclude>
+						<exclude>src/main/resources/**</exclude>
+						<exclude>junk/**</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>${jumbo.groupId}</groupId>
@@ -91,7 +128,7 @@
          <scope>test</scope>
       </dependency>
 	</dependencies>
-	
+
 	<reporting>
 		<plugins>
 			<plugin>

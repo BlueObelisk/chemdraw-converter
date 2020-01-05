@@ -5,10 +5,8 @@ import org.xmlcml.cml.chemdraw.CDXConstants;
 
 
 /**
-This code is open source under the Artistic License
-see http://www.opensource.org for conditions
-@author P.Murray-Rust, 2001-2004
-*/
+ * @author P.Murray-Rust, 2001-2004
+ **/
 
 
 public class BlockManager implements CDXConstants {
@@ -100,4 +98,3 @@ class Block implements CDXConstants {
 //        return bytes[currentByte++];
 //    }
 }
-

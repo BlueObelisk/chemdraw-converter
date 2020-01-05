@@ -18,11 +18,9 @@ import org.xmlcml.cml.chemdraw.components.ChemdrawRuntimeException;
  * relies on format on Chemdraw website.
  * some primitives (especially pure graphics) may not be
  * fully supported
- * 
-This code is open source under the Artistic License
-see http://www.opensource.org for conditions
-@author P.Murray-Rust, 2001-2008
-*/
+ *
+ * @author P.Murray-Rust, 2001-2008
+ **/
 
 
 public class CDX2CDXML {
@@ -35,7 +33,7 @@ public class CDX2CDXML {
 	private static final int BLOCKSIZE = 8 * ROWSIZE;
 	private CDXObject parsedObject;
 	private CDXParser parser;
-	
+
 	/**
      */
 	public CDX2CDXML() {
@@ -45,7 +43,7 @@ public class CDX2CDXML {
 	private void init() {
 		parser = new CDXParser();
 	}
-	
+
 	/**
 	 * @param is
 	 * @throws IOException
@@ -55,7 +53,7 @@ public class CDX2CDXML {
 		byte[] bytes = IOUtils.toByteArray(is);
 		this.parseCDX(bytes);
     }
-	
+
 	public CDXParser getParser() {
 		return parser;
 	}
@@ -138,7 +136,7 @@ public class CDX2CDXML {
 		}
 		return sb.toString();
 	}
-	
+
 	private static String toHexString(byte b) {
 		String s = Integer.toHexString((int)b);
 		StringBuilder sb = new StringBuilder(s);
@@ -149,7 +147,7 @@ public class CDX2CDXML {
 		}
 		return sb.toString();
 	}
-	
+
 	private static String toHexString(int i) {
 		String s = Integer.toHexString(i);
 		StringBuilder sb = new StringBuilder(s);
@@ -189,7 +187,7 @@ public class CDX2CDXML {
 		System.out.println("======================================BYTES "+newBytes.length);
 		return newBytes;
 	}
-	
+
 	private static byte[] exciseBlock(byte[] bytes, int byteCount) {
 		int leftover = bytes.length % BLOCKSIZE;
 		if (leftover != 0) {
@@ -206,10 +204,5 @@ public class CDX2CDXML {
 		System.out.println("======================================BYTES "+newBytes.length);
 		return newBytes;
 	}
-	
+
 };
-
-
-
-
-
