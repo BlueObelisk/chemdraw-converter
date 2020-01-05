@@ -86,11 +86,15 @@
 					</properties>
 					<excludes>
 						<exclude>**/README.md</exclude>
+						<exclude>pom.xml</exclude>
 						<exclude>LICENSE.txt</exclude>
 						<exclude>.gitignore</exclude>
 						<exclude>src/test/resources/**</exclude>
 						<exclude>src/main/resources/**</exclude>
 						<exclude>junk/**</exclude>
+						<exclude>**/*.xhtml</exclude>
+						<exclude>**/*.bat</exclude>
+						<exclude>**/*.xsl</exclude>
 					</excludes>
 				</configuration>
 				<executions>
