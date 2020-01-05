@@ -1,0 +1,9 @@
+target/**
+
+# IDE files:
+## Eclipse:
+.settings/
+.project
+.classpath
+## IntelliJ Idea:
+**/*.iml
