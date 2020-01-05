@@ -77,7 +77,7 @@ A linkage that connects a Bracketed Group to some object outside that group.
 Crossing Bond 	0x8019 	kCDXObj_CrossingBond 	crossingbond
 A Bond that connects a Bracketed Group to a Node outside that group.
 Curve 	0x8008 	kCDXObj_Curve 	curve
-A Bézier curve.
+A BÃ©zier curve.
 Embedded Object 	0x8009 	kCDXObj_EmbeddedObject 	embeddedobject
 A Macintosh PICT, a Windows Metafile, or a Windows OLE Object.
 Table 	0x8016 	kCDXObj_Table 	table
