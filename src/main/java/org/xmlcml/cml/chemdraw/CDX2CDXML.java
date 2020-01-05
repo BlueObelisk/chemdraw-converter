@@ -1,3 +1,18 @@
+/**
+ * Copyright (C) 2001 Peter Murray-Rust (pm286@cam.ac.uk)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.xmlcml.cml.chemdraw;
 
 import java.io.ByteArrayInputStream;
@@ -18,11 +33,9 @@ import org.xmlcml.cml.chemdraw.components.ChemdrawRuntimeException;
  * relies on format on Chemdraw website.
  * some primitives (especially pure graphics) may not be
  * fully supported
- * 
-This code is open source under the Artistic License
-see http://www.opensource.org for conditions
-@author P.Murray-Rust, 2001-2008
-*/
+ *
+ * @author P.Murray-Rust, 2001-2008
+ **/
 
 
 public class CDX2CDXML {
@@ -35,7 +48,7 @@ public class CDX2CDXML {
 	private static final int BLOCKSIZE = 8 * ROWSIZE;
 	private CDXObject parsedObject;
 	private CDXParser parser;
-	
+
 	/**
      */
 	public CDX2CDXML() {
@@ -45,7 +58,7 @@ public class CDX2CDXML {
 	private void init() {
 		parser = new CDXParser();
 	}
-	
+
 	/**
 	 * @param is
 	 * @throws IOException
@@ -55,7 +68,7 @@ public class CDX2CDXML {
 		byte[] bytes = IOUtils.toByteArray(is);
 		this.parseCDX(bytes);
     }
-	
+
 	public CDXParser getParser() {
 		return parser;
 	}
@@ -138,7 +151,7 @@ public class CDX2CDXML {
 		}
 		return sb.toString();
 	}
-	
+
 	private static String toHexString(byte b) {
 		String s = Integer.toHexString((int)b);
 		StringBuilder sb = new StringBuilder(s);
@@ -149,7 +162,7 @@ public class CDX2CDXML {
 		}
 		return sb.toString();
 	}
-	
+
 	private static String toHexString(int i) {
 		String s = Integer.toHexString(i);
 		StringBuilder sb = new StringBuilder(s);
@@ -189,7 +202,7 @@ public class CDX2CDXML {
 		System.out.println("======================================BYTES "+newBytes.length);
 		return newBytes;
 	}
-	
+
 	private static byte[] exciseBlock(byte[] bytes, int byteCount) {
 		int leftover = bytes.length % BLOCKSIZE;
 		if (leftover != 0) {
@@ -206,10 +219,5 @@ public class CDX2CDXML {
 		System.out.println("======================================BYTES "+newBytes.length);
 		return newBytes;
 	}
-	
+
 };
-
-
-
-
-

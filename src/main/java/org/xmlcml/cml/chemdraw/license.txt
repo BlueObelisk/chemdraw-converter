@@ -1,7 +1,0 @@
-/** 
-This code is open source under the Artistic License 
-see http://www.opensource.org for conditions
-@author P.Murray-Rust, 2001-2004
-*/
-
-

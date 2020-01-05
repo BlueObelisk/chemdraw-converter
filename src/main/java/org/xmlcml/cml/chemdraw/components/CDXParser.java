@@ -1,3 +1,18 @@
+/**
+ * Copyright (C) 2001 Peter Murray-Rust (pm286@cam.ac.uk)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.xmlcml.cml.chemdraw.components;
 
 import java.io.IOException;
@@ -10,10 +25,8 @@ import org.apache.log4j.Logger;
 import org.xmlcml.cml.chemdraw.CDXConstants;
 
 /**
-This code is open source under the Artistic License
-see http://www.opensource.org for conditions
-@author P.Murray-Rust, 2001-2004
-*/
+ * @author P.Murray-Rust, 2001-2004
+ **/
 
 public class CDXParser implements CDXConstants {
 
@@ -74,7 +87,7 @@ public class CDXParser implements CDXConstants {
 		bytes = IOUtils.toByteArray(is);
 		parseCDX();
 	}
-	
+
     /** read data from an input stream.
     * @param is the InputStream
     * @throws IOException
@@ -87,7 +100,7 @@ public class CDXParser implements CDXConstants {
     	parseBlocks();
     }
 
-	
+
 
 	private void makeBlocks(byte[] bytes) {
         blockManager = new BlockManager();
@@ -248,7 +261,7 @@ public class CDXParser implements CDXConstants {
 					"UNKNOWN PROP : "+propS+"("+CDXUtil.toXHex(iProp)+")"+
 					") at byte "+byteCount+"/"+Integer.toHexString(byteCount)+" in "+bb.length);
 			throw new ChemdrawRuntimeException("UNKNOWN PROP");
-			
+
 		} else {
             LOG.trace("PROPERTY ... "+prop.getCDXName());
 		}
@@ -307,7 +320,7 @@ public class CDXParser implements CDXConstants {
 		}
 		LOG.trace("ByteCount "+byteCount);
 	}
-	
+
 	private void processObject(byte[] bb) {
 		LOG.debug("processObject");
 //		MYFINE = Level.INFO;
@@ -343,8 +356,3 @@ public class CDXParser implements CDXConstants {
 	}
 
 };
-
-
-
-
-
