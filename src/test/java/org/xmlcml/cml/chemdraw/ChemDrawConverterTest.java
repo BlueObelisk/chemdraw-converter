@@ -1,5 +1,4 @@
-/**
- * Copyright (C) 2001 Peter Murray-Rust (pm286@cam.ac.uk)
+/* Copyright (C) 2001 Peter Murray-Rust (pm286@cam.ac.uk)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
