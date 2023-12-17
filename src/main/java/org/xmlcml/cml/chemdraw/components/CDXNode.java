@@ -23,8 +23,8 @@ import org.xmlcml.cml.element.CMLAtom;
 import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.molutil.ChemicalElement;
 
+import nu.xom.Element;
 import nu.xom.Elements;
-import nu.xom.Node;
 
 /** A node or an atom.
 * the purpose of a non-atom node is not very clear, probable a container for more atoms
@@ -51,9 +51,9 @@ public class CDXNode extends CDXObject {
 	}
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXNode(this);
     }
     

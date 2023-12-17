@@ -21,7 +21,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.element.CMLArray;
 
-import nu.xom.Node;
+import nu.xom.Element;
 
 /** tries to interpret CDX graphics
 */
@@ -63,9 +63,9 @@ public class CDXGraphic extends CDXObject {
 
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXGraphic(this);
     }
     

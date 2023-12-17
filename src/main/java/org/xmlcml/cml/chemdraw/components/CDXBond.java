@@ -24,7 +24,7 @@ import org.xmlcml.cml.element.CMLBond;
 import org.xmlcml.cml.element.CMLBondStereo;
 import org.xmlcml.cml.element.CMLMolecule;
 
-import nu.xom.Node;
+import nu.xom.Element;
 
 /**
  * 
@@ -48,9 +48,9 @@ public class CDXBond extends CDXObject {
 
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXBond(this);
     }
     

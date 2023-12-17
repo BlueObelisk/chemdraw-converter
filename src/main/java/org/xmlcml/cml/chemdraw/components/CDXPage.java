@@ -21,7 +21,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.chemdraw.CDXML2CMLProcessor;
 
-import nu.xom.Node;
+import nu.xom.Element;
 import nu.xom.Nodes;
 /**
  * Chemdraw page
@@ -56,9 +56,9 @@ public class CDXPage extends CDXObject {
 	}
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXPage(this);
     }
     
