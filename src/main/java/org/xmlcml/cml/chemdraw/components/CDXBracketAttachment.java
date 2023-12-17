@@ -19,7 +19,7 @@ package org.xmlcml.cml.chemdraw.components;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import nu.xom.Node;
+import nu.xom.Element;
 /**
 Bracket Attachment Object
 CDXML Name: bracketattachment 
@@ -77,9 +77,9 @@ public class CDXBracketAttachment extends CDXObject {
 
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXBracketAttachment(this);
     }
     

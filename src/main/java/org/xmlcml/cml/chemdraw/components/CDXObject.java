@@ -60,9 +60,9 @@ public class CDXObject extends Element implements CDXConstants {
     
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXObject(this);
 
     }

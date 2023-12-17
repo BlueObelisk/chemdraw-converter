@@ -19,7 +19,7 @@ package org.xmlcml.cml.chemdraw.components;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import nu.xom.Node;
+import nu.xom.Element;
 /**
  * 
  * @author pm286
@@ -42,9 +42,9 @@ public class CDXML extends CDXObject {
 
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXML(this);
     }
     

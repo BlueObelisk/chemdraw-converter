@@ -22,7 +22,7 @@ import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.element.CMLLabel;
 
 import nu.xom.Attribute;
-import nu.xom.Node;
+import nu.xom.Element;
 /**
  * 
  * @author pm286
@@ -56,9 +56,9 @@ Warning="ChemDraw can't interpret this label."
 	
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXText(this);
     }
     

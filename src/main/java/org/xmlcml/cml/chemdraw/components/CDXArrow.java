@@ -24,7 +24,7 @@ import org.xmlcml.cml.element.CMLArray;
 import org.xmlcml.euclid.RealArray;
 
 import nu.xom.Attribute;
-import nu.xom.Node;
+import nu.xom.Element;
 
 /**
  * Docs are missing on site
@@ -52,9 +52,9 @@ public class CDXArrow extends CDXObject {
 
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXArrow(this);
     }
     

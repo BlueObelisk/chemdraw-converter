@@ -22,7 +22,6 @@ import org.apache.log4j.Logger;
 import nu.xom.Attribute;
 import nu.xom.Element;
 import nu.xom.Elements;
-import nu.xom.Node;
 /**
  * Chemdraw page
  * currently only a container
@@ -57,9 +56,9 @@ public class CDXGroup extends CDXObject {
 
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXGroup(this);
     }
     

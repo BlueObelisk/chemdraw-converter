@@ -28,8 +28,8 @@ import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.euclid.Real2;
 import org.xmlcml.euclid.Vector2;
 
+import nu.xom.Element;
 import nu.xom.Elements;
-import nu.xom.Node;
 import nu.xom.Nodes;
 /**
  * 
@@ -54,9 +54,9 @@ public class CDXFragment extends CDXObject {
 	
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXFragment(this);
     }
     
