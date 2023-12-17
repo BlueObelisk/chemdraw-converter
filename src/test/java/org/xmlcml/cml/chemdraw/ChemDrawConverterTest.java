@@ -19,11 +19,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-import nu.xom.Attribute;
-import nu.xom.Builder;
-import nu.xom.Element;
-import nu.xom.Nodes;
-
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -31,7 +26,11 @@ import org.junit.Test;
 import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.base.CMLUtil;
 import org.xmlcml.cml.chemdraw.components.CDXObject;
-import org.xmlcml.cml.testutil.JumboTestUtils;
+
+import nu.xom.Attribute;
+import nu.xom.Builder;
+import nu.xom.Element;
+import nu.xom.Nodes;
 
 
 
