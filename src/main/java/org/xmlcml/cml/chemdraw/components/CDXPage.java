@@ -16,13 +16,13 @@
 package org.xmlcml.cml.chemdraw.components;
 
 
-import nu.xom.Node;
-import nu.xom.Nodes;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.chemdraw.CDXML2CMLProcessor;
+
+import nu.xom.Node;
+import nu.xom.Nodes;
 /**
  * Chemdraw page
  * currently only a container

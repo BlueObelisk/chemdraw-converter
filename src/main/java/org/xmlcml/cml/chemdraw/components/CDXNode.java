@@ -16,15 +16,15 @@
 package org.xmlcml.cml.chemdraw.components;
 
 
-import nu.xom.Elements;
-import nu.xom.Node;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLUtil;
 import org.xmlcml.cml.element.CMLAtom;
 import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.molutil.ChemicalElement;
+
+import nu.xom.Elements;
+import nu.xom.Node;
 
 /** A node or an atom.
 * the purpose of a non-atom node is not very clear, probable a container for more atoms

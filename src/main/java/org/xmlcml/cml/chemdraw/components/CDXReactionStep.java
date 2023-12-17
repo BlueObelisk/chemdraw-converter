@@ -19,21 +19,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import nu.xom.Attribute;
-import nu.xom.Element;
-import nu.xom.Node;
-import nu.xom.Nodes;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLConstants;
 import org.xmlcml.cml.base.CMLElement;
-import org.xmlcml.cml.base.CMLUtil;
 import org.xmlcml.cml.element.CMLLabel;
 import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.cml.element.CMLReaction;
 import org.xmlcml.cml.element.CMLSpectator;
 import org.xmlcml.cml.tools.ReactionTool;
+
+import nu.xom.Attribute;
+import nu.xom.Node;
+import nu.xom.Nodes;
 /**
  * 
  * @author pm286

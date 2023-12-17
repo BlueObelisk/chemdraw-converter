@@ -16,16 +16,15 @@
 package org.xmlcml.cml.chemdraw.components;
 
 
-import nu.xom.Node;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLUtil;
-import org.xmlcml.cml.chemdraw.CDX2CDXML;
 import org.xmlcml.cml.element.CMLAtom;
 import org.xmlcml.cml.element.CMLBond;
 import org.xmlcml.cml.element.CMLBondStereo;
 import org.xmlcml.cml.element.CMLMolecule;
+
+import nu.xom.Node;
 
 /**
  * 
