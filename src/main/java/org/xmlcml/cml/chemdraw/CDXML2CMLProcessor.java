@@ -36,18 +36,12 @@ import static org.xmlcml.euclid.EuclidConstants.S_SPACE;
 import java.util.ArrayList;
 import java.util.List;
 
-import nu.xom.Attribute;
-import nu.xom.Element;
-import nu.xom.Node;
-import nu.xom.Nodes;
-import nu.xom.ParentNode;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLConstants;
 import org.xmlcml.cml.base.CMLElement;
-import org.xmlcml.cml.base.CMLUtil;
 import org.xmlcml.cml.base.CMLElement.CoordinateType;
+import org.xmlcml.cml.base.CMLUtil;
 import org.xmlcml.cml.chemdraw.components.CDXColorTable;
 import org.xmlcml.cml.chemdraw.components.CDXFontTable;
 import org.xmlcml.cml.chemdraw.components.CDXList;
@@ -63,9 +57,9 @@ import org.xmlcml.cml.element.CMLBondStereo;
 import org.xmlcml.cml.element.CMLCml;
 import org.xmlcml.cml.element.CMLLabel;
 import org.xmlcml.cml.element.CMLMolecule;
+import org.xmlcml.cml.element.CMLMolecule.HydrogenControl;
 import org.xmlcml.cml.element.CMLMoleculeList;
 import org.xmlcml.cml.element.CMLReaction;
-import org.xmlcml.cml.element.CMLMolecule.HydrogenControl;
 import org.xmlcml.cml.tools.AtomSetTool;
 import org.xmlcml.cml.tools.GeometryTool;
 import org.xmlcml.cml.tools.MoleculeTool;
@@ -74,6 +68,12 @@ import org.xmlcml.euclid.Real2;
 import org.xmlcml.euclid.Real2Range;
 import org.xmlcml.euclid.RealRange;
 import org.xmlcml.euclid.Transform2;
+
+import nu.xom.Attribute;
+import nu.xom.Element;
+import nu.xom.Node;
+import nu.xom.Nodes;
+import nu.xom.ParentNode;
 
 /**
  * attempts to convert a CDXML file for CML.
@@ -316,9 +316,8 @@ public class CDXML2CMLProcessor {
      private void scale(CMLMolecule molecule) {
     	 // only treat top level molecules
     	 if (molecule.query(".//cml:molecule", CML_XPATH).size() == 0) {
-    		 MoleculeTool moleculeTool = MoleculeTool.getOrCreateTool(molecule);
     		 try {
-	    		 double bb = moleculeTool.getAverageBondLength(CoordinateType.TWOD);
+	    		 double bb = MoleculeTool.getAverageBondLength(molecule, CoordinateType.TWOD, false);
 	    		 double scale = (rescale) ? BOND_LENGTH / bb : 1.0;
 	    		 // this flips y-coordinates
 	    		 Transform2 transform = new Transform2(
@@ -328,7 +327,7 @@ public class CDXML2CMLProcessor {
 	    				 0.0,   0.0,   1.0
 	    				 }
 				 );
-	    		 moleculeTool.transform(transform);
+	    		 MoleculeTool.transform(molecule, transform);
     		 } catch (RuntimeException cmle) {
     			 // no coordinates
     		 }
@@ -364,10 +363,8 @@ public class CDXML2CMLProcessor {
      }
 
     private void addHydrogens(CMLMolecule molecule) {
-		MoleculeTool moleculeTool = MoleculeTool.getOrCreateTool(molecule);
-	    moleculeTool.adjustHydrogenCountsToValency(HydrogenControl.REPLACE_HYDROGEN_COUNT);
-        GeometryTool geometryTool = new GeometryTool(molecule);
-    	geometryTool.addCalculatedCoordinatesForHydrogens(CoordinateType.TWOD, HydrogenControl.USE_EXPLICIT_HYDROGENS);
+	    MoleculeTool.adjustHydrogenCountsToValency(molecule, HydrogenControl.REPLACE_HYDROGEN_COUNT);
+        GeometryTool.addCalculatedCoordinatesForHydrogens(molecule, CoordinateType.TWOD, HydrogenControl.USE_EXPLICIT_HYDROGENS);
 	}
 
 	/**
@@ -422,7 +419,7 @@ public class CDXML2CMLProcessor {
     			 double closestDist = Double.MAX_VALUE;
     			 for (int i = 0; i < moleculeNodes.size(); i++) {
     				 CMLMolecule molecule = (CMLMolecule) moleculeNodes.get(i);
-    				 CMLAtom atom = AtomSetTool.getOrCreateTool(molecule).getNearestAtom(point);
+    				 CMLAtom atom = AtomSetTool.getNearestAtom(molecule, point);
     				 if (atom != null) {
     					 double dist = atom.getXY2().getDistance(point);
     					 if (dist < closestDist) {
