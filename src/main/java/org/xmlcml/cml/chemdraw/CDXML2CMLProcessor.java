@@ -1,5 +1,5 @@
-/**
- * Copyright (C) 2001 Peter Murray-Rust (pm286@cam.ac.uk)
+/* Copyright (C) 2001 Peter Murray-Rust (pm286@cam.ac.uk)
+ *               Copyright 2011 Peter Murray-Rust et. al.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,7 @@ import java.util.List;
 
 import nu.xom.Attribute;
 import nu.xom.Element;
+import nu.xom.Node;
 import nu.xom.Nodes;
 import nu.xom.ParentNode;
 
@@ -73,7 +74,6 @@ import org.xmlcml.euclid.Real2;
 import org.xmlcml.euclid.Real2Range;
 import org.xmlcml.euclid.RealRange;
 import org.xmlcml.euclid.Transform2;
-import org.xmlcml.util.CMLUtilNew;
 
 /**
  * attempts to convert a CDXML file for CML.
@@ -274,9 +274,7 @@ public class CDXML2CMLProcessor {
 	private void flattenGroupingElement(Nodes nodes) {
 		for (int i = 0; i < nodes.size(); i++) {
 			 CMLElement element = (CMLElement)nodes.get(i);
-			 CMLUtilNew.transferChildrenToParent(element);
-//             Element parent = (Element) element.getParent(); 
-//			 CMLUtil.transferChildren(element, parent);
+			 transferChildrenToParent(element);
 			 element.detach();
 		 }
 	}
@@ -809,5 +807,22 @@ public class CDXML2CMLProcessor {
  		this.cleanMolecules = cleanMolecules;
  	}
  	
+ 	// the next transferChildrenToParent(Element) method is ported from Jumbo6's CMLUtilNew
+    /**
+     * transfers children of element to its parent. element is left in place and
+     * children come immediately before normally element will be deleted
+     *
+     * @param element
+     *            (will be left with no children)
+     */
+    private void transferChildrenToParent(Element element) {
+        int nc = element.getChildCount();
+        Element parent = (Element) element.getParent();
+        int ii = parent.indexOf(element);
+        for (int i = nc - 1; i >= 0; i--) {
+            Node child = element.getChild(i);
+            parent.insertChild(child, ii);
+        }
+    }
 
 }
