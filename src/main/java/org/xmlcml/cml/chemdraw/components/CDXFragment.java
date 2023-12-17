@@ -17,14 +17,9 @@ package org.xmlcml.cml.chemdraw.components;
 
 import java.util.List;
 
-import nu.xom.Elements;
-import nu.xom.Node;
-import nu.xom.Nodes;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLConstants;
-import org.xmlcml.cml.chemdraw.CDX2CDXML;
 import org.xmlcml.cml.element.CMLAtom;
 import org.xmlcml.cml.element.CMLBond;
 import org.xmlcml.cml.element.CMLBondStereo;
@@ -32,6 +27,10 @@ import org.xmlcml.cml.element.CMLLabel;
 import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.euclid.Real2;
 import org.xmlcml.euclid.Vector2;
+
+import nu.xom.Elements;
+import nu.xom.Node;
+import nu.xom.Nodes;
 /**
  * 
  * @author pm286

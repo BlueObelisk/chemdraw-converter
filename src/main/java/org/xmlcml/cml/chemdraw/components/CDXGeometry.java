@@ -15,12 +15,9 @@
  */
 package org.xmlcml.cml.chemdraw.components;
 
-import java.util.StringTokenizer;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLUtil;
-import org.xmlcml.cml.chemdraw.CDXConstants;
 
 /**--
 Geometry Object

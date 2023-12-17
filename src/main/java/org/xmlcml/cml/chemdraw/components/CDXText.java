@@ -16,13 +16,13 @@
 package org.xmlcml.cml.chemdraw.components;
 
 
-import nu.xom.Attribute;
-import nu.xom.Node;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
 import org.xmlcml.cml.element.CMLLabel;
+
+import nu.xom.Attribute;
+import nu.xom.Node;
 /**
  * 
  * @author pm286

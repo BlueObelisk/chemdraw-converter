@@ -16,7 +16,6 @@
 package org.xmlcml.cml.chemdraw.components; 
 
 import org.apache.log4j.Logger;
-import org.xmlcml.cml.base.CMLConstants;
 import org.xmlcml.cml.chemdraw.CDXConstants;
 
 

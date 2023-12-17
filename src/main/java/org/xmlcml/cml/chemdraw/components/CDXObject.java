@@ -19,6 +19,15 @@ import java.util.Hashtable;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.xmlcml.cml.base.CMLElement;
+import org.xmlcml.cml.base.CMLUtil;
+import org.xmlcml.cml.chemdraw.CDXConstants;
+import org.xmlcml.cml.chemdraw.CDXML2CMLProcessor;
+import org.xmlcml.cml.element.CMLMolecule;
+import org.xmlcml.cml.element.CMLReaction;
+
 import nu.xom.Attribute;
 import nu.xom.Document;
 import nu.xom.Element;
@@ -28,15 +37,6 @@ import nu.xom.NamespaceConflictException;
 import nu.xom.Node;
 import nu.xom.Nodes;
 import nu.xom.Text;
-
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.xmlcml.cml.base.CMLElement;
-import org.xmlcml.cml.base.CMLUtil;
-import org.xmlcml.cml.chemdraw.CDXConstants;
-import org.xmlcml.cml.chemdraw.CDXML2CMLProcessor;
-import org.xmlcml.cml.element.CMLMolecule;
-import org.xmlcml.cml.element.CMLReaction;
 
 /**
  * holds CDX stuff as XML

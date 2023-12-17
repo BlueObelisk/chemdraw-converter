@@ -16,15 +16,12 @@
 package org.xmlcml.cml.chemdraw.components;
 
 
-import nu.xom.Node;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CMLElement;
-import org.xmlcml.cml.chemdraw.CDX2CDXML;
-import org.xmlcml.cml.chemdraw.CDXConstants;
 import org.xmlcml.cml.element.CMLArray;
-import org.xmlcml.euclid.RealArray;
+
+import nu.xom.Node;
 
 /** tries to interpret CDX graphics
 */
