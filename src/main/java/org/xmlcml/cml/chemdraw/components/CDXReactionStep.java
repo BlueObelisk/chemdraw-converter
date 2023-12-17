@@ -27,10 +27,9 @@ import org.xmlcml.cml.element.CMLLabel;
 import org.xmlcml.cml.element.CMLMolecule;
 import org.xmlcml.cml.element.CMLReaction;
 import org.xmlcml.cml.element.CMLSpectator;
-import org.xmlcml.cml.tools.ReactionTool;
 
 import nu.xom.Attribute;
-import nu.xom.Node;
+import nu.xom.Element;
 import nu.xom.Nodes;
 /**
  * 
@@ -63,9 +62,9 @@ public class CDXReactionStep extends CDXObject {
 	
     /**
      * copy node .
-     * @return Node
+     * @return Element
      */
-    public Node copy() {
+    public Element copy() {
         return new CDXReactionStep(this);
     }
     
@@ -253,14 +252,13 @@ n/a n/a id UINT16
         	// set up references
         	CMLReaction reaction = new CMLReaction();
         	cmlNode.appendChild(reaction);
-        	ReactionTool reactionTool = ReactionTool.getOrCreateTool(reaction);
         	List<CMLMolecule> reactantMoleculeRefs = getMoleculeRefsFromId(reactionStepReactants);
         	for (CMLMolecule reactantMoleculeRef : reactantMoleculeRefs) {
-        		reactionTool.addReactant(reactantMoleculeRef);
+        		reaction.addReactant(reactantMoleculeRef);
         	}
         	List<CMLMolecule> productMoleculeRefs = getMoleculeRefsFromId(reactionStepProducts);
         	for (CMLMolecule productMoleculeRef : productMoleculeRefs) {
-        		reactionTool.addProduct(productMoleculeRef);
+        		reaction.addProduct(productMoleculeRef);
         	}
         	// not sure what to do with this. Perhaps grab graphics attributes
         	CDXGraphic arrowsGraphic = getArrowsTargetNoop(reactionStepArrows);
@@ -319,10 +317,9 @@ n/a n/a id UINT16
             makeProperty(0x0C07, "ReactionStep_Atom_Map_Manual", "ReactionStepAtomMapManual", "CDXObjectIDArray");
             makeProperty(0x0C08, "ReactionStep_Atom_Map_Auto", "ReactionStepAtomMapAuto", "CDXObjectIDArray");
      */
-        	ReactionTool reactionTool = ReactionTool.getOrCreateTool(reaction);
-        	resolveRefs(reactionTool.getReactantMolecules());
-        	resolveRefs(reactionTool.getProductMolecules());
-        	resolveSpectatorRefs(reactionTool.getSpectators());
+        	resolveRefs(reaction.getReactantList().getMolecules());
+        	resolveRefs(reaction.getProductList().getMolecules());
+        	resolveSpectatorRefs(reaction.getSpectatorList().getMolecules());
         }
 
 	private static void resolveRefs(List<CMLMolecule> molecules) {
@@ -378,8 +375,8 @@ n/a n/a id UINT16
 		return getXMLID(attribute);
 	}
 
-	private static void resolveSpectatorRefs(List<CMLSpectator> spectators) {
-		for (CMLSpectator spectator : spectators) {
+	private static void resolveSpectatorRefs(List<CMLMolecule> spectators) {
+		for (CMLMolecule spectator : spectators) {
 			String ref = CDXUtil.ensureNumericID(spectator.getAttributeValue("ref"));
 			String[] refs = ref.split(" ");
 //			for 
