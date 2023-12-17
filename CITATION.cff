@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: Chemdraw-Converter
+url: "https://github.com/BlueObelisk/chemdraw-converter"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Murray-Rust
+      given-names: Peter
+    - family-names: Rzepa
+      given-names: Henry S.
+  title: "CML: Evolution and design"
+  year: 2011
+  month: 10
+  day: 14
+  journal: Journal of Cheminformatics
+  volume: 3
+  issue: 44
+  doi: 10.1186/1758-2946-3-44
+  url: https://doi.org/10.1186/1758-2946-3-44
