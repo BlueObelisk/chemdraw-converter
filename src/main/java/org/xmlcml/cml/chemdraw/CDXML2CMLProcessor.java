@@ -363,7 +363,7 @@ public class CDXML2CMLProcessor {
      }
 
     private void addHydrogens(CMLMolecule molecule) {
-	    MoleculeTool.adjustHydrogenCountsToValency(molecule, HydrogenControl.REPLACE_HYDROGEN_COUNT);
+	    MoleculeTool.adjustHydrogenCountsToValency(molecule, HydrogenControl.USE_HYDROGEN_COUNT);
         GeometryTool.addCalculatedCoordinatesForHydrogens(molecule, CoordinateType.TWOD, HydrogenControl.USE_EXPLICIT_HYDROGENS);
 	}
 
