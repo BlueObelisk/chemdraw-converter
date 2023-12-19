@@ -60,9 +60,6 @@ public class CDXParser implements CDXConstants {
 	private static int BLOCKLEN = 256;
 	private static int MAXTRIES = 3;
 
-	/**
-	 * @param chemDrawConverter
-	 */
 	public CDXParser() {
         init();
 	}
@@ -81,7 +78,6 @@ public class CDXParser implements CDXConstants {
     /** read data from an input stream.
     * @param is the InputStream
     * @throws IOException
-    * @throws CDXException
     */
 	public void parseCDX(InputStream is) throws IOException {
 		bytes = IOUtils.toByteArray(is);
@@ -89,9 +85,7 @@ public class CDXParser implements CDXConstants {
 	}
 
     /** read data from an input stream.
-    * @param is the InputStream
     * @throws IOException
-    * @throws CDXException
     */
 	private void parseCDX() throws IOException {
         makeBlocks(bytes);

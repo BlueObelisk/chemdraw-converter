@@ -62,7 +62,6 @@ public class CDX2CDXML {
 	/**
 	 * @param is
 	 * @throws IOException
-	 * @throws CDXException
 	 */
 	public void parseCDX(InputStream is) throws IOException {
 		byte[] bytes = IOUtils.toByteArray(is);

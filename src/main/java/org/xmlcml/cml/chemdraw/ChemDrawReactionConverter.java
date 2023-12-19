@@ -53,7 +53,6 @@ public class ChemDrawReactionConverter implements CDXConstants {
 	
 	
 	/** constructor
-	 * @param chemDrawConverter
 	 * @param reaction
 	 * @param scopeElement
 	 */
@@ -70,8 +69,6 @@ public class ChemDrawReactionConverter implements CDXConstants {
 	}
 
 	/**
-	 * @param parent
-	 * @param reactionStepArrows
 	 * @throws EuclidRuntimeException
 	 * @throws NumberFormatException
 	 * @throws RuntimeException
@@ -121,7 +118,6 @@ public class ChemDrawReactionConverter implements CDXConstants {
 	}
 	
 	/**
-	 * @param element
 	 * @param reactantList
 	 * @param reactantS
 	 * @throws RuntimeException
@@ -185,9 +181,7 @@ public class ChemDrawReactionConverter implements CDXConstants {
 	}
 	
 	/**
-	 * @param element
 	 * @param productList
-	 * @param productS
 	 * @throws RuntimeException
 	 */
 	private void addMoleculeRefsToProducts(CMLProductList productList) throws RuntimeException {

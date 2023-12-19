@@ -330,7 +330,9 @@ public class AtomTool {
     /**
      * add calculated coordinates for hydrogens.
      * 
-     * @param control 2D or 3D
+     * @param atom
+     * @param type
+     * @param bondLength
      */
     public void addCalculatedCoordinatesForHydrogens(CMLAtom atom, CoordinateType type, double bondLength) {
     	if (CoordinateType.TWOD.equals(type)) {
@@ -738,7 +740,7 @@ public class AtomTool {
 	 *
 	 * </pre>
 	 *
-	 * @param moleculeTool TODO
+	 * @param atom
 	 * @param geometry
 	 *            from: Molutils.DEFAULT, Molutils.ANY, Molutils.LINEAR,
 	 *            Molutils.TRIGONAL, Molutils.TETRAHEDRAL

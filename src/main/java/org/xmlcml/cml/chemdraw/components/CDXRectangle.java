@@ -37,8 +37,8 @@ CDXML: "144 72 288 216"
 (PMR) The implict scale is 2**16;
 CDXML scale appears to be 2 units = 1 pt = 1/72 inch
 
-PMR - rectangles can have left > right. top > bottom(e.g. for backwards arrows)
-Normalised rectangles always have left <= right; top <= bottom
+PMR - rectangles can have left &gt; right. top &gt; bottom(e.g. for backwards arrows)
+Normalised rectangles always have left &lt;= right; top &lt;= bottom
 --*/
 
 public class CDXRectangle implements CDXConstants {
