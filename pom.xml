@@ -6,9 +6,11 @@
 	<groupId>org.blueobelisk</groupId>
 	<artifactId>chemdraw-converter</artifactId>
 	<version>0.5-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
 	<name>Chemdraw-converters</name>
-	<inceptionYear>2001</inceptionYear>
 	<description>Converts CDX and CDXML from and to CML</description>
+	<inceptionYear>2001</inceptionYear>
 	<url>http://www.xml-cml.org/</url>
 
 	<licenses>
@@ -19,7 +21,26 @@
 		</license>
 	</licenses>
 
-	<scm />
+    <scm>
+        <url>https://github.com/BlueObelisk/chemdraw-converter</url>
+        <connection>scm:git:git://github.com/blueobelisk/chemdraw-converter.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/blueobelisk/chemdraw-converter.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>jimdowning</id>
+            <name>Jim Downing</name>
+        </developer>
+        <developer>
+            <id>pm286</id>
+            <name>Peter Murray-Rust</name>
+        </developer>
+        <developer>
+            <name>Oliver Stueker</name>
+        </developer>
+    </developers>
 
 	<properties>
 		<chemdraw.groupId>org.xml-cml.chemdraw</chemdraw.groupId>
@@ -63,6 +84,84 @@
 					</excludes>
 				</configuration>
 			</plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.4.1</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>aggregate</id>
+            <goals>
+              <goal>aggregate</goal>
+            </goals>
+            <phase>site</phase>
+            <configuration>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.8</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.8</version>
+        <executions>
+          <execution>
+            <id>start-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>generate-report</id>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 		</plugins>
 	</build>
 
@@ -106,12 +205,16 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	<distributionManagement>
-		<repository>
-			<id>wwmm-dav</id>
-			<name>WWMM</name>
-			<url>dav:http://wwmm.ch.cam.ac.uk/maven2
-			</url>
-		</repository>
-	</distributionManagement>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
 </project>
