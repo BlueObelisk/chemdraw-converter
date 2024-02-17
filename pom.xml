@@ -5,7 +5,7 @@
 
 	<groupId>org.blueobelisk</groupId>
 	<artifactId>chemdraw-converter</artifactId>
-	<version>0.5-SNAPSHOT</version>
+	<version>0.5</version>
 	<packaging>jar</packaging>
 
 	<name>Chemdraw-converters</name>
