@@ -186,17 +186,17 @@ public class CDXProperty implements CDXConstants {
             } else if (dataType.num instanceof Integer) {
                 Integer ii = ((Integer) dataType.num);
                 int is = ii.intValue();
-                dataType.num = new Integer((int)((double)is * ss));
+                dataType.num = Integer.valueOf((int)((double)is * ss));
                 dataType.s = ""+ii;
             } else if (dataType.num instanceof Long) {
                 Long ll = ((Long) dataType.num);
                 long ls = ll.longValue();
-                dataType.num = new Long((long)((double)ls * ss));
+                dataType.num = Long.valueOf((long)((double)ls * ss));
                 dataType.s = ""+ll;
             } else if (dataType.num instanceof Double) {
                 Double dd = ((Double) dataType.num);
                 double dx = dd.doubleValue();
-                dataType.num = new Double(dx * ss);
+                dataType.num = Double.valueOf(dx * ss);
                 dataType.s = ""+dx;
             }
         } else {
@@ -483,7 +483,7 @@ If possible, a reasonable bounding box will be guessed. For example, if a boundi
         makeProperty(0x0204, "BoundingBox", "BoundingBox", "CDXRectangle");
 //The angular orientation of an object in degrees * 65536.
 
-        makeProperty(0x0205, "RotationAngle", "RotationAngle", "INT32", new Double(1./65536.));
+        makeProperty(0x0205, "RotationAngle", "RotationAngle", "INT32", Double.valueOf(1./65536.));
 
 // kCDXProp_BoundsInParent,	// 0x0206 The bounds of this object in the coordinate system of its parent (used for pages within tables). (CDXRectangle)
         makeProperty(0x0206, "BoundsInParent", "BoundsInParent", "CDXRectangle");
@@ -992,8 +992,8 @@ Value CDXML Name Description
         makeProperty(0x0800, "MacPrintInfo", "MacPrintInfo", "Unformatted");
         makeProperty(0x0801, "WinPrintInfo", "WinPrintInfo", "Unformatted");
         makeProperty(0x0802, "PrintMargins", "PrintMargins", "CDXRectangle");
-        makeProperty(0x0803, "ChainAngle", "ChainAngle", "INT32", new Double(1./65536.));
-        makeProperty(0x0804, "BondSpacing", "BondSpacing", "INT16", new Double(1/10.));
+        makeProperty(0x0803, "ChainAngle", "ChainAngle", "INT32", Double.valueOf(1./65536.));
+        makeProperty(0x0804, "BondSpacing", "BondSpacing", "INT16", Double.valueOf(1/10.));
         makeProperty(0x0805, "BondLength", "BondLength", "CDXCoordinate");
         makeProperty(0x0806, "BoldWidth", "BoldWidth", "CDXCoordinate");
         makeProperty(0x0807, "LineWidth", "LineWidth", "CDXCoordinate");
@@ -1013,7 +1013,7 @@ Value CDXML Name Description
             }
             );
         makeProperty(0x080D, "FractionalWidths", "FractionalWidths", "CDXBooleanImplied");
-        makeProperty(0x080E, "Magnification", "Magnification", "INT16", new Double(1./10.));
+        makeProperty(0x080E, "Magnification", "Magnification", "INT16", Double.valueOf(1./10.));
         makeProperty(0x080F, "WidthPages", "WidthPages", "INT16");
 /*
         	kCDXProp_HeightPages,					// 0x0810 The height of the document in pages. (INT16)
@@ -1285,7 +1285,7 @@ Value CDXML Name Description
 
  */        
         makeProperty(0x0A20, "Arrow_HeadSize", "HeadSize", "INT16");
-        makeProperty(0x0A21, "Arc_AngularSize", "AngularSize", "INT16", new Double(1./10.));
+        makeProperty(0x0A21, "Arc_AngularSize", "AngularSize", "INT16", Double.valueOf(1./10.));
         makeProperty(0x0A22, "Bracket_LipSize", "LipSize", "INT16");
         makeProperty(0x0A23, "Curve_Points", "CurvePoints", "CDXCurvePoints");
         makeProperty(0x0A24, "Bracket_Usage", "BracketUsage", "INT8",
@@ -1625,7 +1625,7 @@ Value CDXML Name Description
                 new IntValue(3,"absolute"),
             }
             );
-        makeProperty(0x0D07, "PositioningAngle", "PositioningAngle", "INT32", new Double(1./65536.));
+        makeProperty(0x0D07, "PositioningAngle", "PositioningAngle", "INT32", Double.valueOf(1./65536.));
         makeProperty(0x0D08, "PositioningOffset", "PositioningOffset", "CDXPoint2D");
 /*
         	// CDSequence properties
