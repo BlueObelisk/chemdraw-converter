@@ -1,4 +1,5 @@
 # Chemdraw-Converter
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.blueobelisk/chemdraw-converter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.blueobelisk/chemdraw-converter)
 [![Build Status](https://github.com/BlueObelisk/chemdraw-converter/actions/workflows/maven.yml/badge.svg)](https://github.com/BlueObelisk/chemdraw-converter/actions/workflows/maven.yml)
 [![codecov](https://codecov.io/gh/BlueObelisk/chemdraw-converter/branch/main/graph/badge.svg?token=E1NGWVWL04)](https://codecov.io/gh/BlueObelisk/chemdraw-converter)
 
